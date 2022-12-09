@@ -1,0 +1,11 @@
+button {
+    display: flex;
+    flex-direction: row;
+    padding: 6px;
+    margin: 12px;
+    background-color: #d8a4a3;
+    color: #ededed;
+    width: max-content;
+
+
+}

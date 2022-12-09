@@ -1,25 +1,55 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import SignIn from './pages/signin/SignIn';
+import SignUp from './pages/signup/SignUp';
+import Home from "./pages/home/Home";
+import MyProfile from "./pages/myprofile/MyProfile.js";
+import {Route, Switch} from "react-router-dom";
+import Contact from "./pages/contact/Contact";
+import SubProfile from "./pages/subprofile/Subprofile";
+import AlgVw from "./pages/algvw/AlgVw";
+import Profiles from "./pages/profiles/Profiles";
+import About from "./pages/about/About";
+import Footer from "./components/footer/Footer";
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+      <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+                 <Route exact path="/SignUp">
+                     <SignUp />
+                 </Route>
+                 <Route exact path="/SignIn">
+                     <SignIn />
+                 </Route>
+                 <Route exact path="/Profiles">
+                     <Profiles />
+                 </Route>
+            <Route exact path="/MyProfile">
+               <MyProfile />
+            </Route>
+                <Route exact path="/About">
+                    <About />
+                </Route>
+               <Route exact path="/AlgVw">
+                     <AlgVw />
+            </Route>
+            <Route exact path="/Contact">
+              <Contact />
+            </Route>
+            <Route path="/SubProfile/:id">
+              <SubProfile />
+            </Route>
+          </Switch>
+      <Footer/>
+      </>
   );
 }
-
 export default App;
+
+

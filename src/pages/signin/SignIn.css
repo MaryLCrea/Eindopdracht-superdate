@@ -1,0 +1,13 @@
+.element {
+    display: flex;
+    margin-top: 150px;
+}
+
+
+h3 {
+    font-family: 'Ebrima', 'Verdana', serif;
+    font-size: 20px;
+    line-height: 115px;
+    color: #000000;
+    text-transform: uppercase;
+}
