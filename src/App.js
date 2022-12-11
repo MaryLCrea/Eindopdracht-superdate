@@ -3,14 +3,14 @@ import './App.css';
 import SignIn from './pages/signin/SignIn';
 import SignUp from './pages/signup/SignUp';
 import Home from "./pages/home/Home";
-import MyProfile from "./pages/myprofile/MyProfile.js";
 import {Route, Switch} from "react-router-dom";
 import Contact from "./pages/contact/Contact";
-import SubProfile from "./pages/subprofile/Subprofile";
+import SubProfile from "./pages/subprofile/SubProfile";
 import AlgVw from "./pages/algvw/AlgVw";
 import Profiles from "./pages/profiles/Profiles";
 import About from "./pages/about/About";
 import Footer from "./components/footer/Footer";
+import MyProfile from "./pages/myprofile/MyProfile";
 
 
 function App() {

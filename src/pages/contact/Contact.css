@@ -8,6 +8,7 @@ form {
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
+    background-color: #ededed;
       }
 .item {
     margin: 25px;
@@ -18,3 +19,16 @@ form {
     margin: 25px;
     justify-content: flex-start;
 }
+
+.contact-content {
+    background-color: #ffffff;
+    border: 1px solid #7A7A7A;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    display: block;
+    font-size: 16px;
+    color: #7A7A7A;
+    width: 100%;
+}
+

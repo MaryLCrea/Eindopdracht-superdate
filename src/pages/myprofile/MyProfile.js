@@ -34,7 +34,7 @@ function MyProfile() {
     useEffect(() => {
     async function fetchData() {
         try {
-            const response = await axios.get('https://fakerapi.it/api/v1/persons?_quantity=1&');
+            const response = await axios.get('https://fakerapi.it/api/v1/persons?_quantity=8&');
             console.log(response);
             setProfile(response.data.data);
         } catch (e) {
@@ -48,7 +48,6 @@ function MyProfile() {
         <>
             <Header/>
                  <main>
-
                     <section className="outer-page-container">
 
                          <div className="inner-profiles-container">
@@ -71,17 +70,13 @@ function MyProfile() {
                             </span>
                              </article>
 
-
                                 )
                             })}
                         </div>
-
-
                     </section>
                 </main>
 
-
-                    </>
+       </>
     );
 }
 

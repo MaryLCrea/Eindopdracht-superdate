@@ -17,7 +17,7 @@ function Contact() {
 
 
                     </section>
-                    <form>
+                    <form className="contact-content">
                         <label className="item" htmlFor="name-field">
                             Naam:
                             <input

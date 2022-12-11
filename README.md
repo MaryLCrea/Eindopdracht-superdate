@@ -1,9 +1,32 @@
-# Getting Started with Superdate
+SUPERDATE DE APPLICATIE 
+Groningen, 11 december 2022
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Inhoudsopgave:
+1. Inleiding
+2. Technische benodigdheden
+3. Installatie instructies
+4. Inloggen en accounts
 
-### `npm start`
 
-Runs the app in the development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Inleiding:
+Welkom bij Superdate. Dit is een datingsite waarbij je zelf een profiel aan kunt maken en profielen van andere gebruikers kunt 
+bekijken. Ook is het mogelijk om andere gebruikers berichten te sturen. 
+
+2. Technische benodigdheden:
+Om de applicatie op te starten dien je npm start in te voeren in de terminal. Open http://localhost:3000 om de
+applicatie te zien werken.
+
+4. Installatie instructies:
+De applicatie maakt gebruik van de Novi backend welke middels een link bereikt wordt. Hier hoef je verder niets voor 
+te doen, de backend server is continue online.
+
+5. Inloggen en accounts:
+Om in te loggen is het handig om zelf even een account aan te maken via de home-pagina. Vul hier je e-mailadres in, en bedenk zelf een gebruikersnaam
+en wachtwoord. Let op: het wachtwoord moet minimaal uit 6 tekens bestaan. 
+
+Veel succes met de applicatie!
+
+
+
+
 

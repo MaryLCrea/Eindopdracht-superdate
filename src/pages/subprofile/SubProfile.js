@@ -8,7 +8,6 @@ import Button from "../../components/button/Button";
 function SubProfile() {
     const [subProfile, setSubProfile] = useState({});
     const { id } = useParams();
-    // const { email } = useParams();
 
     useEffect(() => {
         async function fetchData() {
