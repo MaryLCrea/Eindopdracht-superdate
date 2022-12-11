@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
-// import { AuthContext } from '../../context/AuthContext';
+import React, {useEffect, useState } from 'react';
 import axios from 'axios';
 import Header from "../../components/header/Header";
 import './MyProfile.css';
@@ -7,13 +6,10 @@ import './MyProfile.css';
 
 function MyProfile() {
     const [profileData, setProfileData] = useState({});
-    // const { user } = useContext(AuthContext);
     const [profile, setProfile] = useState([]);
 
     useEffect(() => {
-     // we halen de pagina-content op in de mounting-cycle
-       async function fetchProfileData() {
-             // haal de token uit de Local Storage om in het GET-request te bewijzen dat we geauthoriseerd zijn
+            async function fetchProfileData() {
              const token = localStorage.getItem('token');
 
              try {
@@ -34,7 +30,7 @@ function MyProfile() {
     useEffect(() => {
     async function fetchData() {
         try {
-            const response = await axios.get('https://fakerapi.it/api/v1/persons?_quantity=8&');
+            const response = await axios.get('https://fakerapi.it/api/v1/persons?_quantity=1&');
             console.log(response);
             setProfile(response.data.data);
         } catch (e) {
@@ -75,7 +71,6 @@ function MyProfile() {
                         </div>
                     </section>
                 </main>
-
        </>
     );
 }
