@@ -3,12 +3,13 @@
     display: flex;
     flex-direction: row;
     flex-basis: 100%;
-    height:120px;
+    height: 120px;
     padding: 10px 40px 40px 40px;
     background-color: #d8a4a3;
     list-style: none;
 
 }
+
 /*top balk (buitenste) container*/
 .topmenu-outer-container2 {
     display: flex;
@@ -18,7 +19,8 @@
     justify-content: flex-end;
     background-color: #d8a4a3;
     list-style: none;
-    }
+}
+
 /*linkmenu rechtsboven*/
 .linkmenu-top {
     list-style: none;
@@ -28,7 +30,7 @@
     font-size: 12px;
     color: #ededed;
     text-transform: uppercase;
-    flex-basis:600 px;
+    flex-basis: 600px;
     justify-content: space-between;
 }
 
@@ -41,9 +43,10 @@ h2 {
     text-transform: uppercase;
 }
 
-a   {
+a {
     text-decoration: none
 }
+
 a,
 a:link,
 a:visited {

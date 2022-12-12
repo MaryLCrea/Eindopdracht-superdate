@@ -15,7 +15,6 @@ function Contact() {
                         Indien je een e–mail wil sturen, gebruik dan onderstaand contactformulier.
 
 
-
                     </section>
                     <form className="contact-content">
                         <label className="item" htmlFor="name-field">
@@ -55,7 +54,6 @@ function Contact() {
                             Versturen
                         </button>
                     </form>
-
 
 
                 </div>

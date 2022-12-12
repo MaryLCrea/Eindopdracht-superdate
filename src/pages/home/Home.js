@@ -9,9 +9,10 @@ function Home() {
         <>
             <TopMenu/>
             <div className="outer-container">
-              <img src={homepicture} className="home-picture" alt="home-picture" />
+                <img src={homepicture} className="home-picture" alt="home-picture"/>
             </div>
-            </>
+        </>
     );
 }
+
 export default Home;

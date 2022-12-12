@@ -8,7 +8,7 @@ function Footer() {
     return (
         <>
             <div className="footer-boven">
-                <ul className= "footer-linkmenu">
+                <ul className="footer-linkmenu">
                     <li><NavLink to="/about">About</NavLink></li>
                     <li><NavLink to="/algvw">Algemene voorwaarden</NavLink></li>
                     <li><NavLink to="/contact">Contact</NavLink></li>
@@ -22,5 +22,6 @@ function Footer() {
         </>
     );
 }
+
 export default Footer;
 

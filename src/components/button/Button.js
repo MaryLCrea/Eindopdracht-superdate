@@ -6,4 +6,5 @@ function Button() {
         <button type="button">Terug</button>
     );
 }
+
 export default Button;

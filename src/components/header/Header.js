@@ -1,13 +1,13 @@
 import {Link, NavLink, useHistory} from "react-router-dom";
 import './Header.css';
-import React, { useContext } from 'react';
+import React, {useContext} from 'react';
 import {AuthContext} from "../../context/AuthContext";
 
 function Header() {
-    const { isAuth, logout } = useContext(AuthContext);
+    const {isAuth, logout} = useContext(AuthContext);
     const history = useHistory();
     return (
-//         <>
+//         <> //met deze code stond mijn navigatie wel goed, moet er nog even naar kijken
 //             <header className="outer-page-container">
 //                 <div className= "topmenu-outer-container1">
 //                     <h2><NavLink to="/" >Superdates</NavLink></h2>
@@ -26,9 +26,9 @@ function Header() {
 // }
         <>
             <header className="outer-page-container">
-                <div className= "topmenu-outer-container1">
-                    <h2><NavLink to="/" >Superdate</NavLink></h2>
-                    <nav className= "topmenu-outer-container2">
+                <div className="topmenu-outer-container1">
+                    <h2><NavLink to="/">Superdate</NavLink></h2>
+                    <nav className="topmenu-outer-container2">
                         <ul className="linkmenu-top">
                             <Link to="/"></Link>
 
@@ -64,5 +64,6 @@ function Header() {
         </>
     );
 }
+
 export default Header;
 

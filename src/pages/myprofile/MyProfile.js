@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import Header from "../../components/header/Header";
 import './MyProfile.css';
@@ -9,51 +9,54 @@ function MyProfile() {
     const [profile, setProfile] = useState([]);
 
     useEffect(() => {
-            async function fetchProfileData() {
-             const token = localStorage.getItem('token');
+        async function fetchProfileData() {
+            const token = localStorage.getItem('token');
 
-             try {
-                 const result = await axios.get('https://frontend-educational-backend.herokuapp.com/api/user', {
-                     headers: {
-                         "Content-Type": "application/json",
-                         Authorization: `Bearer ${token}`,
-                    },});
+            try {
+                const result = await axios.get('https://frontend-educational-backend.herokuapp.com/api/user', {
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${token}`,
+                    },
+                });
                 setProfileData(result.data);
             } catch (e) {
-                 console.error(e);
-             }
-         }
-         fetchProfileData();
-     }, [])
+                console.error(e);
+            }
+        }
+
+        fetchProfileData();
+    }, [])
 
 
     useEffect(() => {
-    async function fetchData() {
-        try {
-            const response = await axios.get('https://fakerapi.it/api/v1/persons?_quantity=1&');
-            console.log(response);
-            setProfile(response.data.data);
-        } catch (e) {
-            console.error(e);
+        async function fetchData() {
+            try {
+                const response = await axios.get('https://fakerapi.it/api/v1/persons?_quantity=1&');
+                console.log(response);
+                setProfile(response.data.data);
+            } catch (e) {
+                console.error(e);
+            }
         }
-    }
-    fetchData();
-}, [])
+
+        fetchData();
+    }, [])
 
     return (
         <>
             <Header/>
-                 <main>
-                    <section className="outer-page-container">
+            <main>
+                <section className="outer-page-container">
 
-                         <div className="inner-profiles-container">
+                    <div className="inner-profiles-container">
 
-                            {profile.map((profile) => {
-                                return (
-                                    <article className="profile-card" key={profile.id}>
-                                        <p> Welkom {profile.firstname}  </p>
+                        {profile.map((profile) => {
+                            return (
+                                <article className="profile-card" key={profile.id}>
+                                    <p> Welkom {profile.firstname}  </p>
 
-                                        <span>
+                                    <span>
 
                           <img src={profile.image} alt="profile-img" className="profile-img"/>
                                  <p> Naam: {profile.firstname} {profile.lastname} </p>
@@ -64,14 +67,14 @@ function MyProfile() {
                          <p> Mijn telefoonnummer: {profile.phone} </p>
                         <p> Mijn website: {profile.website} </p>
                             </span>
-                             </article>
+                                </article>
 
-                                )
-                            })}
-                        </div>
-                    </section>
-                </main>
-       </>
+                            )
+                        })}
+                    </div>
+                </section>
+            </main>
+        </>
     );
 }
 

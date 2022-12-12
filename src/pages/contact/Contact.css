@@ -9,16 +9,13 @@ form {
     margin-top: 6px;
     margin-bottom: 16px;
     background-color: #ededed;
-      }
+}
+
 .item {
     margin: 25px;
 
 }
-.text {
-    display: flex;
-    margin: 25px;
-    justify-content: flex-start;
-}
+
 
 .contact-content {
     background-color: #ffffff;

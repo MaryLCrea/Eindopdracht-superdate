@@ -15,41 +15,42 @@ import MyProfile from "./pages/myprofile/MyProfile";
 
 function App() {
 
-  return (
-      <>
-      <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-                 <Route exact path="/SignUp">
-                     <SignUp />
-                 </Route>
-                 <Route exact path="/SignIn">
-                     <SignIn />
-                 </Route>
-                 <Route exact path="/Profiles">
-                     <Profiles />
-                 </Route>
-            <Route exact path="/MyProfile">
-               <MyProfile />
-            </Route>
-                <Route exact path="/About">
-                    <About />
+    return (
+        <>
+            <Switch>
+                <Route exact path="/">
+                    <Home/>
                 </Route>
-               <Route exact path="/AlgVw">
-                     <AlgVw />
-            </Route>
-            <Route exact path="/Contact">
-              <Contact />
-            </Route>
-            <Route path="/SubProfile/:id">
-              <SubProfile />
-            </Route>
-          </Switch>
-      <Footer/>
-      </>
-  );
+                <Route exact path="/SignUp">
+                    <SignUp/>
+                </Route>
+                <Route exact path="/SignIn">
+                    <SignIn/>
+                </Route>
+                <Route exact path="/Profiles">
+                    <Profiles/>
+                </Route>
+                <Route exact path="/MyProfile">
+                    <MyProfile/>
+                </Route>
+                <Route exact path="/About">
+                    <About/>
+                </Route>
+                <Route exact path="/AlgVw">
+                    <AlgVw/>
+                </Route>
+                <Route exact path="/Contact">
+                    <Contact/>
+                </Route>
+                <Route path="/SubProfile/:id">
+                    <SubProfile/>
+                </Route>
+            </Switch>
+            <Footer/>
+        </>
+    );
 }
+
 export default App;
 
 

@@ -5,17 +5,15 @@ import {AuthContext} from "../../context/AuthContext";
 
 
 function TopMenu() {
-    const { isAuth, logout } = useContext(AuthContext);
+    const {isAuth, logout} = useContext(AuthContext);
     const history = useHistory();
     return (
-//         <>
+//         <> //met deze code stond mijn navigatie wel goed, moet er nog even naar kijken
 //             <header className="outer-page-container">
 //                 <div className= "topmenu-outer-container1">
 //                     <h2><NavLink to="/" >Superdates</NavLink></h2>
-
 //                 <nav className= "topmenu-outer-container2">
 //                     <ul className="linkmenu-top">
-
 //                         <li><NavLink to="/signup">Registreren</NavLink></li>
 //                         <li><NavLink to="/MyProfile">Inloggen</NavLink></li>
 //                     </ul>
@@ -28,33 +26,32 @@ function TopMenu() {
 // }
         <>
             <header className="outer-page-container">
-                <div className= "topmenu-outer-container1">
-                    <h2><NavLink to="/" >Superdate</NavLink></h2>
-                    <nav className= "topmenu-outer-container2">
+                <div className="topmenu-outer-container1">
+                    <h2><NavLink to="/">Superdate</NavLink></h2>
+                    <nav className="topmenu-outer-container2">
                         <ul className="linkmenu-top">
 
-
-                        {isAuth ?
-                            <li type="link"
-                                onClick={logout}
-                            >
-                                Uitloggen
-                            </li>
-                            :
-                            <div>
-                                <li><NavLink to="/signin"
+                            {isAuth ?
+                                <li type="link"
+                                    onClick={logout}
+                                >
+                                    Uitloggen
+                                </li>
+                                :
+                                <div>
+                                    <li><NavLink to="/signin"
                                                  onClick={() => history.push('/signin')}>
-                                    Inloggen </NavLink>
-                                </li>
+                                        Inloggen </NavLink>
+                                    </li>
 
-                                <li><NavLink to="/signup"
-                                             onClick={() => history.push('/signup')}>
-                                    Registreren </NavLink>
-                                </li>
+                                    <li><NavLink to="/signup"
+                                                 onClick={() => history.push('/signup')}>
+                                        Registreren </NavLink>
+                                    </li>
 
-                            </div>
+                                </div>
 
-                        }
+                            }
                         </ul>
                     </nav>
                 </div>

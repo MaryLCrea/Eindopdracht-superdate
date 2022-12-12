@@ -3,10 +3,10 @@
     display: flex;
     flex-direction: row;
     flex-basis: 100%;
-    height:30px;
+    height: 30px;
     background-color: #704948;
     justify-content: center;
-    }
+}
 
 /*links menu in de footer*/
 .footer-linkmenu {
@@ -39,7 +39,7 @@
     flex-direction: row;
     height: 80px;
     width: 80px;
-    }
+}
 
 /*onderste footer (copyright) box*/
 .footer-copyright {

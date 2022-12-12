@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import {Link, useParams} from 'react-router-dom';
 import axios from 'axios';
 import './SubProfile.css';
 import Header from "../../components/header/Header";
@@ -7,7 +7,7 @@ import Button from "../../components/button/Button";
 
 function SubProfile() {
     const [subProfile, setSubProfile] = useState({});
-    const { id } = useParams();
+    const {id} = useParams();
 
     useEffect(() => {
         async function fetchData() {
@@ -19,12 +19,13 @@ function SubProfile() {
                 console.error(e);
             }
         }
+
         fetchData();
     }, []);
 
     return (
-            <>
-                <Header/>
+        <>
+            <Header/>
             <main>
                 <section className="outer-page-container">
                     <div className="inner-profiles-container">
@@ -33,12 +34,12 @@ function SubProfile() {
                                 <h3>Dit is het profiel van: </h3>
                                 <h1>{id}</h1>
                                 <p>Laat een bericht achter voor {id}: </p>
-                                <textarea rows="10" cols="50" />
+                                <textarea rows="10" cols="50"/>
                                 <button>Verzenden</button>
                                 <Link to="/profiles"><Button/></Link>
                                 <span className="sub4">
-                </span>
-                </div>
+                            </span>
+                            </div>
                         )}
                     </div>
 
@@ -49,4 +50,5 @@ function SubProfile() {
         </>
     );
 }
+
 export default SubProfile;
