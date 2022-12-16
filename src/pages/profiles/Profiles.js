@@ -37,7 +37,7 @@ function Profiles() {
                         {data.map((profiles) => {
                             return (
                                 <article className="profile-card" key={profiles.id}>
-                                    <a href={profiles.firstname}> </a>
+                                    <a href={profiles.firstname}></a>
                                     <span>
                       <p><Link
                           to={`/subprofile/${profiles.firstname} ${profiles.lastname}`}>{profiles.firstname} </Link></p>

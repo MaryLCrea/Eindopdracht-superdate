@@ -10,52 +10,51 @@ function Contact() {
             <TopMenu/>
             <main className="outer-page-container">
                 <div className="inner-page-container pages">
-                    <h4>Contactformulier</h4>
-                    <section className="text">
-                        Indien je een e–mail wil sturen, gebruik dan onderstaand contactformulier.
+                    <section className="contact-form">
+                        <h4>Contactformulier</h4>
+                        <article className="text">
+                            Indien je een e–mail wil sturen, gebruik dan onderstaand contactformulier.
+                        </article>
+                        <form className="contact-content">
+                            <label className="item" htmlFor="name-field">
+                                Naam:
+                                <input
+                                    className="text"
+                                    type="text"
+                                    name="name"
+                                    id="name-field"
+                                />
+                            </label>
 
+                            <label
+                                className="item" htmlFor="email-field">
+                                Email:
+                                <input
+                                    className="text"
+                                    type="text"
+                                    name="email"
+                                    id="email-field"
+                                />
+                            </label>
+
+                            <label className="item" htmlFor="message-field">
+                                Bericht:
+                                <textarea
+                                    className="text"
+                                    id="message-field"
+                                    rows="4"
+                                    cols="40"
+                                    placeholder="Laat je bericht achter"
+                                    name="message-content"
+                                ></textarea>
+                            </label>
+
+                            <button type="submit">
+                                Versturen
+                            </button>
+                        </form>
 
                     </section>
-                    <form className="contact-content">
-                        <label className="item" htmlFor="name-field">
-                            Naam:
-                            <input
-                                className="text"
-                                type="text"
-                                name="name"
-                                id="name-field"
-                            />
-                        </label>
-
-                        <label
-                            className="item" htmlFor="email-field">
-                            Email:
-                            <input
-                                className="text"
-                                type="text"
-                                name="email"
-                                id="email-field"
-                            />
-                        </label>
-
-                        <label className="item" htmlFor="message-field">
-                            Bericht:
-                            <textarea
-                                className="text"
-                                id="message-field"
-                                rows="4"
-                                cols="40"
-                                placeholder="Laat je bericht achter"
-                                name="message-content"
-                            ></textarea>
-                        </label>
-
-                        <button type="submit">
-                            Versturen
-                        </button>
-                    </form>
-
-
                 </div>
             </main>
         </>

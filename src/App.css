@@ -1,4 +1,4 @@
-/*flex outer-container hele pagina*/
+/*flex outer-page-container hele pagina*/
 .outer-page-container {
     display: flex;
     flex-direction: row;
@@ -19,7 +19,6 @@
 .content {
     margin-top: 50px;
     background-color: #FFFCF8;
-
 }
 
 /*profielkaartjes op pagina's profielen, mijn profiel en subprofiel*/
@@ -55,22 +54,66 @@
     margin: 20px;
 }
 
-/*wordt gebruikt in de footer pagina's'*/
-.pages {
-    margin: 40px;
-    font-family: 'Roboto Condensed', sans-serif;
+/*Superdate logo*/
+h2 {
+    font-family: 'Ebrima', 'Verdana', serif;
+    font-size: 25px;
+    line-height: 115px;
+    color: #000000;
+    text-transform: uppercase;
 }
 
-/*wordt gebruikt in de footer pagina's'*/
+/*Wordt gebruikt als kop op de inlog- en aanmeldpagina en op subprofiel*/
+h3 {
+    font-family: 'Ebrima', 'Verdana', serif;
+    font-size: 20px;
+    line-height: 115px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+/*wordt gebruikt in de footer pagina's' (about, algvw, contact)*/
 h4 {
     font-size: 25px;
     margin: 20px;
 }
 
-/*wordt gebruikt in de footer pagina's'*/
+/*wordt gebruikt in de footer pagina's' en in signup en signin (about, algvw, contact)*/
+.pages {
+    margin: 40px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*wordt gebruikt in de footer pagina's' en in signup en signin, contact*/
+.form-container {
+    margin: 3%;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-width: 44%;
+    min-height: 600px;
+    background-color: #FFFCF8;
+
+}
+.picture-container {
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+    min-height: 600px;
+    background-color: #FFFCF8;
+    opacity:40%;
+
+}
+/*wordt gebruikt in de footer pagina's' (about, algvw, contact) en in signin*/
 .text {
     display: flex;
+    flex-direction: column;
     margin: 25px;
     justify-content: flex-start;
+}
+
+label {
+    margin: 5px;
 }
 

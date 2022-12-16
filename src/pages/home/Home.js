@@ -8,7 +8,7 @@ function Home() {
     return (
         <>
             <TopMenu/>
-            <div className="outer-container">
+            <div className="outerpage-container">
                 <img src={homepicture} className="home-picture" alt="home-picture"/>
             </div>
         </>
