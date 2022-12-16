@@ -14,7 +14,7 @@ Welkom bij Superdate. Dit is een datingsite waarbij je zelf een profiel aan kunt
 bekijken. Ook is het mogelijk om andere gebruikers berichten te sturen. De bijbehorende Css staat zoveel mogelijk in de pagina map, maar daar waar meerdere pagina's gebruik
 maakten van dezelfde css, heb ik het in de app.css geplaatst met zoveel mogelijk verwijzingen naar waar de css voor dient. De Css reset is te vinden in de index.css. 
 
-![](src/assets/Profiel pagina.png)
+![](src/assets/Profiel-pagina.png)
 
 2. Technische benodigdheden:
 Om de applicatie op te starten dien je eerst een npm install uit te voeren, waarna een npm start. Dit doe je in de terminal. Open deze link: http://localhost:3000 om de
