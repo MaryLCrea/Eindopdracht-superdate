@@ -3,14 +3,18 @@ import './App.css';
 import SignIn from './pages/signin/SignIn';
 import SignUp from './pages/signup/SignUp';
 import Home from "./pages/home/Home";
-import {Route, Switch} from "react-router-dom";
+import {Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import Contact from "./pages/contact/Contact";
 import SubProfile from "./pages/subprofile/SubProfile";
 import AlgVw from "./pages/algvw/AlgVw";
-import Profiles from "./pages/profiles/Profiles";
+import Profile from "./pages/profile/Profile";
 import About from "./pages/about/About";
 import Footer from "./components/footer/Footer";
-import MyProfile from "./pages/myprofile/MyProfile";
+import AllProfiles from "./pages/allprofiles/AllProfiles";
+import CategoriesPage from "./pages/recipes/CategoriesPage";
+import RecipeDetailPage from "./pages/recipes/RecipeDetailPage";
+import RecipesPage from "./pages/recipes/RecipesPage";
 
 
 function App() {
@@ -27,11 +31,11 @@ function App() {
                 <Route exact path="/SignIn">
                     <SignIn/>
                 </Route>
-                <Route exact path="/Profiles">
-                    <Profiles/>
+                <Route exact path="/Profile">
+                    <Profile/>
                 </Route>
-                <Route exact path="/MyProfile">
-                    <MyProfile/>
+                <Route exact path="/AllProfiles">
+                    <AllProfiles/>
                 </Route>
                 <Route exact path="/About">
                     <About/>
@@ -42,12 +46,21 @@ function App() {
                 <Route exact path="/Contact">
                     <Contact/>
                 </Route>
+                <Route exact path="/CategoriesPage">
+                    <CategoriesPage/>
+                </Route>
+
+                <Route path="/category/:categoryName" component={RecipesPage} />
+                <Route path="/recipe/:recipeId" component={RecipeDetailPage} />
+
                 <Route path="/SubProfile/:id">
                     <SubProfile/>
                 </Route>
-            </Switch>
+                </Switch>
             <Footer/>
-        </>
+            </>
+
+
     );
 }
 

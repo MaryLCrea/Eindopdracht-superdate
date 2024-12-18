@@ -40,19 +40,27 @@ function Header() {
                                 </li>
                                 :
                                 <div>
-                                    <li><NavLink to="/myprofile"
-                                                 onClick={() => history.push('/myprofile')}>
+                                    <li><NavLink to="/profile"
+                                                 onClick={() => history.push('/profile')}>
                                         Mijn Profiel </NavLink>
                                     </li>
 
-                                    <li><NavLink to="/profiles"
-                                                 onClick={() => history.push('/profiles')}>
+                                    <li><NavLink to="/allprofiles"
+                                                 onClick={() => history.push('/allprofiles')}>
                                         Profielen </NavLink>
                                     </li>
+
+                                    <li><NavLink to="/CategoriesPage"
+                                                 onClick={() => history.push('/CategoriesPage')}>
+                                        Recepten </NavLink>
+                                    </li>
+
+
                                     <li><NavLink to="/"
                                                  onClick={() => history.push('/')}>
                                         Uitloggen </NavLink>
                                     </li>
+
 
                                 </div>
 

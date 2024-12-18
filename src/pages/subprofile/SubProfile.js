@@ -1,52 +1,51 @@
-import React, {useEffect, useState} from 'react';
-import {Link, useParams} from 'react-router-dom';
-import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import './SubProfile.css';
 import Header from "../../components/header/Header";
-import Button from "../../components/button/Button";
 
 function SubProfile() {
+    const { id } = useParams();  // Haal de id uit de URL
     const [subProfile, setSubProfile] = useState({});
-    const {id} = useParams();
 
+    // Haal de profielgegevens op uit de data.json
     useEffect(() => {
-        async function fetchData() {
-            try {
-                const response = await axios.get(`https://api.goprogram.ai/inspiration`);
-                console.log(response);
-                setSubProfile(response.data);
-            } catch (e) {
-                console.error(e);
-            }
-        }
+        const getData = () => {
+            fetch('data.json', {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                },
+            })
+                .then((response) => response.json())
+                .then((myJson) => {
+                    // Zoek het profiel dat overeenkomt met de id uit de URL
+                    const profile = myJson.find((p) => p.id === id);
+                    setSubProfile(profile || {});
+                });
+        };
 
-        fetchData();
-    }, []);
+        getData();
+    }, [id]);  // Haal de gegevens op wanneer de id verandert
 
     return (
         <>
-            <Header/>
+            <Header />
             <main>
                 <section className="outer-page-container">
                     <div className="inner-profiles-container">
-                        {Object.keys(subProfile).length > 0 && (
+                        {subProfile && (
                             <div className="profile-card">
-                                <h3>Dit is het profiel van: </h3>
-                                <h1>{id}</h1>
-                                <p>Laat een bericht achter voor {id}: </p>
-                                <textarea rows="10" cols="50"/>
-                                <button>Verzenden</button>
-                                <Link to="/profiles"><Button/></Link>
-                                <span className="sub4">
-                            </span>
+                                <h1>{subProfile.firstname} {subProfile.lastname}</h1>
+                                <p>Leeftijd: {subProfile.age}</p>
+                                <p>Over mij: {subProfile.about_me}</p>
+                                <p>Geaardheid: {subProfile.orientation}</p>
+                                <p>Mijn postuur: {subProfile.posture}</p>
+                                {/* Voeg hier andere profielgegevens toe */}
                             </div>
                         )}
                     </div>
-
                 </section>
-
             </main>
-
         </>
     );
 }

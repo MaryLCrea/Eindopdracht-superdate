@@ -1,10 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import Header from "../../components/header/Header";
-import './MyProfile.css';
+import './AllProfiles.css';
 
-
-function MyProfile() {
+function AllProfiles() {
     const [profileData, setProfileData] = useState({});
     const [profile, setProfile] = useState([]);
 
@@ -32,7 +31,7 @@ function MyProfile() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await axios.get('https://fakerapi.it/api/v1/persons?_quantity=1&');
+                const response = await axios.get('https://fakerapi.it/api/v1/persons?_quantity=30&');
                 console.log(response);
                 setProfile(response.data.data);
             } catch (e) {
@@ -54,15 +53,14 @@ function MyProfile() {
                         {profile.map((profile) => {
                             return (
                                 <article className="profile-card" key={profile.id}>
-                                    <p> Welkom {profile.firstname}  </p>
+                                    <h6> {profile.firstname}  </h6>
 
                                     <span>
 
-                          <img src={profile.image} alt="profile-img" className="profile-img"/>
-                                 <p> Naam: {profile.firstname} {profile.lastname} </p>
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuoV7tXoX4tCk-1zVz49ligSUHSDzLI-GDzuTMWzcKy74GHPCU9dbVVqXDCbPVRRcmE4w&usqp=CAU" alt="profile-img" className="profile-img"/>
+                           <p> Naam: {profile.firstname} {profile.lastname} </p>
                              <p> Gender: {profile.gender} </p>
                          <p> Geboortedatum: {profile.birthday} </p>
-
                          <p> Mijn e-mail adres: {profile.email} </p>
                          <p> Mijn telefoonnummer: {profile.phone} </p>
                         <p> Mijn website: {profile.website} </p>
@@ -78,4 +76,5 @@ function MyProfile() {
     );
 }
 
-export default MyProfile;
+
+export default AllProfiles;

@@ -1,9 +1,8 @@
 import React from 'react';
 import './Footer.css';
-import keurmerk from '../../assets/keurmerk-vd.png';
 import {NavLink} from 'react-router-dom';
 import waarborg from '../../assets/thuiswinkel.png';
-
+import keurmerk from '../../assets/keurmerk-vd.png';
 function Footer() {
     return (
         <>

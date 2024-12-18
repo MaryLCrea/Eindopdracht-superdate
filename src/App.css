@@ -4,7 +4,7 @@
     flex-direction: row;
     background-color: #FFFCF8;
     flex-basis: 100%;
-}
+    }
 
 /*flex inner-container hele pagina*/
 .inner-page-container {
@@ -47,6 +47,7 @@
     gap: 40px;
     margin: 50px 50px;
     background-color: #FFFCF8;
+
 }
 
 /*tekst op de pagina's*/
@@ -94,6 +95,8 @@ h4 {
     min-height: 600px;
     background-color: #FFFCF8;
 
+
+
 }
 .picture-container {
     font-family: 'Roboto Condensed', sans-serif;
@@ -117,3 +120,9 @@ label {
     margin: 5px;
 }
 
+/*zorgt ervoor dat de plaatjes op de website loskomen van de ondergrond als je eroverheen hovert*/
+.profile-card:hover, .form-container:hover, .picture-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

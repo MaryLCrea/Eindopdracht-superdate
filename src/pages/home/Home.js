@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import homepicture from "../../assets/wood.jpg";
+import homepicture from '../../assets/wood.jpg';
 import TopMenu from "../../components/topmenu/TopMenu";
 
 function Home() {

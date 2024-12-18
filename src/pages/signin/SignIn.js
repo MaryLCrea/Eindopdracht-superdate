@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import {AuthContext} from '../../context/AuthContext';
 import axios from 'axios';
 import TopMenu from "../../components/topmenu/TopMenu";
-import Malediven from "../../assets/malediven.jpg";
+import Malediven from '../../assets/malediven.jpg';
 
 function SignIn() {
     const [password, setPassword] = useState('');
