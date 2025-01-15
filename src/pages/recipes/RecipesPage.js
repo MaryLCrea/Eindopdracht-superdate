@@ -5,7 +5,7 @@ import './recipes.css';
 import Header from "../../components/header/Header";
 
 function RecipesPage() {
-    const { categoryName } = useParams();  // Haal de categorie naam uit de URL
+    const { categoryName } = useParams();
     const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
@@ -20,7 +20,6 @@ function RecipesPage() {
         <>
             <Header/>
         <div className="recipes-container">
-
             <br/>
             <Link to="/CategoriesPage" className="back-link">
                 ⬅ Back to categories
@@ -33,7 +32,6 @@ function RecipesPage() {
                             <img className="recipes-image" src={recipe.strMealThumb} alt={recipe.strMeal} />
                             {recipe.strMeal}
                         </Link>
-
                     </li>
                 ))}
 

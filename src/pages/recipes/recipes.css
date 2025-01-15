@@ -7,7 +7,6 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Stijl voor lijsten */
 .recipes-list, .categories-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -30,7 +29,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Links naar recepten */
 .recipes-list a, .categories-list a {
     text-decoration: none;
     color: black;
@@ -42,7 +40,6 @@
     color: #433130;
 }
 
-/* Afbeeldingen */
 .recipes-image {
     width: 100%;
     height: 150px;
@@ -51,7 +48,6 @@
     margin-bottom: 10px;
 }
 
-/* Titel voor secties */
 .recipes-title {
     font-size: 1.5rem;
     margin-bottom: 20px;
@@ -59,7 +55,6 @@
     text-align: center;
 }
 
-/* Stijl voor receptdetailpagina */
 .recipe-detail-container {
     text-align: center;
 }
@@ -98,3 +93,34 @@
     color: #0056b3;
 }
 
+.filter-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.filter-section li {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #f9f9f9;
+}
+
+.filter-section img {
+    height: 100px;
+    border-radius: 5px;
+}
+
+.filter-section a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.filter-section a:hover {
+    text-decoration: underline;
+    color: #007bff;
+}

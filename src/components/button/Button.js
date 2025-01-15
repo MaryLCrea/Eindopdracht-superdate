@@ -3,7 +3,7 @@ import './Button.css';
 
 function Button() {
     return (
-        <button type="button">Terug</button>
+        <button type="button">Back</button>
     );
 }
 

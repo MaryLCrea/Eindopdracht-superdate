@@ -11,13 +11,13 @@ function Contact() {
             <main className="outer-page-container">
                 <div className="inner-page-container pages">
                     <section className="contact-form">
-                        <h4>Contactformulier</h4>
+                        <h4>Contact Form</h4>
                         <article className="text">
-                            Indien je een e–mail wil sturen, gebruik dan onderstaand contactformulier.
+                            If you would like to send an email, please use the contact form below.
                         </article>
                         <form className="contact-content">
                             <label className="item" htmlFor="name-field">
-                                Naam:
+                                Name:
                                 <input
                                     className="text"
                                     type="text"
@@ -28,7 +28,7 @@ function Contact() {
 
                             <label
                                 className="item" htmlFor="email-field">
-                                Email:
+                                E-mail:
                                 <input
                                     className="text"
                                     type="text"
@@ -38,19 +38,19 @@ function Contact() {
                             </label>
 
                             <label className="item" htmlFor="message-field">
-                                Bericht:
+                                Message:
                                 <textarea
                                     className="text"
                                     id="message-field"
                                     rows="4"
                                     cols="40"
-                                    placeholder="Laat je bericht achter"
+                                    placeholder="Leave your message"
                                     name="message-content"
                                 ></textarea>
                             </label>
 
                             <button type="submit">
-                                Versturen
+                                Send
                             </button>
                         </form>
 

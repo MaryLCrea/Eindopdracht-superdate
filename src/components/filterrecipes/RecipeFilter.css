@@ -1,0 +1,47 @@
+.filter-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.ingredient-inputs input {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.filter-recipes-list {
+    list-style: none;
+    padding: 0;
+}
+
+.filter-recipes-item {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #f9f9f9;
+}
+
+.filter-recipes-item img {
+    height: 100px;
+    border-radius: 5px;
+}
+
+.filter-recipes-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.filter-recipes-item a:hover {
+    text-decoration: underline;
+    color: #007bff;
+}

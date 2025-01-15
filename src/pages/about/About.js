@@ -8,33 +8,34 @@ function About() {
             <TopMenu/>
             <main className="outer-page-container">
                 <div className="inner-page-container pages">
-                    <h4>Over ons</h4>
-                    <section className="text">Superdate is een van de grootste online datingsites in Europa voor singles
-                        die op zoek zijn naar een serieuze relatie.
+                    <h4>About Us</h4>
+                    <section className="text">Superdate is one of the largest online dating sites in Europe for singles
+                        who are looking for a serious relationship.
                     </section>
 
-                    <section className="text">Superdate handelt in Nederland onder de naam ML-Creations.</section>
+                    <section className="text">Super Date trades in the Netherlands under the name ML-Creatons.</section>
                     <section className="text">
-                        Adres:
+                        Address:
 
                         ML-Creatons
-                        De Fakestraat 200
-                        1000 AA Groningen
-                        KvK-nummer 900
-                    </section>
+                        Fakestreet 200
+                        1000 AA London
+                        </section>
 
 
                     <section className="text">
 
                         Tel.: +31 (0) 50 0 00 01 00
-                        Bereikbaarheid:
-                        Van maandag t/m vrijdag vanaf 10.00 uur tot 13.00 uur
+                        Accessibility:
+                        Monday to Friday from 10am to 1pm
                     </section>
                     <section className="text">
-                        Indien je een e–mail wil sturen, gebruik dan het contactformulier.
+                        <p>
+                            If you would like to send an email, please use the
+                            <a href="/contact" title="Go to the contact form"> contact form</a>.
+                        </p>
 
-                        Heb je een vraag over het gebruik van Superdate, stuur dan een e-mail naar:
-                        klantenservice@superdate.nl.
+                        If you have a question about using Superdate, please send us an e-mail to the following e-mail address: customerservice@superdate.nl.
                     </section>
 
                 </div>

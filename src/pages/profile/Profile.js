@@ -36,7 +36,6 @@ function Profile() {
                         {data.map((profiles) => {
                             return (
                                 <article className="profile-card" key={profiles.id}>
-                                    {/* De naam is nu een klikbare link naar de subprofile-pagina */}
                                     <h6>{profiles.firstname}</h6>
                                     <span>
                                         <p>

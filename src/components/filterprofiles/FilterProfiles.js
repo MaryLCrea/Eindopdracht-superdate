@@ -1,5 +1,5 @@
 import React from 'react';
-import './FilterProfiles.css'; // Importeer je CSS-bestand
+import './FilterProfiles.css';
 
 const FilterProfiles = ({ data, gender, ageCategory }) => {
     const ageRanges = {
@@ -26,12 +26,12 @@ const FilterProfiles = ({ data, gender, ageCategory }) => {
                 alt="profile-img"
                 className="profile-img"
             />
-            <p>Naam: {profile.firstname} {profile.lastname}</p>
+            <p>Name: {profile.firstname} {profile.lastname}</p>
             <p>Gender: {profile.gender}</p>
-            <p>Geboortedatum: {profile.birthday}</p>
-            <p>Mijn e-mail adres: {profile.email}</p>
-            <p>Mijn telefoonnummer: {profile.phone}</p>
-            <p>Mijn website: {profile.website}</p>
+            <p>Date of birth: {profile.birthday}</p>
+            <p>My e-Mail address: {profile.email}</p>
+            <p>My Phone number: {profile.phone}</p>
+            <p>My website: {profile.website}</p>
           </span>
                 </article>
             ))}
