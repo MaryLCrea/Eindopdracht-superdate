@@ -36,8 +36,7 @@ function Profile() {
                         {data.map((profiles) => {
                             return (
                                 <article className="profile-card" key={profiles.id}>
-                                    <h6>{profiles.firstname}</h6>
-                                    <span>
+                                     <span>
                                         <p>
                                             <Link to={`/subprofile/${profiles.id}`}>
                                                 <h2 className="profile-name">
@@ -46,9 +45,11 @@ function Profile() {
                                             </Link>
                                         </p>
                                         <img src={profiles.image} alt="profiles-img" className="profiles-img" />
-                                        <p>Naam: {profiles.firstname}</p>
-                                        <p>Leeftijd: {profiles.age}</p>
-                                        <p>Over mij: {profiles.about_me}</p>
+                                        <p>Name: {profiles.firstname}</p>
+                                        <p>Age: {profiles.age}</p>
+                                        <p>Country: {profiles.country}</p>
+                                        <p>Province: {profiles.province}</p>
+                                        <p>About Me: {profiles.about_me}</p>
                                     </span>
                                 </article>
                             );

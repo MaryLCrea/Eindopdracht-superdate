@@ -1,6 +1,6 @@
 
 .profiles-img {
-    height: 600px;
+    height: 500px;
 }
 
 h6 {
@@ -8,7 +8,9 @@ h6 {
     font-size: 22px;
 }
 
-
+.profile-name {
+    text-align: center;
+}
 
 
 
