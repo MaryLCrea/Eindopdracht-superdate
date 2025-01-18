@@ -1,6 +1,7 @@
 import React from 'react';
 import './Contact.css';
 import TopMenu from "../../components/topmenu/TopMenu";
+import {Link} from "react-router-dom";
 
 function Contact() {
     return (
@@ -44,9 +45,10 @@ function Contact() {
                             <button type="submit" className="contact-button">
                                 Send Message
                             </button>
-                        </form>
+                            </form>
                     </section>
                 </div>
+                <Link  to="/home" className="home-link">⬅ Back to Home</Link>
             </main>
         </>
     );
