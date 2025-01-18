@@ -1,7 +1,8 @@
-
+/*Foto op de pagina*/
 .home-picture {
     display: flex;
     flex-direction: row;
     width: 100%;
 }
+
 

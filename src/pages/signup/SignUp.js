@@ -20,11 +20,21 @@ function SignUp() {
         toggleLoading(true);
 
         try {
-            const result = await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signup', {
-                email: email,
-                password: password,
-                username: username,
-            });
+            const result = await axios.post(
+                'https://frontend-educational-backend.herokuapp.com/api/auth/signup',
+                {
+                    email: email,
+                    password: password,
+                    username: username,
+                },
+                {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Api-Key': 'superdating:7Lngh4xpUy887KlrrYmJ',
+                    },
+                }
+            );
+
             console.log(result);
 
             history.push('/signin');
@@ -35,7 +45,6 @@ function SignUp() {
 
         toggleLoading(false);
     }
-
     return (
         <>
             <TopMenu/>
@@ -92,3 +101,5 @@ function SignUp() {
 }
 
 export default SignUp;
+
+// https://frontend-educational-backend.herokuapp.com/api/auth/signup

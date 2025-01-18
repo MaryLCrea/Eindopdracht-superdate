@@ -14,6 +14,9 @@ Welkom bij Superdate. Dit is een datingsite waarbij je zelf een profiel aan kunt
 bekijken. Ook is het mogelijk om andere gebruikers berichten te sturen. De bijbehorende Css staat zoveel mogelijk in de pagina map, maar daar waar meerdere pagina's gebruik
 maakten van dezelfde css, heb ik het in de app.css geplaatst met zoveel mogelijk verwijzingen naar waar de css voor dient. De Css reset is te vinden in de index.css. 
 
+Verder is de data in de dating profielen dummy data en natuurlijk staan op een echte datingsite geen telefoonnummers, email- en webadressen, ik heb hier echter wel gebruik van gemaakt
+zodat de data die de API geeft ook weergegeven wordt op de pagina. 
+
 ![](../../EO/src/assets/Profiel-pagina.png)
 
 2. Technische benodigdheden:

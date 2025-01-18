@@ -4,7 +4,7 @@ import SignIn from './pages/signin/SignIn';
 import SignUp from './pages/signup/SignUp';
 import Home from "./pages/home/Home";
 import {Switch} from "react-router-dom";
-import {BrowserRouter as Router, Route} from "react-router-dom";
+import {Route} from "react-router-dom";
 import Contact from "./pages/contact/Contact";
 import SubProfile from "./pages/subprofile/SubProfile";
 import AlgVw from "./pages/algvw/AlgVw";
@@ -15,7 +15,6 @@ import AllProfiles from "./pages/allprofiles/AllProfiles";
 import CategoriesPage from "./pages/recipes/CategoriesPage";
 import RecipeDetailPage from "./pages/recipes/RecipeDetailPage";
 import RecipesPage from "./pages/recipes/RecipesPage";
-
 
 function App() {
 
@@ -49,6 +48,7 @@ function App() {
                 <Route exact path="/CategoriesPage">
                     <CategoriesPage/>
                 </Route>
+
 
                 <Route path="/category/:categoryName" component={RecipesPage} />
                 <Route path="/recipe/:recipeId" component={RecipeDetailPage} />

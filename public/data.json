@@ -3,23 +3,23 @@
     "id": "5",
     "firstname": "Estelle",
     "lastname": "Oberbrunner",
-    "country": "Nederland",
+    "country": "Netherlands",
     "province": "Noord-Holland",
     "city": "Amsterdam",
     "email": "estelle.oberbrunner@novi.info",
     "phone": "+31650505050",
-    "gender": "vrouw",
+    "gender": "female",
     "age": "30",
     "birthday": "30-01-1994",
     "image": "https://cdn.pixabay.com/photo/2015/03/03/18/58/woman-657753_1280.jpg",
     "hair_color": "blond",
-    "eye_color": "blauw",
-    "about_me": "Ik heb nog nooit een vaste relatie gehad. Ik wil graag samenwonen en een gezin stichten",
-    "looking_for": "vaste relatie",
+    "eye_color": "blue",
+    "about_me": "I have never been in a steady relationship. I would like to live together and start a family.",
+    "looking_for": "steady relationship",
     "orientation": "hetero",
-    "marital_status": "alleenstaand",
-    "posture": "slank",
-    "smoke": "soms"
+    "marital_status": "single",
+    "posture": "slim",
+    "smoke": "sometimes"
   }
 ]
 

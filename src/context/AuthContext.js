@@ -48,10 +48,11 @@ function AuthContextProvider({children}) {
 
     async function fetchUserData(id, token, redirectUrl) {
         try {
-            const result = await axios.get(`https://frontend-educational-backend.herokuapp.com/${id}`, {
+            const result = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/user${id}`, {
                 headers: {
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${token}`,
+
                 },
             });
 
@@ -95,3 +96,8 @@ function AuthContextProvider({children}) {
 }
 
 export default AuthContextProvider;
+
+// `https://frontend-educational-backend.herokuapp.com/${id}`
+
+// "Content-Type": "application/json",
+    // Authorization: `Bearer ${token}`,

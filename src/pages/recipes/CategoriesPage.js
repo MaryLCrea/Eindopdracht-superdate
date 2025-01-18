@@ -4,6 +4,7 @@ import axios from 'axios';
 import './recipes.css';
 import Header from "../../components/header/Header";
 import RecipeFilter from '../../components/filterrecipes/RecipeFilter';
+
 function CategoriesPage() {
     const [categories, setCategories] = useState([]);
     const [allRecipes, setAllRecipes] = useState([]);

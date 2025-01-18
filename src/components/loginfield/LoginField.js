@@ -1,9 +1,35 @@
+// import React from 'react';
+// import './LoginField.css';
+//
+//
+// function loginField() {
+//
+//     return (
+//         <>
+//                 <div className="login-box">
+//                     <h4>Inloggen</h4>
+//                     <form>
+//                         <label htmlFor="username">Gebruikersnaam:</label>
+//                         <input type="text" id="username" name="username" placeholder="Voer je gebruikersnaam in"/>
+//
+//                         <label htmlFor="password">Wachtwoord:</label>
+//                         <input type="password" id="password" name="password" placeholder="Voer je wachtwoord in"/>
+//
+//                         <button type="submit">Inloggen</button>
+//                     </form>
+//                 </div>
+//         </>
+//     );
+// }
+
+// export default loginField;
+
 import React, {useContext, useState} from 'react';
 import {Link} from 'react-router-dom';
 import {AuthContext} from '../../context/AuthContext';
 import axios from 'axios';
-import TopMenu from "../../components/topmenu/TopMenu";
-import Malediven from '../../assets/malediven.jpg';
+import './LoginField.css';
+
 
 
 function SignIn() {
@@ -29,34 +55,30 @@ function SignIn() {
             toggleError(true);
         }
     }
-
     return (
         <>
-            <TopMenu/>
-            <main className="outer-page-container">
-                <div className="form-container">
-
-                    <h3>Inloggen</h3>
-                    <article className="text"> Log hier in om ook andere profielen te kunnen bekijken.
-                    </article>
-
+            <main>
+                <div className="login-box">
+                    <h4>Inloggen</h4>
                     <form className="text" onSubmit={handleSubmit}>
-                        <label htmlFor="email-field">
-                            Gebruikersnaam:
+                        <label htmlFor="email-field" >
+                            Username:
                             <input
                                 type="username"
                                 id="username-field"
                                 name="username"
                                 value={username}
+                                placeholder="Enter your username"
                                 onChange={(e) => setUsername(e.target.value)}
                             />
                         </label>
                         <label htmlFor="password-field">
-                            Wachtwoord:
+                            Password:
                             <input
                                 type="password"
                                 id="password-field"
                                 name="password"
+                                placeholder="Enter your password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
@@ -70,15 +92,14 @@ function SignIn() {
                         </button>
                     </form>
 
-                    <p>
-                        Heb je nog geen account? <Link to="/signup"> Registreer </Link> je dan eerst.
+                    <p className="register-tekst">
+                        Don't have an account yet? <Link to="/signup"> Register </Link>
                     </p>
 
                 </div>
-                <section className="picture-container">
+                <section>
 
-                    <img className="malediven" src={Malediven} alt="malediven"/>
-                </section>
+                                  </section>
             </main>
         </>
     );
@@ -87,4 +108,27 @@ function SignIn() {
 
 export default SignIn;
 
-// https://frontend-educational-backend.herokuapp.com/api/auth/signin
+
+// import React from 'react';
+// import './LoginField.css';
+
+
+// function loginField() {
+//
+//     return (
+//         <>
+//             <div className="login-box">
+//                 <h4>Inloggen</h4>
+//                 <form>
+//                     <label htmlFor="username">Gebruikersnaam:</label>
+//                     <input type="text" id="username" name="username" placeholder="Voer je gebruikersnaam in"/>
+//
+//                     <label htmlFor="password">Wachtwoord:</label>
+//                     <input type="password" id="password" name="password" placeholder="Voer je wachtwoord in"/>
+//
+//                     <button type="submit">Inloggen</button>
+//                 </form>
+//             </div>
+//         </>
+//     );
+// }

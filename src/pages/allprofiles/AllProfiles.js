@@ -12,11 +12,12 @@ function AllProfiles() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await axios.get('https://fakerapi.it/api/v1/persons?_quantity=30&');
+                const response = await axios.get('https://fakerapi.it/api/v1/persons?_quantity=100&');
                 const profilesWithAge = response.data.data.map(profile => ({
                     ...profile,
                     age: new Date().getFullYear() - new Date(profile.birthday).getFullYear(),
                 }));
+                console.log("Ophaalde data:", profilesWithAge);
                 setProfile(profilesWithAge);
             } catch (e) {
                 console.error(e);
