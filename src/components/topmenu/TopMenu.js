@@ -31,27 +31,27 @@ function TopMenu() {
                     <nav className="topmenu-outer-container2">
                         <ul className="linkmenu-top">
 
-                            {isAuth ?
-                                <li type="link"
-                                    onClick={logout}
-                                >
-                                    Uitloggen
-                                </li>
-                                :
-                                <div>
-                                    <li><NavLink to="/signin"
-                                                 onClick={() => history.push('/signin')}>
-                                        Inloggen </NavLink>
-                                    </li>
+                            {/*{isAuth ?*/}
+                            {/*    <li type="link"*/}
+                            {/*        onClick={logout}*/}
+                            {/*    >*/}
+                            {/*        Uitloggen*/}
+                            {/*    </li>*/}
+                            {/*    :*/}
+                            {/*    // <div>*/}
+                            {/*    //     <li><NavLink to="/signin"*/}
+                            {/*    //                  onClick={() => history.push('/signin')}>*/}
+                            {/*    //         Inloggen </NavLink>*/}
+                            {/*    //     </li>*/}
+                            {/*    //*/}
+                            {/*    //     <li><NavLink to="/signup"*/}
+                            {/*    //                  onClick={() => history.push('/signup')}>*/}
+                            {/*    //         Registreren </NavLink>*/}
+                            {/*    //     </li>*/}
+                            {/*    //*/}
+                            {/*    // </div>*/}
 
-                                    <li><NavLink to="/signup"
-                                                 onClick={() => history.push('/signup')}>
-                                        Registreren </NavLink>
-                                    </li>
-
-                                </div>
-
-                            }
+                            {/*}*/}
                         </ul>
                     </nav>
                 </div>

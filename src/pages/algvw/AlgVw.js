@@ -1,6 +1,7 @@
 import React from 'react';
 import './AlgVw.css';
 import TopMenu from "../../components/topmenu/TopMenu";
+import CondiCard from "../../components/condicard/CondiCard";
 
 function AlgVw() {
     return (
@@ -8,36 +9,28 @@ function AlgVw() {
             <TopMenu/>
             <main className="outer-page-container">
                 <div className="inner-page-container pages">
-                    <h4>Algemene Voorwaarden</h4>
-                    <section>
-                        <h5>Deze Algemene Voorwaarden zijn van kracht met ingang van 1 januari 2023</h5>
-                        <section className="text">Artikel 1: Definities
-                            Deelnemer: de contractspartij van SuperDate bij deze overeenkomst;
-                            Website: www.superdate.nl
-                            Materiaal: door de Deelnemer aangeleverd materiaal voor plaatsing op de Website, zoals
-                            profielnamen, teksten, foto's en (chat)berichten;
-                            Misbruik: het plaatsen van materiaal op de Website of het versturen van berichten via de
-                            Website waarmee de rechten of privacy van anderen worden geschonden, het versturen van
-                            ongevraagde commerciële informatie en spam, het versturen van commerciële SMS-nummers, het
-                            aanbieden van betaalde diensten, het doen van grievende of beledigende uitlatingen, het zich
-                            voordoen als iemand anders, het gebruiken van andermans rekeninggegevens, inbreuk maken op
-                            intellectuele eigendomsrechten of het openbaar maken of verveelvoudigen van materiaal zonder
-                            toestemming;
-                            Standaard toegang: het gebruik van Website waarbij de Deelnemer toegang tot de Website
-                            krijgt en beperkt van de op de Website aangeboden diensten gebruik kan maken;
-                            exclusieve-toegang: het gebruik van Website waarbij de Deelnemer toegang tot de Website
-                            krijgt en van de op de Website aangeboden diensten die onder exclusieve-toegang vallen
-                            gebruik kan maken; Toegangsvorm: geeft aan van welke aangeboden diensten de Deelnemer
-                            gebruik kan maken op de Website. Dit is bijvoorbeeld Standaard toegang of
-                            exclusieve-toegang;
-                            Abonnement: de instelling waarmee de Deelnemer aangeeft welk bedrag Website in rekening
-                            brengt voor de aanschaf van een betaalde toegangsvorm per specifieke periode. Afhankelijk
-                            van de gekozen betaalmethode zal dit abonnement automatisch verlengd wordt. Dit gebeurt op
-                            het moment dat de periode van de betaalde toegangsvorm verloopt;
-                            Inlogcode: de door Website aan de Deelnemer verstrekte code waarmee de Deelnemer toegang
-                            krijgt tot de Website.
-                        </section>
-                        <section className="text">Artikel 2: Overeenkomst
+                    <h2>Algemene Voorwaarden</h2>
+
+                    <h3>Deze Algemene Voorwaarden zijn van kracht met ingang van 1 januari 2025</h3>
+
+                    <CondiCard title="Artikel 1. Definities">
+                        <br/>
+                        <h6 >Deelnemer:</h6> De contractspartij van SuperDate in het kader van deze overeenkomst.
+                        <h6 > Website:</h6>  www.superdate.nl.
+                        <h6>Materiaal:</h6>  door de Deelnemer aangeleverd materiaal voor plaatsing op de Website, zoals profielnamen, teksten, foto’s en (chat)berichten.
+                        <h6 >Misbruik:</h6>  het gebruik van de Website of het plaatsen van materiaal dat:
+                        de rechten of privacy van anderen schendt; ongevraagde commerciële informatie of spam bevat; commerciële SMS-nummers verspreidt; betaalde diensten aanbiedt;
+                        grievende of beledigende uitlatingen bevat; een andere identiteit aanneemt;
+                        andermans rekeninggegevens gebruikt;
+                        inbreuk maakt op intellectuele eigendomsrechten;
+                        materiaal openbaar maakt of verveelvoudigt zonder toestemming.
+                        <h6 >Standaard toegang: </h6>toegang tot de Website waarbij de Deelnemer beperkt gebruik kan maken van de aangeboden diensten.
+                        <h6>Exclusieve toegang:</h6> toegang tot de Website waarbij de Deelnemer gebruik kan maken van de diensten die onder exclusieve toegang vallen.
+                        <h6>Toegangsvorm: </h6> De specifieke diensten die de Deelnemer op de Website kan gebruiken, zoals Standaard toegang of exclusieve toegang.
+                        <h6>Abonnement: </h6> Een overeenkomst waarbij de Deelnemer aangeeft welk bedrag SuperDate in rekening brengt voor een betaalde toegangsvorm gedurende een specifieke periode. Het abonnement wordt, afhankelijk van de gekozen betaalmethode, automatisch verlengd zodra de periode van de betaalde toegangsvorm afloopt.
+                        <h6>Inlogcode: </h6> De door SuperDate aan de Deelnemer verstrekte code waarmee toegang tot de Website wordt verkregen.
+                    </CondiCard>
+                    <CondiCard title="Artikel 2. Overeenkomst">
                             Deze algemene voorwaarden maken integraal onderdeel uit van iedere tussen Website en de
                             Deelnemer gesloten overeenkomst en zijn van toepassing op iedere offerte en overeenkomst.
                             Van deze algemene voorwaarden afwijkende bedingen zijn slechts rechtsgeldig voor zover zij
@@ -47,8 +40,8 @@ function AlgVw() {
                             ontvangen.
                             De overeenkomst is persoonlijk en niet overdraagbaar.
                             Deelname is alleen mogelijk voor personen van 18 jaar en ouder.
-                        </section>
-                        <section className="text">Artikel 3: Prijs en betaling
+                          </CondiCard>
+                <CondiCard title="Artikel 3. Prijs en betaling.">
                             De op de Website vermelde bedragen zijn inclusief 21% omzetbelasting.
                             De overeenkomst terzake Standaard toegang eindigt met onmiddellijke ingang door opzegging
                             door Website of de Deelnemer.
@@ -88,8 +81,8 @@ function AlgVw() {
                             het indexeringsbedrag dat correspondeert met de uitkomst van voormelde formule. Indexering
                             zal alleen plaatsvinden voor lopende abonnementen waarvan de looptijd op het moment van
                             indexeren minimaal 180 dagen bedraagt.
-                        </section>
-                        <section className="text">Artikel 4: Herroepingsrecht
+                        </CondiCard>
+                                <CondiCard title="Artikel 4. Herroepingsrecht">
                             De Deelnemer heeft de mogelijkheid de overeenkomst terzake een Abonnement zonder opgave van
                             redenen te ontbinden gedurende ten minste 14 dagen, ingaande op de dag van het aangaan van
                             de overeenkomst (herroepingsrecht).
@@ -104,8 +97,8 @@ function AlgVw() {
                             door de Website mogen worden verrekend met het door de Deelnemer reeds betaalde
                             abonnementsgeld; een eventueel na verrekening resterend saldo zal aan de Deelnemer worden
                             teruggestort.
-                        </section>
-                        <section className="text">Artikel 5: Gebruiksrecht
+                </CondiCard>
+                <CondiCard title="Artikel 5. Gebruikersrechten">
                             Website verleent aan de Deelnemer het niet-exclusieve recht van toegang tot de Website om de
                             op de Website geregistreerde gegevens in te zien.
                             Het in het vorige lid bedoelde recht van toegang omvat uitsluitend het recht om de Website
@@ -132,8 +125,9 @@ function AlgVw() {
                             Website heeft het recht om het gebruik door de Deelnemer van de inlogcode zonder
                             voorafgaande ingebrekestelling tijdelijk of blijvend te deactiveren, indien de Deelnemer
                             enige verplichting jegens Website niet nakomt.
-                        </section>
-                        <section className="text">Artikel 6: Inlogcode
+                </CondiCard>
+
+            <CondiCard title="Artikel 6. Inlogcode">
                             De inlogcode van de Deelnemer is geheim. Website en de Deelnemer nemen redelijke maatregelen
                             om te voorkomen dat anderen dan de Deelnemer kennis kunnen nemen van de aan de Deelnemer
                             verstrekte inlogcode.
@@ -146,8 +140,8 @@ function AlgVw() {
                             Indien het onbevoegde gebruik van een inlogcode niet aan Website kan worden toegerekend,
                             dient de Deelnemer aan Website de aan de blokkering en vervanging verbonden administratieve
                             kosten aan Website te vergoeden, alsmede de kosten van het onbevoegde gebruik.
-                        </section>
-                        <section className="text">Artikel 7: Plaatsing van materiaal
+            </CondiCard>
+                    <CondiCard title="Artikel 7. Plaatsing van materiaal">
                             De Deelnemer plaatst materiaal op de Website op eigen risico.
                             De Deelnemer onthoudt zich van het plaatsen van profielnamen, teksten en foto's op de
                             Website die aanstootgevend, racistisch of wettelijk verboden zijn.
@@ -164,8 +158,8 @@ function AlgVw() {
                             regels zal hiertegen worden opgetreden.
                             Website kan materiaal wat niet overeenkomt met de richtlijnen voor Website zonder
                             voorafgaand overleg met en melding aan de Deelnemer of andere Deelnemers verwijderen.
-                        </section>
-                        <section className="text">Artikel 8: Aanbiedingen per e-mail
+                        </CondiCard>
+                    <CondiCard title="Artikel 8. Aanbiedingen per e-mail">
                             De Deelnemer die zich bij inschrijving of elders op Website door het plaatsen van een vinkje
                             expliciet akkoord heeft verklaard met het ontvangen van nieuws en Website-aanbiedingen,
                             geeft hierdoor toestemming voor het versturen van nieuwsbrieven en commerciële boodschappen
@@ -173,8 +167,8 @@ function AlgVw() {
                             De Deelnemer kan zich hiervoor te allen tijde uitschrijven via de uitschrijflink onderaan
                             een dergelijke boodschap. De wijze waarop persoonsgegevens en het e-mailadres worden
                             verwerkt, staat beschreven in het Privacy- en cookiebeleid.
-                        </section>
-                        <section className="text">Artikel 9: Misbruik
+                        </CondiCard>
+                    <CondiCard title="Artikel 9. Misbruik">
                             Website kan de overeenkomst met de Deelnemer bij diens misbruik met onmiddellijke ingang
                             beëindigen, materiaal ontoegankelijk maken en/of verwijderen van de Website, het gebruik
                             door de Deelnemer van op de Website aangeboden diensten beperken en/of de toegang tot de
@@ -188,15 +182,15 @@ function AlgVw() {
                             bericht elk geldt als één afzonderlijk feit, onverminderd het recht van Website om nadere
                             rechtsmaatregelen tegen de Deelnemer te nemen en schadevergoeding te eisen, ook voor het
                             herstel van door de Deelnemer veroorzaakte misbruik.
-                        </section>
-                        <section className="text">Artikel 10: Gegevens
+                        </CondiCard>
+                    <CondiCard title="Artikel 10. Gegevens">
                             De wijze waarop de privacy wordt gewaarborgd, staat beschreven in het Privacy- en
                             cookiebeleid.
                             De Deelnemer zal Website vrijwaren van alle vorderingen van derden op basis van de stelling
                             dat door Website verwerkte gegevens, het verwerken van gegevens en/of het resultaat van die
                             verwerking in strijd zijn met het geldende recht.
-                        </section>
-                        <section className="text">Artikel 11: Aansprakelijkheid
+                        </CondiCard>
+                    <CondiCard title="Artikel 11. Aansprakelijkheid">
                             Website is nimmer aansprakelijk voor de mogelijke (gevolg)schade van de Deelnemer of van
                             derden.
                             De Deelnemer vrijwaart Website terzake alle aanspraken van derden tot vergoeding van
@@ -205,21 +199,18 @@ function AlgVw() {
                             aansprakelijk is voor de (gevolg)schade van een Deelnemer of een derde en gehouden is om de
                             schade geheel of gedeeltelijk te vergoeden, wordt de hoogte van de schadevergoeding beperkt
                             tot het door de Deelnemer betaalde abonnementsgeld.
-                        </section>
-                        <section className="text">Artikel 12: Toepasselijk recht en bevoegde rechter
+                        </CondiCard>
+                    <CondiCard title="Artikel 12. Toepasselijk recht en bevoegde rechter">
                             Op deze overeenkomst is Nederlands recht van toepassing.
                             In geval van een geschil tussen Website en de Deelnemer is de rechtbank te Arnhem bevoegd
                             tot kennisneming van het geschil of, ter keuze van Website, de rechtbank die anders bevoegd
                             zou zijn van het geschil kennis te nemen.
-                        </section>
-                        <section className="text">Artikel 13: Wijzigingen voorwaarden
+                        </CondiCard>
+                    <CondiCard title="Artikel 13. Wijzigingen voorwaarden">
                             Website heeft het recht de voorwaarden te wijzigen en de gewijzigde voorwaarden op bestaande
                             overeenkomsten van toepassing te verklaren, waartoe wijzigingen dertig dagen na bekendmaking
                             aan Deelnemer, in werking treden.
-                        </section>
-
-                    </section>
-
+                        </CondiCard>
                 </div>
             </main>
         </>
