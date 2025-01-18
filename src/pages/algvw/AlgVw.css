@@ -1,6 +1,5 @@
 /*gebruikt css van app.css*/
 
-/*gebruikt css van app.css*/
 
 .article-card {
     border: 1px solid #ccc;
@@ -27,6 +26,7 @@ h3 {
     font-size: 14px;
     font-weight: bold;
 }
+
 
 .article-card h6 {
     font-size: 12px;
