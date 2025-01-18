@@ -37,13 +37,13 @@ function Profile() {
                             return (
                                 <article className="profile-card" key={profiles.id}>
                                      <span>
-                                        <p>
+
                                             <Link to={`/subprofile/${profiles.id}`}>
-                                                <h2 className="profile-name">
+                                                <p className="profile-name">
                                                     {profiles.firstname} {profiles.lastname}
-                                                </h2>
+                                                </p>
                                             </Link>
-                                        </p>
+
                                         <img src={profiles.image} alt="profiles-img" className="profiles-img" />
                                         <p>Name: {profiles.firstname}</p>
                                         <p>Age: {profiles.age}</p>

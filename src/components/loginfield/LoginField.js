@@ -1,38 +1,10 @@
-// import React from 'react';
-// import './LoginField.css';
-//
-//
-// function loginField() {
-//
-//     return (
-//         <>
-//                 <div className="login-box">
-//                     <h4>Inloggen</h4>
-//                     <form>
-//                         <label htmlFor="username">Gebruikersnaam:</label>
-//                         <input type="text" id="username" name="username" placeholder="Voer je gebruikersnaam in"/>
-//
-//                         <label htmlFor="password">Wachtwoord:</label>
-//                         <input type="password" id="password" name="password" placeholder="Voer je wachtwoord in"/>
-//
-//                         <button type="submit">Inloggen</button>
-//                     </form>
-//                 </div>
-//         </>
-//     );
-// }
-
-// export default loginField;
-
 import React, {useContext, useState} from 'react';
 import {Link} from 'react-router-dom';
 import {AuthContext} from '../../context/AuthContext';
 import axios from 'axios';
 import './LoginField.css';
 
-
-
-function SignIn() {
+function Login() {
     const [password, setPassword] = useState('');
     const [username, setUsername] = useState('');
     const [error, toggleError] = useState(false);
@@ -106,29 +78,4 @@ function SignIn() {
 }
 
 
-export default SignIn;
-
-
-// import React from 'react';
-// import './LoginField.css';
-
-
-// function loginField() {
-//
-//     return (
-//         <>
-//             <div className="login-box">
-//                 <h4>Inloggen</h4>
-//                 <form>
-//                     <label htmlFor="username">Gebruikersnaam:</label>
-//                     <input type="text" id="username" name="username" placeholder="Voer je gebruikersnaam in"/>
-//
-//                     <label htmlFor="password">Wachtwoord:</label>
-//                     <input type="password" id="password" name="password" placeholder="Voer je wachtwoord in"/>
-//
-//                     <button type="submit">Inloggen</button>
-//                 </form>
-//             </div>
-//         </>
-//     );
-// }
+export default Login;

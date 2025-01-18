@@ -3,13 +3,11 @@
     height: 500px;
 }
 
-h6 {
-    text-decoration: solid;
-    font-size: 22px;
-}
 
 .profile-name {
     text-align: center;
+    text-decoration: solid;
+    font-size: 22px;
 }
 
 
