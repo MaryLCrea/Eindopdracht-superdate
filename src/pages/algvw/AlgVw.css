@@ -13,6 +13,25 @@
     font-size: 12px;
 }
 
-h2, h6 {
+h2, h3 {
     text-align: center;
 }
+
+h3 {
+    font-size: 14px;
+}
+
+.article-card h5 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.article-card h6 {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+
