@@ -49,7 +49,6 @@ function App() {
                     <CategoriesPage/>
                 </Route>
 
-
                 <Route path="/category/:categoryName" component={RecipesPage} />
                 <Route path="/recipe/:recipeId" component={RecipeDetailPage} />
 
@@ -59,8 +58,6 @@ function App() {
                 </Switch>
             <Footer/>
             </>
-
-
     );
 }
 
