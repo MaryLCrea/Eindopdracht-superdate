@@ -38,18 +38,6 @@ function TopMenu() {
                             {/*        Uitloggen*/}
                             {/*    </li>*/}
                             {/*    :*/}
-                            {/*    <div>*/}
-                            {/*        <li><NavLink to="/signin"*/}
-                            {/*                     onClick={() => history.push('/signin')}>*/}
-                            {/*            Inloggen </NavLink>*/}
-                            {/*        </li>*/}
-
-                            {/*        <li><NavLink to="/signup"*/}
-                            {/*                     onClick={() => history.push('/signup')}>*/}
-                            {/*            Registreren </NavLink>*/}
-                            {/*        </li>*/}
-
-                            {/*    </div>*/}
 
                             {/*}*/}
                         </ul>

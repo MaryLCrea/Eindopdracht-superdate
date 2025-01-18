@@ -1,5 +1,6 @@
 /*gebruikt css van app.css*/
 
+
 .article-card {
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -32,6 +33,3 @@ h3 {
     font-weight: bold;
     text-align: left;
 }
-
-
-

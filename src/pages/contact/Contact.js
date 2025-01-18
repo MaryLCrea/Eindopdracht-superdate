@@ -1,61 +1,54 @@
 import React from 'react';
 import './Contact.css';
 import TopMenu from "../../components/topmenu/TopMenu";
+import {Link} from "react-router-dom";
 
 function Contact() {
-
-
     return (
         <>
-            <TopMenu/>
+            <TopMenu />
             <main className="outer-page-container">
                 <div className="inner-page-container pages">
                     <section className="contact-form">
                         <h4>Contact Form</h4>
-                        <article className="text">
-                            If you would like to send an email, please use the contact form below.
-                        </article>
+                        <p className="contact-descript">
+                            If you have any questions or concerns, feel free to contact us.
+                        </p>
                         <form className="contact-content">
-                            <label className="item" htmlFor="name-field">
+                            <label htmlFor="name-field">
                                 Name:
                                 <input
-                                    className="text"
                                     type="text"
                                     name="name"
                                     id="name-field"
+                                    placeholder="Enter your name"
                                 />
                             </label>
-
-                            <label
-                                className="item" htmlFor="email-field">
+                            <label htmlFor="email-field">
                                 E-mail:
                                 <input
-                                    className="text"
-                                    type="text"
+                                    type="email"
                                     name="email"
                                     id="email-field"
+                                    placeholder="Enter your email"
                                 />
                             </label>
-
-                            <label className="item" htmlFor="message-field">
+                            <label htmlFor="message-field">
                                 Message:
                                 <textarea
-                                    className="text"
                                     id="message-field"
                                     rows="4"
-                                    cols="40"
                                     placeholder="Leave your message"
                                     name="message-content"
                                 ></textarea>
                             </label>
-
-                            <button type="submit">
-                                Send
+                            <button type="submit" className="contact-button">
+                                Send Message
                             </button>
-                        </form>
-
+                            </form>
                     </section>
                 </div>
+                <Link  to="/home" className="home-link">⬅ Back to Home</Link>
             </main>
         </>
     );
