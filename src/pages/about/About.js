@@ -1,11 +1,11 @@
 import React from 'react';
 import './About.css';
-import TopMenu from "../../components/topmenu/TopMenu";
+import HomeHeader from "../../components/homeheader/HomeHeader";
 
 function About() {
     return (
         <>
-            <TopMenu/>
+            <HomeHeader/>
             <main className="outer-page-container">
                 <div className="inner-page-container pages">
                     <h4>About Us</h4>

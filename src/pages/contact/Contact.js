@@ -1,12 +1,12 @@
 import React from 'react';
 import './Contact.css';
-import TopMenu from "../../components/topmenu/TopMenu";
+import HomeHeader from "../../components/homeheader/HomeHeader";
 import {Link} from "react-router-dom";
 
 function Contact() {
     return (
         <>
-            <TopMenu />
+            <HomeHeader />
             <main className="outer-page-container">
                 <div className="inner-page-container pages">
                     <section className="contact-form">
@@ -48,7 +48,7 @@ function Contact() {
                             </form>
                     </section>
                 </div>
-                <Link  to="/home" className="home-link">⬅ Back to Home</Link>
+                <Link  to="/" className="home-link">⬅ Back to Home</Link>
             </main>
         </>
     );

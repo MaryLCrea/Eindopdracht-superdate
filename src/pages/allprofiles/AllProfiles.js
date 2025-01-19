@@ -65,3 +65,5 @@ function AllProfiles() {
 
 export default AllProfiles;
 
+// const response = await axios.get('https://fakerapi.it/api/v1/persons?_quantity=100&');
+

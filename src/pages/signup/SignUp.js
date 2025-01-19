@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import axios from 'axios';
-import TopMenu from "../../components/topmenu/TopMenu";
+import HomeHeader from "../../components/homeheader/HomeHeader";
 
 function SignUp() {
 
@@ -47,7 +47,7 @@ function SignUp() {
     }
     return (
         <>
-            <TopMenu/>
+            <HomeHeader/>
             <main className="outer-page-container">
                 <div className="inner-page-container pages">
                     <p>Op deze pagina kun je je registreren. Hierna word je direct doorverwezen naar de inlogpagina

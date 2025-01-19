@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react';
 import {Link} from 'react-router-dom';
 import {AuthContext} from '../../context/AuthContext';
 import axios from 'axios';
-import TopMenu from "../../components/topmenu/TopMenu";
+import HomeHeader from "../../components/homeheader/HomeHeader";
 import Malediven from '../../assets/malediven.jpg';
 
 
@@ -32,7 +32,7 @@ function SignIn() {
 
     return (
         <>
-            <TopMenu/>
+            <HomeHeader/>
             <main className="outer-page-container">
                 <div className="form-container">
 

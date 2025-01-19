@@ -15,6 +15,8 @@ import AllProfiles from "./pages/allprofiles/AllProfiles";
 import CategoriesPage from "./pages/recipes/CategoriesPage";
 import RecipeDetailPage from "./pages/recipes/RecipeDetailPage";
 import RecipesPage from "./pages/recipes/RecipesPage";
+import test from "./pages/test/Test";
+import Test from "./pages/test/Test";
 
 function App() {
 

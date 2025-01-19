@@ -1,64 +1,110 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Profile.css';
+import React, { useState } from "react";
+import PicaSlider from "../../components/picaslider/PicaSlider";
+import "./Profile.css";
 import Header from "../../components/header/Header";
 
 function Profile() {
-    const [data, setData] = useState([]);
+    const [imageUrl, setImageUrl] = useState(
+        "https://cdn.pixabay.com/photo/2017/03/27/14/55/photographer-2179204_1280.jpg"
+    );
+    const [inputValue, setInputValue] = useState("");
+    const [profile, setProfile] = useState({
+        name: "",
+        age: "",
+        city: "",
+    });
 
-    const getData = () => {
-        fetch('data.json', {
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-            },
-        })
-            .then((response) => {
-                console.log(response);
-                return response.json();
-            })
-            .then((myJson) => {
-                console.log(myJson);
-                setData(myJson);
-            });
+    const handleInputChange = (event) => {
+        setInputValue(event.target.value);
     };
 
-    useEffect(() => {
-        getData();
-    }, []);
+    const handleUpload = () => {
+        if (inputValue.match(/\.(jpg|jpeg|png)$/i)) {
+            setImageUrl(inputValue);
+        } else {
+            alert("Voer een geldige afbeeldings-URL in (jpg, jpeg, of png).");
+        }
+    };
+
+    const handleProfileChange = (event) => {
+        const { name, value } = event.target;
+        setProfile((prevProfile) => ({
+            ...prevProfile,
+            [name]: value,
+        }));
+    };
 
     return (
         <>
-            <Header />
-            <main>
-                <section className="outer-page-container">
-                    <div className="inner-profiles-container">
-                        {data.map((profiles) => {
-                            return (
-                                <article className="profile-card" key={profiles.id}>
-                                     <span>
 
-                                            <Link to={`/subprofile/${profiles.id}`}>
-                                                <p className="profile-name">
-                                                    {profiles.firstname} {profiles.lastname}
-                                                </p>
-                                            </Link>
+            <Header/>
+            <main className="test-page">
+                <div className="content-container">
+                    <h3>My Profile</h3>
+                    <div className="input-container">
 
-                                        <img src={profiles.image} alt="profiles-img" className="profiles-img" />
-                                        <p>Name: {profiles.firstname}</p>
-                                        <p>Age: {profiles.age}</p>
-                                        <p>Country: {profiles.country}</p>
-                                        <p>Province: {profiles.province}</p>
-                                        <p>About Me: {profiles.about_me}</p>
-                                    </span>
-                                </article>
-                            );
-                        })}
+                        <PicaSlider
+
+                            minRange="100"
+                            maxRange="600"
+                            nameAttribuut="image-slider"
+                            imageUrl={imageUrl}
+                        />
                     </div>
-                </section>
+                    <div className="input-container">
+                        <label htmlFor="name">Name:</label>
+                        <br />
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            value={profile.name}
+                            onChange={handleProfileChange}
+                        />
+                    </div>
+                    <div className="input-container">
+                        <label htmlFor="age">Age:</label>
+                        <br />
+                        <input
+                            type="number"
+                            id="age"
+                            name="age"
+                            placeholder="Enter your age"
+                            value={profile.age}
+                            onChange={handleProfileChange}
+                        />
+                    </div>
+                    <div className="input-container">
+                        <label htmlFor="city">City:</label>
+                        <br />
+                        <input
+                            type="text"
+                            id="city"
+                            name="city"
+                            placeholder="Enter your city"
+                            value={profile.city}
+                            onChange={handleProfileChange}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="imageUrlInput">Here you can past a link to upload a new picture</label>
+                        <br/>
+                        <input
+                            type="text"
+                            id="imageUrlInput"
+                            placeholder="Here you can past the new link with a jpg, jpeg or png extension"
+                            value={inputValue}
+                            onChange={handleInputChange}
+                        />
+                        <button onClick={handleUpload}>
+                            Upload
+                        </button>
+                    </div>
+                </div>
             </main>
         </>
     );
 }
-
 export default Profile;
+
