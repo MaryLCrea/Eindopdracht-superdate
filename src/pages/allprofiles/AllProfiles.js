@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import Header from "../../components/header/Header";
 import FilterProfiles from "../../components/filterprofiles/FilterProfiles";
@@ -17,22 +17,23 @@ function AllProfiles() {
                     ...profile,
                     age: new Date().getFullYear() - new Date(profile.birthday).getFullYear(),
                 }));
-                console.log("Ophaalde data:", profilesWithAge);
+                console.log("Opgehaalde data:", profilesWithAge);
                 setProfile(profilesWithAge);
             } catch (e) {
                 console.error(e);
             }
         }
+
         fetchData();
     }, []);
 
     return (
         <>
-            <Header />
+            <Header/>
             <main>
                 <section className="outer-page-container">
                     <div className="inner-profiles-container">
-                        <div>
+                        <div className="filters">
                             <label>
                                 Filter op gender:
                                 <select value={selectedGender} onChange={(e) => setSelectedGender(e.target.value)}>
@@ -43,7 +44,8 @@ function AllProfiles() {
                             </label>
                             <label>
                                 Filter op leeftijdscategorie:
-                                <select value={selectedAgeCategory} onChange={(e) => setSelectedAgeCategory(e.target.value)}>
+                                <select value={selectedAgeCategory}
+                                        onChange={(e) => setSelectedAgeCategory(e.target.value)}>
                                     <option value="">Alle</option>
                                     <option value="young">0-18</option>
                                     <option value="adult">19-35</option>

@@ -14,7 +14,13 @@ function HomeHeader() {
                 <div className="topmenu-outer-container1">
                     <h2><NavLink to="/">Superdate</NavLink></h2>
                     <nav className="topmenu-outer-container2">
-                        <ul className="linkmenu-top">
+                        <ul className="linkmenu2-top">
+
+                            <li>
+                                <NavLink to="/CategoriesPage" activeClassName="active">
+                                    Recepten
+                                </NavLink>
+                            </li>
                         </ul>
                     </nav>
                 </div>

@@ -12,25 +12,35 @@ function RecipeDetailPage() {
     const [ingredients, setIngredients] = useState(['chicken', 'tomato', 'onion']);
 
     useEffect(() => {
-        axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${recipeId}`)
-            .then(response => {
+        async function fetchRecipe() {
+            try {
+                const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${recipeId}`);
                 setRecipe(response.data.meals[0]);
-            })
-            .catch(error => console.error("Er is iets misgegaan", error));
+            } catch (error) {
+                console.error("Something went wrong while retrieving the recipe:", error);
+            }
+        }
+
+        fetchRecipe();
     }, [recipeId]);
 
     useEffect(() => {
-        axios.get('https://www.themealdb.com/api/json/v1/1/search.php?s=')
-            .then(response => {
+        async function fetchAllRecipes() {
+            try {
+                const response = await axios.get('https://www.themealdb.com/api/json/v1/1/search.php?s=');
                 setAllRecipes(response.data.meals);
-            })
-            .catch(error => console.error("Er is iets misgegaan", error));
+            } catch (error) {
+                console.error("Something went wrong while retrieving all recipes:", error);
+            }
+        }
+
+        fetchAllRecipes();
     }, []);
 
     return (
         <>
             <Header />
-            <div className="recipes-container recipe-detail-container">
+            <div className="recipes-card recipe-detail-card">
                 {recipe ? (
                     <>
                         <h2>{recipe.strMeal}</h2>
@@ -43,8 +53,8 @@ function RecipeDetailPage() {
                     <p>Loading...</p>
                 )}
             </div>
-            <div className="filter-section">
-                <h3>Filter op ingrediënten</h3>
+            <div className="filter-list">
+
                 <RecipeFilter recipes={allRecipes} ingredients={ingredients} />
             </div>
         </>

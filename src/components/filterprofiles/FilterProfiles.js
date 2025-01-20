@@ -1,7 +1,7 @@
 import React from 'react';
 import './FilterProfiles.css';
 
-const FilterProfiles = ({ data, gender, ageCategory }) => {
+const FilterProfiles = ({data, gender, ageCategory}) => {
     const ageRanges = {
         young: [0, 18],
         adult: [19, 35],
@@ -17,12 +17,13 @@ const FilterProfiles = ({ data, gender, ageCategory }) => {
 
     return (
         <div className="inner-profiles-container">
+            <div className="filters"></div>
             {filteredData.map(profile => (
                 <article className="profile-card" key={profile.id}>
                     <h6>{profile.firstname}</h6>
                     <span>
             <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuoV7tXoX4tCk-1zVz49ligSUHSDzLI-GDzuTMWzcKy74GHPCU9dbVVqXDCbPVRRcmE4w&usqp=CAU"
+                src="https://cdn.pixabay.com/photo/2016/11/21/12/35/woman-1845100_1280.jpg"
                 alt="profile-img"
                 className="profile-img"
             />

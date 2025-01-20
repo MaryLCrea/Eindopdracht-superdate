@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 function Contact() {
     return (
         <>
-            <HomeHeader />
+            <HomeHeader/>
             <main className="outer-page-container">
                 <div className="inner-page-container pages">
                     <section className="contact-form">
@@ -45,10 +45,10 @@ function Contact() {
                             <button type="submit" className="contact-button">
                                 Send Message
                             </button>
-                            </form>
+                        </form>
                     </section>
                 </div>
-                <Link  to="/" className="home-link">⬅ Back to Home</Link>
+                <Link to="/" className="home-link">⬅ Back to Home</Link>
             </main>
         </>
     );

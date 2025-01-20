@@ -4,12 +4,9 @@ import axios from 'axios';
 import HomeHeader from "../../components/homeheader/HomeHeader";
 
 function SignUp() {
-
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-
-
     const [error, toggleError] = useState(false);
     const [loading, toggleLoading] = useState(false);
     const history = useHistory();
@@ -18,7 +15,6 @@ function SignUp() {
         e.preventDefault();
         toggleError(false);
         toggleLoading(true);
-
         try {
             const result = await axios.post(
                 'https://frontend-educational-backend.herokuapp.com/api/auth/signup',
@@ -34,17 +30,15 @@ function SignUp() {
                     },
                 }
             );
-
             console.log(result);
-
             history.push('/signin');
         } catch (e) {
             console.error(e);
             toggleError(true);
         }
-
         toggleLoading(false);
     }
+
     return (
         <>
             <HomeHeader/>
@@ -101,5 +95,3 @@ function SignUp() {
 }
 
 export default SignUp;
-
-// https://frontend-educational-backend.herokuapp.com/api/auth/signup

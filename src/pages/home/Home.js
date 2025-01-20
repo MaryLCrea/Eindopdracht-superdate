@@ -21,8 +21,8 @@ function Home() {
             <LoginField/>
             <div className="outerpage-container">
                 <img src={picture} className="home-picture" alt="home-picture"/>
-                </div>
-                </>
+            </div>
+        </>
     );
 }
 

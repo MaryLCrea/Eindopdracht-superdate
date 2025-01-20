@@ -1,4 +1,4 @@
-.recipes-container {
+.recipes-card {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
@@ -55,24 +55,24 @@
     text-align: center;
 }
 
-.recipe-detail-container {
+.recipe-detail-card {
     text-align: center;
 }
 
-.recipe-detail-container img {
+.recipe-detail-card img {
     max-width: 500px;
     width: 100%;
     border-radius: 8px;
     margin-bottom: 20px;
 }
 
-.recipe-detail-container h1 {
+.recipe-detail-card h1 {
     font-size: 2rem;
     color: #007bff;
     margin-bottom: 10px;
 }
 
-.recipe-detail-container p {
+.recipe-detail-card p {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #555;
@@ -93,12 +93,12 @@
     color: #0056b3;
 }
 
-.filter-section ul {
+.filter-list ul {
     list-style: none;
     padding: 0;
 }
 
-.filter-section li {
+.filter-list li {
     margin: 15px 0;
     padding: 10px;
     border: 1px solid #ccc;
@@ -109,18 +109,80 @@
     background-color: #f9f9f9;
 }
 
-.filter-section img {
+.filter-list img {
     height: 100px;
     border-radius: 5px;
 }
 
-.filter-section a {
+.filter-list a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
 }
 
-.filter-section a:hover {
+.filter-list a:hover {
     text-decoration: underline;
     color: #007bff;
+}
+
+/*Styling voor de zoekbox*/
+.search-box {
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*TitelStyling*/
+.search-box h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #333;
+}
+
+/*Styling beschrijvingstekst*/
+.description-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Styling voor de inputvelden */
+.ingredient-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.ingredient-input {
+    width: 200px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling voor de zoekknop */
+.search-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
 }

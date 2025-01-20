@@ -12,10 +12,8 @@ function Header() {
                 <div className="topmenu-outer-container1">
                     <h2><NavLink to="/">Superdate</NavLink></h2>
                     <nav className="topmenu-outer-container2">
-                        <ul className="linkmenu-top">
-                            <li>
-                                <NavLink to="/" exact activeClassName="active">Home</NavLink>
-                            </li>
+                        <ul className="linkmenu2-top">
+
 
                             {isAuth ? (
                                 <li type="link" onClick={logout}>
@@ -23,6 +21,11 @@ function Header() {
                                 </li>
                             ) : (
                                 <div>
+                                    <li>
+                                        <NavLink to="/" activeClassName="active">
+                                            Home
+                                        </NavLink>
+                                    </li>
                                     <li>
                                         <NavLink to="/profile" activeClassName="active">
                                             Mijn Profiel

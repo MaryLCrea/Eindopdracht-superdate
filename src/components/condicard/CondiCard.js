@@ -2,7 +2,7 @@ import React from 'react';
 
 function CondiCard(props) {
     console.log(props);
-    return(
+    return (
         <article className="article-card">
             <h5>{props.title}</h5>
             {props.children}

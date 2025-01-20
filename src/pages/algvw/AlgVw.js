@@ -1,38 +1,43 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import './AlgVw.css';
 import HomeHeader from "../../components/homeheader/HomeHeader";
 import CondiCard from "../../components/condicard/CondiCard";
+import {Link} from "react-router-dom";
 
 function AlgVw() {
 
     return (
         <>
             <HomeHeader/>
-             <main className="outer-page-container">
+            <main className="outer-page-container">
                 <div className="inner-page-container pages">
-
-
-
-                            <h2>Algemene Voorwaarden</h2>
-
-                     <h3>Deze Algemene Voorwaarden zijn van kracht met ingang van 1 januari 2025</h3>
-
-                       <CondiCard title="Artikel 1. Definities">
+                    <h2>Algemene Voorwaarden</h2>
+                    <h3>Deze Algemene Voorwaarden zijn van kracht met ingang van 1 januari 2025</h3>
+                    <CondiCard title="Artikel 1. Definities">
                         <br/>
-                        <h6 >Deelnemer:</h6> De contractspartij van SuperDate in het kader van deze overeenkomst.
-                        <h6 > Website:</h6>  www.superdate.nl.
-                        <h6>Materiaal:</h6>  door de Deelnemer aangeleverd materiaal voor plaatsing op de Website, zoals profielnamen, teksten, foto’s en (chat)berichten.
-                        <h6 >Misbruik:</h6>  het gebruik van de Website of het plaatsen van materiaal dat:
-                        de rechten of privacy van anderen schendt; ongevraagde commerciële informatie of spam bevat; commerciële SMS-nummers verspreidt; betaalde diensten aanbiedt;
+                        <h6>Deelnemer:</h6> De contractspartij van SuperDate in het kader van deze overeenkomst.
+                        <h6> Website:</h6> www.superdate.nl.
+                        <h6>Materiaal:</h6> door de Deelnemer aangeleverd materiaal voor plaatsing op de Website, zoals
+                        profielnamen, teksten, foto’s en (chat)berichten.
+                        <h6>Misbruik:</h6> het gebruik van de Website of het plaatsen van materiaal dat:
+                        de rechten of privacy van anderen schendt; ongevraagde commerciële informatie of spam bevat;
+                        commerciële SMS-nummers verspreidt; betaalde diensten aanbiedt;
                         grievende of beledigende uitlatingen bevat; een andere identiteit aanneemt;
                         andermans rekeninggegevens gebruikt;
                         inbreuk maakt op intellectuele eigendomsrechten;
                         materiaal openbaar maakt of verveelvoudigt zonder toestemming.
-                        <h6 >Standaard toegang: </h6>toegang tot de Website waarbij de Deelnemer beperkt gebruik kan maken van de aangeboden diensten.
-                        <h6>Exclusieve toegang:</h6> toegang tot de Website waarbij de Deelnemer gebruik kan maken van de diensten die onder exclusieve toegang vallen.
-                        <h6>Toegangsvorm: </h6> De specifieke diensten die de Deelnemer op de Website kan gebruiken, zoals Standaard toegang of exclusieve toegang.
-                        <h6>Abonnement: </h6> Een overeenkomst waarbij de Deelnemer aangeeft welk bedrag SuperDate in rekening brengt voor een betaalde toegangsvorm gedurende een specifieke periode. Het abonnement wordt, afhankelijk van de gekozen betaalmethode, automatisch verlengd zodra de periode van de betaalde toegangsvorm afloopt.
-                        <h6>Inlogcode: </h6> De door SuperDate aan de Deelnemer verstrekte code waarmee toegang tot de Website wordt verkregen.
+                        <h6>Standaard toegang: </h6>toegang tot de Website waarbij de Deelnemer beperkt gebruik kan
+                        maken van de aangeboden diensten.
+                        <h6>Exclusieve toegang:</h6> toegang tot de Website waarbij de Deelnemer gebruik kan maken van
+                        de diensten die onder exclusieve toegang vallen.
+                        <h6>Toegangsvorm: </h6> De specifieke diensten die de Deelnemer op de Website kan gebruiken,
+                        zoals Standaard toegang of exclusieve toegang.
+                        <h6>Abonnement: </h6> Een overeenkomst waarbij de Deelnemer aangeeft welk bedrag SuperDate in
+                        rekening brengt voor een betaalde toegangsvorm gedurende een specifieke periode. Het abonnement
+                        wordt, afhankelijk van de gekozen betaalmethode, automatisch verlengd zodra de periode van de
+                        betaalde toegangsvorm afloopt.
+                        <h6>Inlogcode: </h6> De door SuperDate aan de Deelnemer verstrekte code waarmee toegang tot de
+                        Website wordt verkregen.
                     </CondiCard>
                     <CondiCard title="Artikel 2. Overeenkomst">
                         Deze algemene voorwaarden maken integraal onderdeel uit van iedere tussen Website en de
@@ -130,7 +135,6 @@ function AlgVw() {
                         voorafgaande ingebrekestelling tijdelijk of blijvend te deactiveren, indien de Deelnemer
                         enige verplichting jegens Website niet nakomt.
                     </CondiCard>
-
                     <CondiCard title="Artikel 6. Inlogcode">
                         De inlogcode van de Deelnemer is geheim. Website en de Deelnemer nemen redelijke maatregelen
                         om te voorkomen dat anderen dan de Deelnemer kennis kunnen nemen van de aan de Deelnemer
@@ -215,9 +219,7 @@ function AlgVw() {
                         overeenkomsten van toepassing te verklaren, waartoe wijzigingen dertig dagen na bekendmaking
                         aan Deelnemer, in werking treden.
                     </CondiCard>
-
-
-
+                    <Link to="/" className="home-link">⬅ Back to Home</Link>
                 </div>
             </main>
         </>

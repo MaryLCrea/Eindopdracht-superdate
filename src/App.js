@@ -6,7 +6,6 @@ import Home from "./pages/home/Home";
 import {Switch} from "react-router-dom";
 import {Route} from "react-router-dom";
 import Contact from "./pages/contact/Contact";
-import SubProfile from "./pages/subprofile/SubProfile";
 import AlgVw from "./pages/algvw/AlgVw";
 import Profile from "./pages/profile/Profile";
 import About from "./pages/about/About";
@@ -15,8 +14,6 @@ import AllProfiles from "./pages/allprofiles/AllProfiles";
 import CategoriesPage from "./pages/recipes/CategoriesPage";
 import RecipeDetailPage from "./pages/recipes/RecipeDetailPage";
 import RecipesPage from "./pages/recipes/RecipesPage";
-import test from "./pages/test/Test";
-import Test from "./pages/test/Test";
 
 function App() {
 
@@ -50,16 +47,11 @@ function App() {
                 <Route exact path="/CategoriesPage">
                     <CategoriesPage/>
                 </Route>
-
-                <Route path="/category/:categoryName" component={RecipesPage} />
-                <Route path="/recipe/:recipeId" component={RecipeDetailPage} />
-
-                <Route path="/SubProfile/:id">
-                    <SubProfile/>
-                </Route>
-                </Switch>
+                <Route path="/category/:categoryName" component={RecipesPage}/>
+                <Route path="/recipe/:recipeId" component={RecipeDetailPage}/>
+            </Switch>
             <Footer/>
-            </>
+        </>
     );
 }
 

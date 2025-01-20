@@ -9,17 +9,22 @@ function RecipesPage() {
     const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
-                axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryName}`)
-            .then(response => {
+        async function fetchRecipesByCategory() {
+            try {
+                const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryName}`);
                 setRecipes(response.data.meals);
-            })
-            .catch(error => console.error("Er is iets misgegaan", error));
+            } catch (error) {
+                console.error("Something went wrong while retrieving recipes by category:", error);
+            }
+        }
+
+        fetchRecipesByCategory();
     }, [categoryName]);
 
     return (
         <>
             <Header/>
-        <div className="recipes-container">
+        <div className="recipes-card">
             <br/>
             <Link to="/CategoriesPage" className="back-link">
                 ⬅ Back to categories
