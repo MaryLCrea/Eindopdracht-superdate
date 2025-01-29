@@ -1,1 +1,62 @@
-/*gebruikt css van app.css*/
+/*!*gebruikt deels css van app.css*!*/
+
+form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+form input {
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form input:focus {
+    border-color: #4c90f5;
+    outline: none;
+}
+
+form input::placeholder {
+    font-style: italic;
+    color: #888;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.form-button {
+    background-color: #d8a4a3;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.form-button:disabled {
+    background-color: #a0c0f4;
+    cursor: not-allowed;
+}
+
+.form-button:hover:not(:disabled) {
+    background-color: #986968;
+}
+
+.pica-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+    min-height: 600px;
+    background-color: #FFFCF8;
+    opacity: 40%;
+}
+
+

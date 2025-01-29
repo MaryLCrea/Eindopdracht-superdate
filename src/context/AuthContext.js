@@ -72,8 +72,7 @@ function AuthContextProvider({children}) {
             }
 
         } catch (e) {
-            // console.error(e);
-            toggleIsAuth({
+                toggleIsAuth({
                 isAuth: false,
                 user: null,
                 status: 'done',
@@ -96,8 +95,3 @@ function AuthContextProvider({children}) {
 }
 
 export default AuthContextProvider;
-
-// `https://frontend-educational-backend.herokuapp.com/${id}`
-
-// "Content-Type": "application/json",
-    // Authorization: `Bearer ${token}`,

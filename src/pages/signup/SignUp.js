@@ -1,7 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import axios from 'axios';
 import HomeHeader from "../../components/homeheader/HomeHeader";
+import './SignUp.css';
+import RomaCouple from "../../assets/romacouple.jpg";
 
 function SignUp() {
     const [email, setEmail] = useState('');
@@ -23,13 +25,7 @@ function SignUp() {
                     password: password,
                     username: username,
                 },
-                {
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-Api-Key': 'superdating:7Lngh4xpUy887KlrrYmJ',
-                    },
-                }
-            );
+                            );
             console.log(result);
             history.push('/signin');
         } catch (e) {
@@ -44,51 +40,56 @@ function SignUp() {
             <HomeHeader/>
             <main className="outer-page-container">
                 <div className="inner-page-container pages">
-                    <p>Op deze pagina kun je je registreren. Hierna word je direct doorverwezen naar de inlogpagina
-                        waar je je kunt inloggen.
+                    <h3> Register</h3>
+                    <p>On this page you can register. After this you will be redirected directly to the login page where you can log in.
                     </p>
-                    <h3>Registreren</h3>
-                    <form className="text" onSubmit={handleSubmit}>
+                     <form className="text" onSubmit={handleSubmit}>
                         <label htmlFor="email-field">
-                            Emailadres:
+                            E-Mail:
                             <input
                                 type="email"
                                 id="email-field"
                                 name="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
+                                placeholder="Enter your e-mail address"
                             />
                         </label>
                         <label htmlFor="username-field">
-                            Gebruikersnaam:
+                            Username:
                             <input
                                 type="text"
                                 id="username-field"
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}
+                                placeholder="Enter your username"
                             />
                         </label>
                         <label htmlFor="password-field">
-                            Wachtwoord:
+                            Password:
                             <input
                                 type="password"
                                 id="password-field"
                                 name="password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
+                                placeholder="Choose a password"  // Placeholder tekst binnen het invoerveld
                             />
                         </label>
-                        {error && <p className="error">Dit account bestaat al. Probeer een ander emailadres.</p>}
+                        {error && <p className="error">This account already exists. Please try a different email address or login..</p>}
                         <button
                             type="submit"
                             className="form-button"
                             disabled={loading}
                         >
-                            Registreren
+                            Register
                         </button>
                     </form>
-                    <p>Heb je al een account? Je kunt je <Link to="/signin">hier</Link> inloggen.</p>
+                    <p>Already have an account? You can <Link to="/signin">log in</Link> here.</p>
                 </div>
+                <section className="pica-container">
+                    <img className="recouple" src={RomaCouple} alt="koppel"/>
+                </section>
             </main>
         </>
     );

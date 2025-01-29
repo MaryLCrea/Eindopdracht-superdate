@@ -11,3 +11,4 @@ function CondiCard(props) {
 }
 
 export default CondiCard;
+

@@ -18,7 +18,7 @@ function HomeHeader() {
 
                             <li>
                                 <NavLink to="/CategoriesPage" activeClassName="active">
-                                    Recepten
+                                    Recipes
                                 </NavLink>
                             </li>
                         </ul>

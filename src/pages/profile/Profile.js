@@ -22,7 +22,7 @@ function Profile() {
         if (inputValue.match(/\.(jpg|jpeg|png)$/i)) {
             setImageUrl(inputValue);
         } else {
-            alert("Voer een geldige afbeeldings-URL in (jpg, jpeg, of png).");
+            alert("Enter a valid image URL (jpg, jpeg, or png).");
         }
     };
 
@@ -88,7 +88,7 @@ function Profile() {
                         />
                     </div>
                     <div>
-                        <label htmlFor="imageUrlInput">Here you can past a link to upload a new picture</label>
+                        <label htmlFor="imageUrlInput"></label>
                         <br/>
                         <input
                             type="text"
@@ -108,3 +108,7 @@ function Profile() {
 }
 export default Profile;
 
+
+
+
+// https://frontend-educational-backend.herokuapp.com/api/user

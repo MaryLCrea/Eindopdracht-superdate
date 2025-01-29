@@ -5,12 +5,12 @@
     top: 25%;
     left: 10%;
     width: 300px;
-    height: 350px;
+    height: 375px;
     background-color: rgba(255, 252, 248, 0.5);
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    padding: 20px;
+    padding: 15px;
     box-sizing: border-box;
 }
 
@@ -26,6 +26,7 @@
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-bottom: 5px;
 }
 
 /*Hover voor de inlog knop*/
@@ -33,18 +34,18 @@
     background-color: #edc5c4;
 }
 
-/*stijl voor de input velden*/
+/*Stijl voor de input velden*/
 .login-box input {
-    width: calc(100% - 20px);
+    width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-family: 'Roboto Condensed', sans-serif;
     border: 2px solid #ccc;
     border-radius: 8px;
     font-size: 14px;
 }
 
-/*Focus het inputveld*/
+/*Focus inputveld*/
 .login-box input:focus {
     outline: none;
     border-color: #d8a4a3;
@@ -59,10 +60,18 @@
     text-align: center;
 }
 
-/*tekst registreer onderin*/
+/*Tekst register onderin*/
 .register-tekst {
-    font-size: 12px; /* Maakt de tekst kleiner */
-    font-style: italic; /* Maakt de tekst schuin */
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*Error melding*/
+.error {
+    font-size: 14px;
+    font-weight: bold;
     text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
 }

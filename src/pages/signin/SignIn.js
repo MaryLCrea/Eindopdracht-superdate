@@ -17,7 +17,8 @@ function SignIn() {
 
         try {
             const result = await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signin', {
-                username: username, password: password,
+                username: username,
+                password: password,
             });
             console.log(result.data);
             login(result.data.accessToken);
@@ -31,44 +32,47 @@ function SignIn() {
     return (<>
         <HomeHeader/>
         <main className="outer-page-container">
-            <div className="form-container">
+            <div className="inner-page-container pages">
                 <h3>Inloggen</h3>
-                <article className="text"> Log hier in om ook andere profielen te kunnen bekijken.
+                <article className="text"> Log in here to view other profiles.
                 </article>
                 <form className="text" onSubmit={handleSubmit}>
                     <label htmlFor="email-field">
-                        Gebruikersnaam:
+                        Username:
                         <input
                             type="username"
                             id="username-field"
                             name="username"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
+                            placeholder="Enter your username"
                         />
                     </label>
                     <label htmlFor="password-field">
-                        Wachtwoord:
+                        Password:
                         <input
                             type="password"
                             id="password-field"
                             name="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
+                            placeholder="Enter your password"
                         />
                     </label>
-                    {error && <p className="error">Combinatie van gebruikersnaam en wachtwoord is onjuist</p>}
+                    {error && <p className="error">Username and password combination is incorrect</p>}
                     <button
                         type="submit"
                         className="form-button"
                     >
-                        Inloggen
+                        Log in
                     </button>
                 </form>
                 <p>
-                    Heb je nog geen account? <Link to="/signup"> Registreer </Link> je dan eerst.
+
+                    Don't have an account yet? <Link to="/signup"> Register </Link> first.
                 </p>
             </div>
-            <section className="picture-container">
+            <section className="pica-container">
                 <img className="malediven" src={Malediven} alt="malediven"/>
             </section>
         </main>
@@ -76,3 +80,7 @@ function SignIn() {
 }
 
 export default SignIn;
+
+// https://frontend-educational-backend.herokuapp.com/api/auth/signin
+
+// https://api.datavortex.nl/superdate/users/authenticate

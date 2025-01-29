@@ -7,7 +7,7 @@ function Contact() {
     return (
         <>
             <HomeHeader/>
-            <main className="outer-page-container">
+                      <main className="outer-page-container">
                 <div className="inner-page-container pages">
                     <section className="contact-form">
                         <h4>Contact Form</h4>

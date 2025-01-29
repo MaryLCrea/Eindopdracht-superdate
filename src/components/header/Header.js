@@ -17,7 +17,7 @@ function Header() {
 
                             {isAuth ? (
                                 <li type="link" onClick={logout}>
-                                    Uitloggen
+                                    Log Out
                                 </li>
                             ) : (
                                 <div>
@@ -28,26 +28,27 @@ function Header() {
                                     </li>
                                     <li>
                                         <NavLink to="/profile" activeClassName="active">
-                                            Mijn Profiel
+                                            My Profile
                                         </NavLink>
                                     </li>
 
                                     <li>
                                         <NavLink to="/allprofiles" activeClassName="active">
-                                            Profielen
+                                            Profiles
                                         </NavLink>
                                     </li>
 
                                     <li>
                                         <NavLink to="/CategoriesPage" activeClassName="active">
-                                            Recepten
+                                            Recipes
                                         </NavLink>
                                     </li>
 
                                     <li>
                                         <NavLink to="/" activeClassName="active">
-                                            Uitloggen
+                                            Log Out
                                         </NavLink>
+
                                     </li>
                                 </div>
                             )}

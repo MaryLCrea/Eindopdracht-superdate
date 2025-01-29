@@ -13,7 +13,6 @@
     flex-basis: 100%;
     min-height: 600px;
     background-color: #FFFCF8;
-    /*margin: 0 30px 0 30px;*/
 }
 
 .content {
@@ -47,7 +46,6 @@
     gap: 40px;
     margin: 50px 50px;
     background-color: #FFFCF8;
-
 }
 
 /*tekst op de pagina's*/
@@ -104,7 +102,6 @@ h4 {
     min-height: 600px;
     background-color: #FFFCF8;
     opacity:40%;
-
 }
 /*wordt gebruikt in de footer pagina's' (about, algvw, contact) en in signin*/
 .text {
@@ -125,7 +122,7 @@ label {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/*!*Responsive*!*/
+/*Responsive*/
 /*.container {*/
 /*    display: grid;*/
 /*    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/

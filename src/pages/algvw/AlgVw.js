@@ -5,6 +5,7 @@ import CondiCard from "../../components/condicard/CondiCard";
 import {Link} from "react-router-dom";
 
 function AlgVw() {
+    const {openC, setOpenC} = useState(null);
 
     return (
         <>
@@ -39,6 +40,7 @@ function AlgVw() {
                         <h6>Inlogcode: </h6> De door SuperDate aan de Deelnemer verstrekte code waarmee toegang tot de
                         Website wordt verkregen.
                     </CondiCard>
+
                     <CondiCard title="Artikel 2. Overeenkomst">
                         Deze algemene voorwaarden maken integraal onderdeel uit van iedere tussen Website en de
                         Deelnemer gesloten overeenkomst en zijn van toepassing op iedere offerte en overeenkomst.
@@ -227,3 +229,4 @@ function AlgVw() {
 }
 
 export default AlgVw;
+
