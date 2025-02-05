@@ -4,6 +4,9 @@
     flex-direction: row;
     background-color: #FFFCF8;
     flex-basis: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     }
 
 /*flex inner-container hele pagina*/
@@ -20,7 +23,7 @@
     background-color: #FFFCF8;
 }
 
-/*profielkaartjes op pagina's profielen, mijn profiel en subprofiel*/
+/*profielkaartjes op pagina's profielen en mijn profiel*/
 .profile-card {
     display: flex;
     border-radius: 4px;
@@ -62,7 +65,7 @@ h2 {
     text-transform: uppercase;
 }
 
-/*Wordt gebruikt als kop op de inlog- en aanmeldpagina en op subprofiel*/
+/*Wordt gebruikt als kop op de inlog- en aanmeldpagina*/
 h3 {
     font-family: 'Ebrima', 'Verdana', serif;
     font-size: 20px;
@@ -122,9 +125,8 @@ label {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/*Responsive*/
-/*.container {*/
-/*    display: grid;*/
-/*    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
-/*    gap: 20px;*/
-/*}*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}

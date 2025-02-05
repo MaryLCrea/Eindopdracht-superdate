@@ -88,7 +88,7 @@ function SignUp() {
                     <p>Already have an account? You can <Link to="/signin">log in</Link> here.</p>
                 </div>
                 <section className="pica-container">
-                    <img className="recouple" src={RomaCouple} alt="koppel"/>
+                    <img src={RomaCouple} alt="koppel"/>
                 </section>
             </main>
         </>
