@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import SignIn from './pages/signin/SignIn';
-import SignUp from './pages/signup/SignUp';
+import SignIn from "./pages/signin/SignIn";
+import SignUp from "./pages/signup/SignUp";
 import Home from "./pages/home/Home";
 import {Switch} from "react-router-dom";
 import {Route} from "react-router-dom";
@@ -14,8 +14,8 @@ import AllProfiles from "./pages/allprofiles/AllProfiles";
 import CategoriesPage from "./pages/recipes/CategoriesPage";
 import RecipeDetailPage from "./pages/recipes/RecipeDetailPage";
 import RecipesPage from "./pages/recipes/RecipesPage";
-import ProfileDetail from './pages/profile/ProfileDetail';
-
+import ProfileDetail from "./pages/profile/ProfileDetail";
+import NotFound from "./pages/notfound/NotFound";
 
 function App() {
 
@@ -49,11 +49,12 @@ function App() {
                 <Route exact path="/CategoriesPage">
                     <CategoriesPage/>
                 </Route>
-                         <Route path="/category/:categoryName" component={RecipesPage}/>
-                         <Route path="/recipe/:recipeId" component={RecipeDetailPage}/>
                 <Route>
-                        <Route path="/" element={<AllProfiles />} />
-                        <Route path="/profile/:profileId" element={<ProfileDetail />} />
+                         <Route path="/category/:categoryName" component={RecipesPage} />
+                         <Route path="/recipe/:recipeId" component={RecipeDetailPage} />
+                         <Route path="/" element={<AllProfiles />} />
+                         <Route path="/profile/:profileId" element={<ProfileDetail />} />
+                         <Route component={NotFound} />
                 </Route>
             </Switch>
             <Footer/>
