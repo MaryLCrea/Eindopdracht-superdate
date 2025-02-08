@@ -17,8 +17,8 @@ function HomeHeader() {
                         <ul className="linkmenu2-top">
 
                             <li>
-                                <NavLink to="/CategoriesPage" activeClassName="active">
-                                    Recipes
+                                <NavLink to="/Contact" activeClassName="active">
+                                    Contact
                                 </NavLink>
                             </li>
                         </ul>

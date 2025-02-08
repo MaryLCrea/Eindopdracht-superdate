@@ -21,7 +21,7 @@ form textarea {
 
 form input,
 form textarea:focus {
-    border-color: #d31d1d;
+    border-color: #986968;
     outline: none;
 }
 

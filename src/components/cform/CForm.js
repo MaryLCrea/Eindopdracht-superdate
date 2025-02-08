@@ -74,7 +74,7 @@ function CForm() {
                                         }
                                     })}
                                     id="comments"
-                                    className="wide-textarea"
+                                    className="textarea"
                                     rows="6"
                                     placeholder="Enter your message here"
                                 />
