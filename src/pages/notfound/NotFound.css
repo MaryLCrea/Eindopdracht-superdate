@@ -1,0 +1,33 @@
+/*css spreekt voor zich*/
+.link-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    text-align: center;
+}
+
+.link-text a {
+    text-decoration: none;
+    color: #125fb6;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.link-text a:hover {
+    color: #3d9aff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.dog {
+    margin-top: -250px;
+    width: 25%;
+    height: auto;
+}
