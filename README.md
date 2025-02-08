@@ -1,5 +1,5 @@
 ### *SUPERDATE DE APPLICATIE* 
-Groningen, 9 februari 2025
+*Groningen, 9 februari 2025*
 
 ## Inhoudsopgave:
 1. Inleiding
@@ -14,7 +14,7 @@ bekijken. Naast het bekijken van profielen zit er ook een filterfunctie op waarm
 kan ingevuld en gewijzigd worden en er kan een foto worden geupload welke naar eigen wensen in te stellen is qua formaat. Verder is er een recepten pagina, 
 waarop door geklikt kan worden en tot een derde laag, echter kan er ook gezocht worden middels 1 tot 3 ingredienten die je graag wilt gebruiken in het recept. 
 
-# Screenshot van de dating profielen pagina:
+*Screenshot van de dating profielen pagina:*
 
 ![](src/assets/profiel-pagina.png)
 
@@ -29,7 +29,7 @@ Mocht je meer informatie willen over de backend bezoek dan deze link: https://gi
 
 ## 3. Installatie instructies
 
-Het opstarten van de applicatie:
+*Het opstarten van de applicatie:*
 - Start Webstorm op. 
 - Ga (rechtsbovenin) naar open en zoek daar de project map en klik op ok of ga naar get from VCS (rechtsbovenin) en plak vervolgens de 
   repository link: https://github.com/MaryLCrea/Eindopdracht-superdate en klik op clone.
