@@ -5,15 +5,7 @@ import HomeHeader from "../../components/homeheader/HomeHeader";
 import LoginField from "../../components/loginfield/LoginField";
 
 function Home() {
-    // const [loginField, setLoginField] = useState(null);
-    // const [signUpField, setSignUpField] = useState(null);
-    //
-    // useEffect = () => {
-    //     function FetchFields() {
-    //         console.log ("staat het in de console?")
-    // }
 
-    // useEffect(() => {}, [])}  Als ik nog tijd heb hier een dynamisch veld maken van het inlog en registratie blok
 
     return (
         <>

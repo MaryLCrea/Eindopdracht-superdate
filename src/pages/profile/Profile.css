@@ -1,6 +1,6 @@
 /*EDEDEDFF*/
 
-/* Algemene stijl voor de body */
+/*Algemene stijl voor de body*/
 body {
     margin: 0;
     padding: 0;
@@ -8,24 +8,22 @@ body {
     background-color: #f4f4f9;
 }
 
-/* Specifieke stijl voor de Test-pagina */
 .test-page {
-    width: 100%; /* Volledige breedte */
-    background-color: #ffffff; /* Achtergrondkleur */
-    padding: 20px 0; /* Verticale ruimte rondom de inhoud */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optionele schaduw */
+    width: 100%;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Centrale inhoud binnen de Test-pagina */
+/*Centrale inhoud binnen de Test-pagina*/
 .test-page > .content-container {
-    width: 90%; /* Breedte van de inhoud */
-    max-width: 800px; /* Maximale breedte */
-    margin: 0 auto; /* Centraal uitlijnen */
-    text-align: center; /* Tekst centreren */
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-/* Titel stijl */
+/*Titel stijl*/
 .test-page h3 {
     font-size: 24px;
     margin-bottom: 20px;
@@ -33,18 +31,18 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-/* Afbeelding stijl op de Test-pagina */
+/*Afbeelding stijl op de Test-pagina*/
 .test-page .image-container img {
-    width: auto; /* Zorgt dat de afbeelding proportioneel schaalt */
-    max-width: 100%; /* Voorkomt dat de afbeelding breder wordt dan de inhoud */
+    width: auto;
+    max-width: 100%;
     height: auto;
     margin: 20px auto;
-    display: block; /* Centraal in lijn */
+    display: block;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Input en labels binnen Test-pagina */
+
 .test-page label {
     font-size: 14px;
     color: #555555;
@@ -83,70 +81,70 @@ body {
     background-color: #704948;
 }
 
-Input-container voor alle velden binnen Test-pagina
+
 .test-page .input-container {
     margin-top: 20px;
 }
 
 .test-page input[type="range"] {
     width: 100%;
-    height: 10px; /* Bepaal de hoogte van de slider */
-    background: #ddd; /* Achtergrondkleur van de track (de lijn waarop de slider beweegt) */
+    height: 10px;
+    background: #ddd;
     border-radius: 5px;
     outline: none;
-    -webkit-appearance: none; /* Verwijder de standaard styling van de slider in Webkit-browsers */
-    appearance: none; /* Verwijder de standaard styling van de slider in andere browsers */
+    -webkit-appearance: none;
+    appearance: none;
 }
 
-/* De kleur van de gevulde gedeelte van de slider (de voortgang) */
+/*De kleur van de gevulde gedeelte van de slider (de voortgang)*/
 .test-page input[type="range"]::-webkit-slider-runnable-track {
     height: 10px;
-    background: #fdfdfd; /* Groene kleur voor het gevulde gedeelte */
+    background: #fdfdfd;
     border-radius: 2px;
 }
 
-/* Kleur van de knop van de slider */
+/*Kleur van de knop van de slider*/
 .test-page input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 15px;
     height: 15px;
-    border-radius: 50%; /* Maak de knop rond */
-    background: #986968; /* Blauwe kleur voor de knop */
+    border-radius: 50%;
+    background: #986968;
     cursor: pointer;
 }
 
-/* Kleur van de track (lijn) voor Firefox */
+/*Kleur van de track (lijn) voor Firefox*/
 .test-page input[type="range"]::-moz-range-track {
     height: 10px;
-    background: #4caf50; /* Groene kleur voor het gevulde gedeelte */
+    background: #4caf50;
     border-radius: 5px;
 }
 
-/* Kleur van de knop voor Firefox */
+/*Kleur van de knop voor Firefox*/
 .test-page input[type="range"]::-moz-range-thumb {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #007bff; /* Blauwe kleur voor de knop */
+    background: #007bff;
     cursor: pointer;
 }
 
-/* Kleur van de track (lijn) voor IE */
+/*Kleur van de track (lijn) voor IE*/
 .test-page input[type="range"]::-ms-track {
     height: 10px;
-    background: #859585; /* Groene kleur voor het gevulde gedeelte */
+    background: #859585;
     border-radius: 5px;
-    border-color: transparent; /* Verberg de rand */
-    color: transparent; /* Verberg de kleur */
+    border-color: transparent;
+    color: transparent;
 }
 
-/* Kleur van de knop voor IE */
+/*Kleur van de knop voor IE*/
 .test-page input[type="range"]::-ms-thumb {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #00000; /* Blauwe kleur voor de knop */
+    background: #00000;
     cursor: pointer;
 }
 

@@ -48,13 +48,13 @@ a:visited {
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start; /* Verander van space-between naar flex-start */
+    justify-content: flex-start;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 12px;
     color: #201817;
     text-transform: uppercase;
     flex-basis: 300px;
-    margin-left: auto; /* Dit duwt het menu naar rechts */
+    margin-left: auto;
 }
 
 

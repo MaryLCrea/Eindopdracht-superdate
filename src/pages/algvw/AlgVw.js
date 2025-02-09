@@ -3,6 +3,7 @@ import './AlgVw.css';
 import HomeHeader from "../../components/homeheader/HomeHeader";
 import CondiCard from "../../components/condicard/CondiCard";
 import {Link} from "react-router-dom";
+import HomeLink from "../../components/homelink/HomeLink";
 
 function AlgVw() {
     const {openC, setOpenC} = useState(null);
@@ -12,216 +13,126 @@ function AlgVw() {
             <HomeHeader/>
             <main className="outer-page-container">
                 <div className="inner-page-container pages">
-                    <h2>Algemene Voorwaarden</h2>
-                    <h3>Deze Algemene Voorwaarden zijn van kracht met ingang van 1 januari 2025</h3>
-                    <CondiCard title="Artikel 1. Definities">
+                    <h2>General Terms and Conditions</h2>
+                    <h3>These Terms and Conditions are effective as of January 1, 2025</h3>
+                    <CondiCard title="Artikel 1. Definitions">
                         <br/>
-                        <h6>Deelnemer:</h6> De contractspartij van SuperDate in het kader van deze overeenkomst.
-                        <h6> Website:</h6> www.superdate.nl.
-                        <h6>Materiaal:</h6> door de Deelnemer aangeleverd materiaal voor plaatsing op de Website, zoals
-                        profielnamen, teksten, foto’s en (chat)berichten.
-                        <h6>Misbruik:</h6> het gebruik van de Website of het plaatsen van materiaal dat:
-                        de rechten of privacy van anderen schendt; ongevraagde commerciële informatie of spam bevat;
-                        commerciële SMS-nummers verspreidt; betaalde diensten aanbiedt;
-                        grievende of beledigende uitlatingen bevat; een andere identiteit aanneemt;
-                        andermans rekeninggegevens gebruikt;
-                        inbreuk maakt op intellectuele eigendomsrechten;
-                        materiaal openbaar maakt of verveelvoudigt zonder toestemming.
-                        <h6>Standaard toegang: </h6>toegang tot de Website waarbij de Deelnemer beperkt gebruik kan
-                        maken van de aangeboden diensten.
-                        <h6>Exclusieve toegang:</h6> toegang tot de Website waarbij de Deelnemer gebruik kan maken van
-                        de diensten die onder exclusieve toegang vallen.
-                        <h6>Toegangsvorm: </h6> De specifieke diensten die de Deelnemer op de Website kan gebruiken,
-                        zoals Standaard toegang of exclusieve toegang.
-                        <h6>Abonnement: </h6> Een overeenkomst waarbij de Deelnemer aangeeft welk bedrag SuperDate in
-                        rekening brengt voor een betaalde toegangsvorm gedurende een specifieke periode. Het abonnement
-                        wordt, afhankelijk van de gekozen betaalmethode, automatisch verlengd zodra de periode van de
-                        betaalde toegangsvorm afloopt.
-                        <h6>Inlogcode: </h6> De door SuperDate aan de Deelnemer verstrekte code waarmee toegang tot de
-                        Website wordt verkregen.
+                        <h6>Participant:</h6> The contracting party of SuperDate within the framework of this agreement.
+                        <h6>Website:</h6> www.superdate.nl.
+                        <h6>Material:</h6> Content provided by the Participant for publication on the Website, such as profile names, texts, photos, and (chat) messages.
+                        <h6>Abuse:</h6> The use of the Website or the posting of material that:
+                        violates the rights or privacy of others; contains unsolicited commercial information or spam;
+                        distributes commercial SMS numbers; offers paid services;
+                        contains offensive or insulting statements; assumes another identity;
+                        uses someone else's account details;
+                        infringes intellectual property rights;
+                        publishes or reproduces material without permission.
+                        <h6>Standard Access:</h6> Access to the Website where the Participant has limited use of the available services.
+                        <h6>Exclusive Access:</h6> Access to the Website where the Participant can use the services that fall under exclusive access.
+                        <h6>Access Type:</h6> The specific services that the Participant can use on the Website, such as Standard Access or Exclusive Access.
+                        <h6>Subscription:</h6> An agreement in which the Participant specifies the amount SuperDate will charge for a paid access type over a specific period.
+                        The subscription is automatically renewed once the period of the paid access type expires, depending on the chosen payment method.
+                        <h6>Login Code:</h6> The code provided by SuperDate to the Participant to gain access to the Website.
                     </CondiCard>
 
-                    <CondiCard title="Artikel 2. Overeenkomst">
-                        Deze algemene voorwaarden maken integraal onderdeel uit van iedere tussen Website en de
-                        Deelnemer gesloten overeenkomst en zijn van toepassing op iedere offerte en overeenkomst.
-                        Van deze algemene voorwaarden afwijkende bedingen zijn slechts rechtsgeldig voor zover zij
-                        door Website schriftelijk zijn aanvaard.
-                        De overeenkomst komt tot stand doordat de Deelnemer het op de Website vermelde
-                        inschrijfformulier via de Website aan Website toezendt en dit formulier door Website is
-                        ontvangen.
-                        De overeenkomst is persoonlijk en niet overdraagbaar.
-                        Deelname is alleen mogelijk voor personen van 18 jaar en ouder.
+                    <CondiCard title="Article 2. Agreement">
+                        These general terms and conditions form an integral part of every agreement concluded between the Website and the Participant and apply to every offer and agreement.
+                        Deviations from these general terms and conditions are only valid if they have been accepted in writing by the Website.
+                        The agreement is established when the Participant submits the registration form stated on the Website via the Website and this form has been received by the Website.
+                        The agreement is personal and non-transferable.
+                        Participation is only possible for persons aged 18 and older.
                     </CondiCard>
-                    <CondiCard title="Artikel 3. Prijs en betaling.">
-                        De op de Website vermelde bedragen zijn inclusief 21% omzetbelasting.
-                        De overeenkomst terzake Standaard toegang eindigt met onmiddellijke ingang door opzegging
-                        door Website of de Deelnemer.
-                        De overeenkomst terzake een Abonnement wordt aangegaan voor onbepaalde duur en wordt tot
-                        wederopzegging verlengd. Deze overeenkomst komt tot stand na ontvangst van de betaling van
-                        Deelnemer door Website.
-                        Door het betalingsformulier op de Website in te vullen machtigt de Deelnemer Website om in
-                        het geval van een Abonnement waarbij automatische verlenging van toepassing is, het
-                        verschuldigde bedrag periodiek van bankrekening of creditcard van Deelnemer af te schrijven.
-                        Dit is afhankelijk van de gekozen betaalmethode en staat ook op Website vermeld bij de
-                        uitleg voor de gekozen betaalmethode. Indien het door Deelnemer verschuldigde bedrag na
-                        ontvangst van het betalingsformulier door Website niet (geheel) kan worden afgeschreven van
-                        de opgegeven bankrekening of creditcard, vervalt de toegang tot de betaalde functies van
-                        Website.
-                        Indien een betaling door Deelnemer wordt gestorneerd (teruggeboekt via de bank), of wanneer
-                        het automatische incasseren van rekening of creditcard van Deelnemer om een andere reden
-                        niet is gelukt, betekent dit dat Deelnemer in verzuim is in de nakoming van de
-                        betalingsverplichting. Dit veroorzaakt extra kosten welke Website naast de hoofdsom bij
-                        Deelnemer in rekening kan brengen. Bij het uitblijven van betaling, kan Website een
-                        incassobureau inschakelen. Deelnemer is in dat geval, conform het Besluit Vergoeding voor
-                        Buitengerechtelijke Incassokosten, 15% van de hoofdsom met een minimum van € 40,00
-                        incassokosten verschuldigd. Alvorens Website een incassobureau inschakelt, zal Website eerst
-                        eenmalig een herinnering per e-mail aan Deelnemer sturen.
-                        Website kan de tarieven van Abonnementen of het aan het Toegangsvorm verbonden recht van
-                        toegang tot de Website eenzijdig aanpassen, uitbreiden of intrekken.
-                        Indien er op het moment van het aangaan van een Abonnement sprake is van een promotie- of
-                        kortingsactie dan geldt deze alleen voor de eerste abonnementsperiode. Bij een afschrijving
-                        voor een volgende abonnementsperiode zal er geen promotie of korting meer worden toegepast.
-                        Wanneer hier door Website van wordt afgeweken, zal dit separaat worden aangekondigd.
-                        Website is gerechtigd de overeengekomen prijzen voor lopende abonnementen ingaande 1 januari
-                        van ieder kalenderjaar te indexeren overeenkomstig het door het Centraal Bureau voor de
-                        Statistiek (CBS) gepubliceerde consumentenprijsindexcijfer (CPI), reeks alle bestedingen. De
-                        gewijzigde prijs is gelijk aan de geldende prijs per 1 januari, vermenigvuldigd met het
-                        gemiddelde maand indexcijfer (jaarmutatie CPI) over de voorgaande twaalf maanden waarvoor op
-                        het moment van indexeren de definitieve cijfers bij het CBS beschikbaar zijn. Website heeft
-                        het recht om in het kader van de indexering een lager indexeringsbedrag toe te passen dan
-                        het indexeringsbedrag dat correspondeert met de uitkomst van voormelde formule. Indexering
-                        zal alleen plaatsvinden voor lopende abonnementen waarvan de looptijd op het moment van
-                        indexeren minimaal 180 dagen bedraagt.
+
+                    <CondiCard title="Article 3. Price and Payment">
+                        The amounts stated on the Website include 21% VAT.
+                        The agreement for Standard Access ends immediately upon termination by the Website or the Participant.
+                        The agreement for a Subscription is entered into for an indefinite period and is renewed until cancellation.
+                        This agreement is established upon receipt of the Participant’s payment by the Website.
+                        By completing the payment form on the Website, the Participant authorizes the Website to periodically deduct the due amount from the Participant's bank account or credit card in the case of a Subscription with automatic renewal.
+                        This depends on the chosen payment method and is also specified on the Website in the explanation for the selected payment method.
+                        If the amount due by the Participant cannot be (fully) debited from the provided bank account or credit card after receipt of the payment form, access to the paid features of the Website will be revoked.
+                        If a payment is reversed (chargeback) by the Participant or if an automatic debit fails for any other reason, the Participant is in default of their payment obligation.
+                        This may incur additional costs, which the Website may charge to the Participant in addition to the principal sum.
+                        If payment remains outstanding, the Website may engage a debt collection agency.
+                        In such cases, the Participant is liable for collection fees of 15% of the principal sum, with a minimum of €40, in accordance with the Dutch regulation on extrajudicial collection costs.
+                        Before involving a debt collection agency, the Website will first send a reminder via email.
+                        The Website may unilaterally adjust, expand, or withdraw the Subscription rates or access rights associated with the Access Type.
+                        If a promotion or discount applies at the time of subscribing, it only applies to the first subscription period.
+                        For subsequent periods, no promotion or discount will be applied unless explicitly announced otherwise.
+                        The Website is entitled to index the agreed prices for active subscriptions as of January 1st of each calendar year based on the Consumer Price Index (CPI) published by Statistics Netherlands (CBS).
                     </CondiCard>
-                    <CondiCard title="Artikel 4. Herroepingsrecht">
-                        De Deelnemer heeft de mogelijkheid de overeenkomst terzake een Abonnement zonder opgave van
-                        redenen te ontbinden gedurende ten minste 14 dagen, ingaande op de dag van het aangaan van
-                        de overeenkomst (herroepingsrecht).
-                        De Deelnemer die gebruik maakt van het herroepingsrecht, dient dit ondubbelzinnig aan de
-                        Website kenbaar te maken, bij voorkeur via het contactformulier op de Website
-                        Omdat Deelnemer na totstandkoming van de overeenkomst direct toegang heeft tot en gebruik
-                        kan maken van de overeengekomen diensten, is de Deelnemer ingeval van herroeping aan de
-                        Website een redelijke vergoeding voor deze diensten verschuldigd van € 1,50 voor iedere dag
-                        of dagdeel dat de overeenkomst tot aan het moment van herroeping heeft geduurd, met een
-                        maximum van het bedrag dat de Deelnemer op het moment van herroeping reeds aan
-                        abonnementsgeld aan de Website heeft betaald. Het dientengevolge verschuldigde bedrag zal
-                        door de Website mogen worden verrekend met het door de Deelnemer reeds betaalde
-                        abonnementsgeld; een eventueel na verrekening resterend saldo zal aan de Deelnemer worden
-                        teruggestort.
+
+                    <CondiCard title="Article 4. Right of Withdrawal">
+                        The Participant has the right to terminate the Subscription agreement without stating a reason within at least 14 days from the date of conclusion of the agreement (right of withdrawal).
+                        The Participant who exercises this right must inform the Website unequivocally, preferably via the contact form on the Website.
+                        Since the Participant gains immediate access to and can use the agreed services upon entering into the agreement, a reasonable fee of €1.50 per day or part thereof will be charged for the duration of the agreement up to the moment of withdrawal, with a maximum equal to the already paid subscription fee.
+                        The Website may offset the due amount against the subscription fee already paid, and any remaining balance will be refunded to the Participant.
                     </CondiCard>
-                    <CondiCard title="Artikel 5. Gebruikersrechten">
-                        Website verleent aan de Deelnemer het niet-exclusieve recht van toegang tot de Website om de
-                        op de Website geregistreerde gegevens in te zien.
-                        Het in het vorige lid bedoelde recht van toegang omvat uitsluitend het recht om de Website
-                        te gebruiken overeenkomstig het doel waarvoor de Website is ontwikkeld.
-                        De Deelnemer is volledig verantwoordelijk voor het inloggen op de Website en het gebruik van
-                        de door Website aan de Deelnemer verstrekte inlogcode.
-                        De Deelnemer heeft geen recht op aflevering of andere verstrekking van de inlogcode en
-                        evenmin om het in lid 1 van dit artikel bedoelde recht over te dragen.
-                        De Deelnemer zal de Website uitsluitend rechtmatig gebruiken en zich in ieder geval
-                        onthouden van:
-                        het gebruiken of toegang proberen te krijgen tot computersystemen en/of netwerken van
-                        anderen dan zichzelf;
-                        onderzoek of beproeving van de beveiliging van de Website of netwerken van anderen dan
-                        zichzelf;
-                        het aantasten van de werking van de Website of netwerken van anderen dan zichzelf;
-                        het vervreemden, verhuren of verstrekken aan derden, ten behoeve van derden gebruiken,
-                        wijzigen, verwijderen of onbruikbaar maken van de door het in artikel 4.1 bedoelde recht
-                        toegankelijke gegevens van anderen dan zichzelf;
-                        het ontwerpen, vervaardigen, introduceren en verspreiden van computervirussen en andere
-                        computerprogrammatuur die mogelijk schade aan de Website zou kunnen veroorzaken;
-                        het schenden van intellectuele eigendomsrechten en/of andere rechten van andere gebruikers.
-                        Gedragingen van derden die gebruik maken van de aan die Deelnemer verstrekte inlogcode
-                        worden aan de Deelnemer toegerekend als ware die gedragingen van de Deelnemer zelf.
-                        Website heeft het recht om het gebruik door de Deelnemer van de inlogcode zonder
-                        voorafgaande ingebrekestelling tijdelijk of blijvend te deactiveren, indien de Deelnemer
-                        enige verplichting jegens Website niet nakomt.
+
+                    <CondiCard title="Article 5. User Rights">
+                        The Website grants the Participant a non-exclusive right to access the Website to view the registered data on the Website.
+                        This right of access only includes the right to use the Website for its intended purpose.
+                        The Participant is fully responsible for logging into the Website and using the login code provided by the Website.
+                        The Participant has no right to transfer the login code or the access rights described in paragraph 1 of this article.
+                        The Participant must use the Website lawfully and refrain from:
+                        - Accessing or attempting to access computer systems or networks other than their own;
+                        - Testing or probing the security of the Website or networks other than their own;
+                        - Disrupting the operation of the Website or networks other than their own;
+                        - Renting, transferring, or making accessible to third parties any data accessible under Article 4.1 rights;
+                        - Creating, distributing, or introducing computer viruses or software that may harm the Website;
+                        - Violating intellectual property rights or other users' rights.
+                        Any actions by third parties using the Participant’s login code are attributed to the Participant as if they were their own actions.
+                        The Website reserves the right to temporarily or permanently deactivate the Participant’s login code without prior notice if they fail to comply with obligations to the Website.
                     </CondiCard>
-                    <CondiCard title="Artikel 6. Inlogcode">
-                        De inlogcode van de Deelnemer is geheim. Website en de Deelnemer nemen redelijke maatregelen
-                        om te voorkomen dat anderen dan de Deelnemer kennis kunnen nemen van de aan de Deelnemer
-                        verstrekte inlogcode.
-                        Indien Website constateert en/of redelijkerwijs vermoedt dat anderen dan de Deelnemer
-                        gebruik (kunnen) maken van de inlogcode of indien de Deelnemer Website van een zodanig
-                        gebruik op de hoogte stelt, blokkeert Website met onmiddellijke ingang de toegang via de
-                        bewuste inlogcode tot de Website. Website stelt de Deelnemer, voor zover nodig, op de hoogte
-                        van het onbevoegde gebruik en de blokkering van de inlogcode en verstrekt zo spoedig
-                        mogelijk na de blokkering een vervangende inlogcode aan de Deelnemer.
-                        Indien het onbevoegde gebruik van een inlogcode niet aan Website kan worden toegerekend,
-                        dient de Deelnemer aan Website de aan de blokkering en vervanging verbonden administratieve
-                        kosten aan Website te vergoeden, alsmede de kosten van het onbevoegde gebruik.
+
+                    <CondiCard title="Article 6. Login Code">
+                        The Participant’s login code is confidential. The Website and the Participant take reasonable measures to prevent others from accessing the login code.
+                        If the Website detects or reasonably suspects unauthorized use of the login code, it will immediately block access to the Website via that login code.
+                        The Website will notify the Participant of the unauthorized use and provide a replacement login code as soon as possible.
+                        If the unauthorized use is not attributable to the Website, the Participant must reimburse the Website for administrative costs related to blocking and replacing the login code, as well as any unauthorized usage costs.
                     </CondiCard>
-                    <CondiCard title="Artikel 7. Plaatsing van materiaal">
-                        De Deelnemer plaatst materiaal op de Website op eigen risico.
-                        De Deelnemer onthoudt zich van het plaatsen van profielnamen, teksten en foto's op de
-                        Website die aanstootgevend, racistisch of wettelijk verboden zijn.
-                        De Deelnemer onthoudt zich van het plaatsen van materiaal op de Website waardoor overige
-                        Deelnemers contact met de Deelnemer kunnen opnemen zonder gebruik te maken van de specifiek
-                        door Website op de Website aangeboden contactmethodes. De Deelnemer plaatst op de Website
-                        bijvoorbeeld niet zijn woonadres, telefoonnummer, e-mailadres of links naar internetadressen
-                        waar dergelijke gegevens te achterhalen zijn. Ook indirecte verwijzingen of uitlokkingen tot
-                        het verstrekken van deze gegevens door andere Deelnemers zijn niet toegestaan. De Deelnemer
-                        onthoudt zich eveneens van het op de Website plaatsen van in het vorige lid bedoelde
-                        gegevens met betrekking tot andere Deelnemers.
-                        Website zal het in de vorige leden bedoelde materiaal verwijderen zonder voorafgaand overleg
-                        met en melding aan de Deelnemer of andere Deelnemers. Bij overtreding van bovenstaande
-                        regels zal hiertegen worden opgetreden.
-                        Website kan materiaal wat niet overeenkomt met de richtlijnen voor Website zonder
-                        voorafgaand overleg met en melding aan de Deelnemer of andere Deelnemers verwijderen.
+
+                    <CondiCard title="Article 7. Posting of Material">
+                        The Participant posts material on the Website at their own risk.
+                        The Participant must not post profile names, texts, or photos that are offensive, racist, or illegal.
+                        The Participant must not post material that allows other Participants to contact them outside the Website’s provided communication methods.
+                        This includes addresses, phone numbers, emails, or links to external websites containing such information.
+                        The Website will remove any such material without prior consultation or notification.
                     </CondiCard>
-                    <CondiCard title="Artikel 8. Aanbiedingen per e-mail">
-                        De Deelnemer die zich bij inschrijving of elders op Website door het plaatsen van een vinkje
-                        expliciet akkoord heeft verklaard met het ontvangen van nieuws en Website-aanbiedingen,
-                        geeft hierdoor toestemming voor het versturen van nieuwsbrieven en commerciële boodschappen
-                        aan het e-mailadres van de Deelnemer. Doorgaans zijn dit unieke acties zoals kortingsacties.
-                        De Deelnemer kan zich hiervoor te allen tijde uitschrijven via de uitschrijflink onderaan
-                        een dergelijke boodschap. De wijze waarop persoonsgegevens en het e-mailadres worden
-                        verwerkt, staat beschreven in het Privacy- en cookiebeleid.
+
+                    <CondiCard title="Article 8. Email Offers">
+                        If a Participant has explicitly agreed to receive newsletters and Website offers, they consent to receiving promotional emails.
+                        These emails may contain exclusive discounts or promotions.
+                        The Participant can unsubscribe at any time using the link at the bottom of such emails.
+                        The Website’s Privacy and Cookie Policy outlines how personal data and email addresses are processed.
                     </CondiCard>
-                    <CondiCard title="Artikel 9. Misbruik">
-                        Website kan de overeenkomst met de Deelnemer bij diens misbruik met onmiddellijke ingang
-                        beëindigen, materiaal ontoegankelijk maken en/of verwijderen van de Website, het gebruik
-                        door de Deelnemer van op de Website aangeboden diensten beperken en/of de toegang tot de
-                        Website blokkeren zonder voorafgaande mededeling aan of overleg met de Deelnemer.
-                        Bij opzegging van de overeenkomst wegens misbruik heeft de Deelnemer geen recht op
-                        restitutie van het reeds door hem betaalde abonnementsgeld.
-                        Website is gerechtigd zonder nadere waarschuwing of ingebrekestelling, en zonder dat daartoe
-                        rechterlijke tussenkomst is vereist, een direct opeisbare boete van € 1.000,- (duizend euro)
-                        per feit van misbruik aan de Deelnemer in rekening te brengen, waarbij het misbruik van
-                        (persoons)gegevens, rekeninggegevens, foto's of een ander materiaal en ieder verzonden
-                        bericht elk geldt als één afzonderlijk feit, onverminderd het recht van Website om nadere
-                        rechtsmaatregelen tegen de Deelnemer te nemen en schadevergoeding te eisen, ook voor het
-                        herstel van door de Deelnemer veroorzaakte misbruik.
+
+                    <CondiCard title="Article 9. Abuse">
+                        The Website may immediately terminate the agreement, remove material, restrict services, and block access in cases of misuse.
+                        No refunds will be provided for terminated accounts due to misuse.
+                        The Website may impose a €1,000 fine per violation, including misuse of personal data, account information, photos, or messages.
+                        Additional legal action and claims for damages may also be pursued.
                     </CondiCard>
-                    <CondiCard title="Artikel 10. Gegevens">
-                        De wijze waarop de privacy wordt gewaarborgd, staat beschreven in het Privacy- en
-                        cookiebeleid.
-                        De Deelnemer zal Website vrijwaren van alle vorderingen van derden op basis van de stelling
-                        dat door Website verwerkte gegevens, het verwerken van gegevens en/of het resultaat van die
-                        verwerking in strijd zijn met het geldende recht.
+
+                    <CondiCard title="Article 10. Data">
+                        The Privacy and Cookie Policy outlines how privacy is safeguarded.
+                        The Participant indemnifies the Website against claims from third parties regarding the processing of data in violation of applicable laws.
                     </CondiCard>
-                    <CondiCard title="Artikel 11. Aansprakelijkheid">
-                        Website is nimmer aansprakelijk voor de mogelijke (gevolg)schade van de Deelnemer of van
-                        derden.
-                        De Deelnemer vrijwaart Website terzake alle aanspraken van derden tot vergoeding van
-                        (gevolg)schade, die verband houden met deze overeenkomst.
-                        Indien en voor zover een Nederlandse gerechtelijke instantie niettemin oordeelt dat Website
-                        aansprakelijk is voor de (gevolg)schade van een Deelnemer of een derde en gehouden is om de
-                        schade geheel of gedeeltelijk te vergoeden, wordt de hoogte van de schadevergoeding beperkt
-                        tot het door de Deelnemer betaalde abonnementsgeld.
+
+                    <CondiCard title="Article 11. Liability">
+                        The Website is not liable for any (consequential) damages suffered by the Participant or third parties.
+                        If a court determines liability, compensation is limited to the amount paid by the Participant as a subscription fee.
                     </CondiCard>
-                    <CondiCard title="Artikel 12. Toepasselijk recht en bevoegde rechter">
-                        Op deze overeenkomst is Nederlands recht van toepassing.
-                        In geval van een geschil tussen Website en de Deelnemer is de rechtbank te Arnhem bevoegd
-                        tot kennisneming van het geschil of, ter keuze van Website, de rechtbank die anders bevoegd
-                        zou zijn van het geschil kennis te nemen.
+
+                    <CondiCard title="Article 12. Governing Law and Jurisdiction">
+                        This agreement is governed by Dutch law.
+                        Disputes will be settled in the court of Arnhem or another competent court chosen by the Website.
                     </CondiCard>
-                    <CondiCard title="Artikel 13. Wijzigingen voorwaarden">
-                        Website heeft het recht de voorwaarden te wijzigen en de gewijzigde voorwaarden op bestaande
-                        overeenkomsten van toepassing te verklaren, waartoe wijzigingen dertig dagen na bekendmaking
-                        aan Deelnemer, in werking treden.
+
+                    <CondiCard title="Article 13. Amendments">
+                        The Website reserves the right to modify these terms and apply them to existing agreements, effective 30 days after notification.
                     </CondiCard>
-                    <Link to="/" className="home-link">⬅ Back to Home</Link>
+                    <HomeLink/>
                 </div>
             </main>
         </>

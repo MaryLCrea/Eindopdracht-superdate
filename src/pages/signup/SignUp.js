@@ -74,7 +74,7 @@ function SignUp() {
                                 name="password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                placeholder="Choose a password"  // Placeholder tekst binnen het invoerveld
+                                placeholder="Choose a password"
                             />
                         </label>
                         {error &&

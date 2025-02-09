@@ -14,7 +14,6 @@ import AllProfiles from "./pages/allprofiles/AllProfiles";
 import CategoriesPage from "./pages/recipes/CategoriesPage";
 import RecipeDetailPage from "./pages/recipes/RecipeDetailPage";
 import RecipesPage from "./pages/recipes/RecipesPage";
-import ProfileDetail from "./pages/profile/ProfileDetail";
 import NotFound from "./pages/notfound/NotFound";
 
 function App() {
@@ -53,7 +52,6 @@ function App() {
                     <Route path="/category/:categoryName" component={RecipesPage}/>
                     <Route path="/recipe/:recipeId" component={RecipeDetailPage}/>
                     <Route path="/" element={<AllProfiles/>}/>
-                    <Route path="/profile/:profileId" element={<ProfileDetail/>}/>
                     <Route component={NotFound}/>
                 </Route>
             </Switch>

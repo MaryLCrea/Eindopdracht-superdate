@@ -56,7 +56,7 @@ function Login() {
                                 onChange={(e) => setPassword(e.target.value)}
                             />
                         </label>
-                        {error && <p className="error">Combinatie van gebruikersnaam en wachtwoord is onjuist</p>}
+                        {error && <p className="error">Username and password combination is incorrect</p>}
                         <button
                             type="submit"
                             className="form-button"

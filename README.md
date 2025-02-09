@@ -40,7 +40,7 @@ Mocht je meer informatie willen over de backend bezoek dan deze link: [backend] 
    typ dan: nvm install 16.16.0. Mocht je daarna weer terug willen naar de oorspronkelijke versie herhaal dan de stappen met de versie die als eerste verscheen. 
 2. Installeer Webstorm via JetBrains en start Webstorm op. 
 3. Ga (rechtsbovenin) naar open en zoek daar de project map en klik op ok of ga naar get from VCS (rechtsbovenin) en plak vervolgens de 
-   repository link: [repository link] (https://github.com/MaryLCrea/Eindopdracht-superdate) en klik op clone.
+   repository link: [repository link] (https://github.com/MaryLCrea/Eindopdracht-superdate.git) en klik op clone.
 4. Open links onderin de terminal.
 5. Voer hierna een npm install uit door dit te typen in de terminal of wanneer webstorm hier (rechtsonderin) zelf mee komt door te klikken op npm install.
 6. Vervolgens check je of de react-router-dom in package.json staat. Op hetzelfde niveau als de src map staat een bestand genaamd package.json. Zoek in dit bestand naar
@@ -56,6 +56,9 @@ en wachtwoord. Let op: het wachtwoord moet minimaal uit 6 tekens bestaan.
 ## 5. Overige npm commando's
 Mocht je willen stoppen met het draaien van de applicatie dan kun je de toetscombinatie ctl+c intypen in de terminal en vervolgens y intypen en een enter geven, 
 het runnen van de applicatie is nu gestopt. 
+
+Verder nog een belangrijke note. De applicatie is in het engels geschreven, dit omdat de recepten die ik terug kreeg middels de 
+api ook in het engels zijn. Wanneer je dus een zoekactie doet op de recepten pagina, typ dan ook Engelse termen in, anders komen er geen recepten terug. 
 
 
 Veel plezier en succes met de applicatie!

@@ -2,6 +2,7 @@ import React from 'react';
 import './About.css';
 import HomeHeader from "../../components/homeheader/HomeHeader";
 import {Link} from "react-router-dom";
+import HomeLink from "../../components/homelink/HomeLink";
 
 function About() {
     return (
@@ -33,7 +34,7 @@ function About() {
                         If you have a question about using Superdate, please send us an e-mail to the following e-mail
                         address: customerservice@superdate.nl.
                     </section>
-                    <Link to="/" className="home-link">⬅ Back to Home</Link>
+                    <HomeLink/>
                 </div>
             </main>
         </>

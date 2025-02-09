@@ -131,3 +131,17 @@ label {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
+
+/*zorgt voor responsiviteit*/
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/*zorgt voor responsiviteit*/
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+}

@@ -108,6 +108,3 @@ function Profile() {
 }
 
 export default Profile;
-
-
-// https://frontend-educational-backend.herokuapp.com/api/user

@@ -46,7 +46,7 @@
     color: #007bff;
 }
 
-/* Styling voor de button */
+/*Styling voor de button*/
 button {
     background-color: #007bff;
     color: white;
@@ -57,18 +57,18 @@ button {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
     display: block;
-    margin: 20px auto; /* Centreert de button horizontaal */
+    margin: 20px auto;
 }
 
 button:hover {
     background-color: #0056b3;
-    transform: translateY(-3px); /* Effect voor een subtiele hover animatie */
+    transform: translateY(-3px);
 }
 
 button:focus {
-    outline: none; /* Verwijdert de standaard focus rand */
+    outline: none;
 }
 
 button:active {
-    background-color: #004085; /* Donkerder wanneer de knop wordt ingedrukt */
+    background-color: #004085;
 }
