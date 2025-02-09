@@ -1,10 +1,10 @@
 import React from 'react';
 import './CForm.css';
-import { useForm } from 'react-hook-form';
+import {useForm} from 'react-hook-form';
 import Telephone from "../../assets/telephone.jpg";
 
 function CForm() {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const {register, handleSubmit, formState: {errors}} = useForm();
 
     function onFormSubmit(data) {
         console.log(data);
@@ -24,10 +24,10 @@ function CForm() {
                             <label htmlFor="details-name">
                                 Name:
                                 <input
-                                   type="text"
+                                    type="text"
                                     id="details-name"
                                     className="wide-input"
-                                    placeholder= "Enter your name"
+                                    placeholder="Enter your name"
                                     {...register("name", {
                                         required: "Naam is verplicht",
                                         minLength: {
@@ -44,7 +44,7 @@ function CForm() {
                                 <input
                                     type="email"
                                     id="details-email"
-                                    placeholder= "Enter your e-mail address"
+                                    placeholder="Enter your e-mail address"
                                     {...register("email", {
                                         required: "Het veld e-mailadres is verplicht",
                                         pattern: {
@@ -62,7 +62,7 @@ function CForm() {
                             <legend>Questions/comments:</legend>
                             <label htmlFor="comments">
                                 <textarea
-                                    placeholder= "Here you can leave your message"
+                                    placeholder="Here you can leave your message"
                                     {...register("comments", {
                                         minLength: {
                                             value: 10,
@@ -86,9 +86,9 @@ function CForm() {
                     </form>
                 </section>
             </div>
-    <section className="pica-container">
-        <img src={Telephone} alt="telefoon"/>
-    </section>
+            <section className="pica-container">
+                <img src={Telephone} alt="telefoon"/>
+            </section>
         </main>
     );
 }

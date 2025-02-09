@@ -50,11 +50,11 @@ function App() {
                     <CategoriesPage/>
                 </Route>
                 <Route>
-                         <Route path="/category/:categoryName" component={RecipesPage} />
-                         <Route path="/recipe/:recipeId" component={RecipeDetailPage} />
-                         <Route path="/" element={<AllProfiles />} />
-                         <Route path="/profile/:profileId" element={<ProfileDetail />} />
-                         <Route component={NotFound} />
+                    <Route path="/category/:categoryName" component={RecipesPage}/>
+                    <Route path="/recipe/:recipeId" component={RecipeDetailPage}/>
+                    <Route path="/" element={<AllProfiles/>}/>
+                    <Route path="/profile/:profileId" element={<ProfileDetail/>}/>
+                    <Route component={NotFound}/>
                 </Route>
             </Switch>
             <Footer/>

@@ -25,7 +25,7 @@ function SignUp() {
                     password: password,
                     username: username,
                 },
-                            );
+            );
             console.log(result);
             history.push('/signin');
         } catch (e) {
@@ -41,9 +41,10 @@ function SignUp() {
             <main className="outer-page-container">
                 <div className="inner-page-container pages">
                     <h3> Register</h3>
-                    <p>On this page you can register. After this you will be redirected directly to the login page where you can log in.
+                    <p>On this page you can register. After this you will be redirected directly to the login page where
+                        you can log in.
                     </p>
-                     <form className="text" onSubmit={handleSubmit}>
+                    <form className="text" onSubmit={handleSubmit}>
                         <label htmlFor="email-field">
                             E-Mail:
                             <input
@@ -76,7 +77,9 @@ function SignUp() {
                                 placeholder="Choose a password"  // Placeholder tekst binnen het invoerveld
                             />
                         </label>
-                        {error && <p className="error">This account already exists. Please try a different email address or login..</p>}
+                        {error &&
+                            <p className="error">This account already exists. Please try a different email address or
+                                login..</p>}
                         <button
                             type="submit"
                             className="form-button"

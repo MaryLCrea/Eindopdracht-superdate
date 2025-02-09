@@ -26,7 +26,7 @@ form textarea:focus {
 }
 
 form input,
-form textarea::placeholder{
+form textarea::placeholder {
     font-style: italic;
     color: #888;
     font-family: 'Roboto Condensed', sans-serif;
@@ -45,36 +45,39 @@ form textarea::placeholder{
 }
 
 .form-button:hover {
-    background-color:#986968 ;
+    background-color: #986968;
 }
+
 .pica-container {
-    display : flex ;
-    flex-direction : column ;
-    min-width :50% ;
-    min-height: 600px ;
-    background: #FFFCF8 ;
-    opacity :40% ;
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+    min-height: 600px;
+    background: #FFFCF8;
+    opacity: 40%;
 }
 
 .error-message {
-    font-family :'Roboto Condensed' , sans-serif ;
-    font-style :italic ;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: italic;
 }
 
 .text {
-    font-family :'Roboto Condensed' , sans-serif ;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .contact-button {
     background-color: #d8a4a3;
-    color :white ;
-    border :none ;
-    padding: 12px 20px ;
-    font-size: 16px ;
-    border-radius: 5px ;
-    width :25% ;
-    cursor :pointer ;
-    font-family:'Roboto Condensed' , sans-serif }
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 25%;
+    cursor: pointer;
+    font-family: 'Roboto Condensed', sans-serif
+}
 
-.contact-button:hover { background-color: #986968
+.contact-button:hover {
+    background-color: #986968
 }

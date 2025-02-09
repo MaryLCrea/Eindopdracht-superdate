@@ -72,7 +72,7 @@ function AuthContextProvider({children}) {
             }
 
         } catch (e) {
-                toggleIsAuth({
+            toggleIsAuth({
                 isAuth: false,
                 user: null,
                 status: 'done',

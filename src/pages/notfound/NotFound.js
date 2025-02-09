@@ -15,7 +15,7 @@ function NotFound() {
                     <h2>Oops... The page you are trying to find doesn't exist</h2>
 
                     <div className="container">
-                    <img src={picture} className="dog" alt="dog"/>
+                        <img src={picture} className="dog" alt="dog"/>
                     </div>
                     <p className="link-text">
                         <Link to="/" className="home-link">⬅ Back to Home</Link>

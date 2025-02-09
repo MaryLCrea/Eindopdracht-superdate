@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import PicaSlider from "../../components/picaslider/PicaSlider";
 import "./Profile.css";
 import Header from "../../components/header/Header";
@@ -27,7 +27,7 @@ function Profile() {
     };
 
     const handleProfileChange = (event) => {
-        const { name, value } = event.target;
+        const {name, value} = event.target;
         setProfile((prevProfile) => ({
             ...prevProfile,
             [name]: value,
@@ -53,7 +53,7 @@ function Profile() {
                     </div>
                     <div className="input-container">
                         <label htmlFor="name">Name:</label>
-                        <br />
+                        <br/>
                         <input
                             type="text"
                             id="name"
@@ -65,7 +65,7 @@ function Profile() {
                     </div>
                     <div className="input-container">
                         <label htmlFor="age">Age:</label>
-                        <br />
+                        <br/>
                         <input
                             type="number"
                             id="age"
@@ -77,7 +77,7 @@ function Profile() {
                     </div>
                     <div className="input-container">
                         <label htmlFor="city">City:</label>
-                        <br />
+                        <br/>
                         <input
                             type="text"
                             id="city"
@@ -106,9 +106,8 @@ function Profile() {
         </>
     );
 }
+
 export default Profile;
-
-
 
 
 // https://frontend-educational-backend.herokuapp.com/api/user

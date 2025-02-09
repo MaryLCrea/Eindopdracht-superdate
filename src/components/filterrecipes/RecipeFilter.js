@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 import './RecipeFilter.css';
 
-const RecipeFilter = ({ recipes, ingredients }) => {
+const RecipeFilter = ({recipes, ingredients}) => {
     const [filteredRecipes, setFilteredRecipes] = useState([]);
     const [hasSearched, setHasSearched] = useState(false);
 
@@ -49,7 +49,7 @@ const RecipeFilter = ({ recipes, ingredients }) => {
                             <h3>
                                 <Link to={`/recipe/${recipe.idMeal}`}>{recipe.strMeal}</Link>
                             </h3>
-                            <img src={recipe.strMealThumb} alt={recipe.strMeal} />
+                            <img src={recipe.strMealThumb} alt={recipe.strMeal}/>
                         </li>
                     ))}
                 </ul>

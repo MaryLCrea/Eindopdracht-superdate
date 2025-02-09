@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import {useParams, Link} from 'react-router-dom';
 import axios from 'axios';
 import './recipes.css';
 import Header from "../../components/header/Header";
 
 function RecipesPage() {
-    const { categoryName } = useParams();
+    const {categoryName} = useParams();
     const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
@@ -24,28 +24,28 @@ function RecipesPage() {
     return (
         <>
             <Header/>
-        <div className="recipes-card">
-            <br/>
-            <Link to="/CategoriesPage" className="back-link">
-                ⬅ Back to categories
-            </Link>
-            <h2 className="recipes-title">Recipes: {categoryName}</h2>
-            <ul className="recipes-list">
-                {recipes.map(recipe => (
-                    <li key={recipe.idMeal}>
-                        <Link to={`/recipe/${recipe.idMeal}`}>
-                            <img className="recipes-image" src={recipe.strMealThumb} alt={recipe.strMeal} />
-                            {recipe.strMeal}
-                        </Link>
-                    </li>
-                ))}
+            <div className="recipes-card">
+                <br/>
+                <Link to="/CategoriesPage" className="back-link">
+                    ⬅ Back to categories
+                </Link>
+                <h2 className="recipes-title">Recipes: {categoryName}</h2>
+                <ul className="recipes-list">
+                    {recipes.map(recipe => (
+                        <li key={recipe.idMeal}>
+                            <Link to={`/recipe/${recipe.idMeal}`}>
+                                <img className="recipes-image" src={recipe.strMealThumb} alt={recipe.strMeal}/>
+                                {recipe.strMeal}
+                            </Link>
+                        </li>
+                    ))}
 
-            </ul>
-            <br/>
-            <Link to="/CategoriesPage" className="back-link">
-                ⬅ Back to categories
-            </Link>
-        </div>
+                </ul>
+                <br/>
+                <Link to="/CategoriesPage" className="back-link">
+                    ⬅ Back to categories
+                </Link>
+            </div>
         </>
     );
 }

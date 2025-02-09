@@ -27,13 +27,14 @@ function Login() {
             toggleError(true);
         }
     }
+
     return (
         <>
             <main>
                 <div className="login-box">
                     <h4>Inloggen</h4>
                     <form className="text" onSubmit={handleSubmit}>
-                        <label htmlFor="email-field" >
+                        <label htmlFor="email-field">
                             Username:
                             <input
                                 type="username"
@@ -71,7 +72,7 @@ function Login() {
                 </div>
                 <section>
 
-                                  </section>
+                </section>
             </main>
         </>
     );

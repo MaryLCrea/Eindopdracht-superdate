@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    }
+}
 
 /*flex inner-container hele pagina*/
 .inner-page-container {
@@ -104,8 +104,9 @@ h4 {
     min-width: 50%;
     min-height: 600px;
     background-color: #FFFCF8;
-    opacity:40%;
+    opacity: 40%;
 }
+
 /*wordt gebruikt in de footer pagina's' (about, algvw, contact) en in signin*/
 .text {
     display: flex;
