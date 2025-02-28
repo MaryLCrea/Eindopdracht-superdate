@@ -32,8 +32,8 @@ function AllProfiles() {
             <NavBar/>
             <main>
                 <section className="outer-page-container">
-                    <div className="inner-profiles-container">
-                        <div className="filters">
+                    <article className="inner-profiles-container">
+                            <article className="filters">
                             <label>
                                 Filter op gender:
                                 <select value={selectedGender} onChange={(e) => setSelectedGender(e.target.value)}>
@@ -52,13 +52,13 @@ function AllProfiles() {
                                     <option value="senior">36-65</option>
                                 </select>
                             </label>
-                        </div>
+                        </article>
                         <FilterProfiles
                             data={profile}
                             gender={selectedGender}
                             ageCategory={selectedAgeCategory}
                         />
-                    </div>
+                    </article>
                 </section>
             </main>
         </>
