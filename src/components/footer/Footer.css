@@ -21,7 +21,7 @@
     padding-top: 15px;
 }
 
-/*footer balk plaatjes veiligheid daten*/
+/*footer balk plaatje veiligheid daten*/
 .footer-onder {
     display: flex;
     flex-direction: row;
@@ -33,7 +33,7 @@
     padding-right: 30px;
 }
 
-/*footer plaatjes veiligheid daten*/
+/*footer plaatje veiligheid daten*/
 .keurmerk-plaatjes {
     display: flex;
     flex-direction: row;
@@ -56,3 +56,30 @@
     text-transform: uppercase;
     font-size: 12px;
 }
+
+/* Algemene kleur voor tekst in de footer */
+footer {
+    color: white; /* Zorg ervoor dat de tekst in de footer altijd wit is */
+}
+
+/* Links in de footer */
+.footer-linkmenu a {
+    color: #ededed; /* Zorg ervoor dat de links lichtgrijs zijn */
+    text-decoration: none; /* Verwijder eventueel onderstreping van links */
+}
+
+/* Hover-effect voor de links in de footer */
+.footer-linkmenu a:hover {
+    color: white; /* Maak de hoverkleur wit */
+}
+
+/* Footer copyright tekst */
+.footer-copyright {
+    color: #ededed; /* Zorg ervoor dat de copyright tekst lichtgrijs is */
+}
+
+/* Zorg ervoor dat de hover van de copyright tekst ook wit is */
+.footer-copyright a:hover {
+    color: white;
+}
+

@@ -12,7 +12,8 @@
 Welkom bij Superdate. SuperDate is een datingsite waarbij je zelf een profiel aan kunt maken en profielen van andere gebruikers kunt 
 bekijken. Naast het bekijken van profielen zit er ook een filterfunctie op waarmee gericht gezocht kan worden op geslacht en leeftijd. Het eigen profiel 
 kan ingevuld en gewijzigd worden en er kan een foto worden geupload welke naar eigen wensen in te stellen is qua formaat. Verder is er een recepten pagina, 
-waarop door geklikt kan worden en tot een derde laag, echter kan er ook gezocht worden middels 1 tot 3 ingredienten die je graag wilt gebruiken in het recept. 
+waarop door geklikt kan worden en tot een derde laag, echter kan er ook gezocht worden middels het invullen van 1 tot 3 ingredienten die je graag wilt gebruiken 
+in het recept. 
 
 *Screenshot van de dating profielen pagina:*
 
@@ -20,8 +21,8 @@ waarop door geklikt kan worden en tot een derde laag, echter kan er ook gezocht 
 
 ## 2. Technische benodigdheden:
 Gezien de eerste opzet van deze applicatie uit het jaar 2022 stamt, is deze nog niet opgezet in een vite project, zoals dat anno 2025 wel gebruikelijk is.
-De api's doen hun werk en je hebt hier verder geen api keys voor nodig om de applicatie te runnen. Ik maak gebruik van de [api link] (https://fakerapi.it) en
-de [api link] (https://www.themealdb.com/). De node.js versie die op mijn computer is geinstalleerd is v16.16.0.
+De api's doen hun werk en je hebt hier verder geen api keys voor nodig om de applicatie te runnen. Ik maak gebruik van de [api_link] (https://fakerapi.it) en
+de [api_link] (https://www.themealdb.com/). De node.js versie die op mijn computer is geinstalleerd is v16.16.0.
 De bijbehorende css staat zoveel mogelijk in de pagina map, maar daar waar meerdere pagina's gebruik maakten van dezelfde css, 
 heb ik het in de app.css geplaatst met in app.css met tekst erboven verwijzingen naar waar de css voor dient. De css die behoort tot de pagina in dezelfde map heb ik
 zoveel mogelijk logische namen gegeven, zodat direct duidelijk is waar de css voor dient. De data in de dating profielen is dummy data opgehaald middels een api en natuurlijk 
@@ -35,12 +36,12 @@ Mocht je meer informatie willen over de backend bezoek dan deze link: [backend] 
 *Het opstarten van de applicatie:*
 
 1. Controleer eerst of node.js is geinstalleerd op je computer, dit kun je doen door cmd te typen in het zoekveld onderin (windows), de opdrachtprompt opent zich
-   en vervolgens typ je node -v.  In het geval node.js helemaal nog niet geinstalleerd is installeer dan via [link node.js] (https://nodejs.org/en/download/)
+   en vervolgens typ je node -v.  In het geval node.js helemaal nog niet geinstalleerd is installeer dan via [link_node.js] (https://nodejs.org/en/download/)
    Controleer nu nogmaals de versie met node -v. Een versie 16.16.0 is de versie die goed is om deze applicatie te draaien, dus als er een oudere of nieuwere versie verschijnt, 
    typ dan: nvm install 16.16.0. Mocht je daarna weer terug willen naar de oorspronkelijke versie herhaal dan de stappen met de versie die als eerste verscheen. 
-2. Installeer Webstorm via JetBrains en start Webstorm op. 
+2. Installeer een IDE zoals bijvoorbeeld Webstorm (via JetBrains) en start het programma op. 
 3. Ga (rechtsbovenin) naar open en zoek daar de project map en klik op ok of ga naar get from VCS (rechtsbovenin) en plak vervolgens de 
-   repository link: [repository link] (https://github.com/MaryLCrea/Eindopdracht-superdate.git) en klik op clone.
+   repository link: [repository_link] (https://github.com/MaryLCrea/Eindopdracht-superdate.git) en klik op clone.
 4. Open links onderin de terminal.
 5. Voer hierna een npm install uit door dit te typen in de terminal of wanneer webstorm hier (rechtsonderin) zelf mee komt door te klikken op npm install.
 6. Vervolgens check je of de react-router-dom in package.json staat. Op hetzelfde niveau als de src map staat een bestand genaamd package.json. Zoek in dit bestand naar

@@ -1,14 +1,14 @@
 import React from "react";
-import HomeHeader from "../../components/homeheader/HomeHeader";
 import {Link} from "react-router-dom";
 import './NotFound.css';
 import picture from "../../assets/dog.png";
+import NavBarHome from "../../components/navbarhome/NavBarHome";
 
 function NotFound() {
 
     return (
         <>
-            <HomeHeader/>
+            <NavBarHome/>
             <main className="outer-page-container">
                 <div className="inner-page-container pages">
 

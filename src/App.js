@@ -11,9 +11,9 @@ import Profile from "./pages/profile/Profile";
 import About from "./pages/about/About";
 import Footer from "./components/footer/Footer";
 import AllProfiles from "./pages/allprofiles/AllProfiles";
-import CategoriesPage from "./pages/recipes/CategoriesPage";
-import RecipeDetailPage from "./pages/recipes/RecipeDetailPage";
-import RecipesPage from "./pages/recipes/RecipesPage";
+import CategoriesPage from "./pages/recipes/categoriespage/CategoriesPage";
+import RecipeDetailPage from "./pages/recipes/recipedetailpage/RecipeDetailPage";
+import RecipesPage from "./pages/recipes/recipespage/RecipesPage";
 import NotFound from "./pages/notfound/NotFound";
 
 function App() {

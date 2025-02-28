@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import Header from "../../components/header/Header";
 import FilterProfiles from "../../components/filterprofiles/FilterProfiles";
 import './AllProfiles.css';
+import NavBar from "../../components/navbar/NavBar";
 
 function AllProfiles() {
     const [profile, setProfile] = useState([]);
@@ -29,11 +29,11 @@ function AllProfiles() {
 
     return (
         <>
-            <Header/>
+            <NavBar/>
             <main>
                 <section className="outer-page-container">
-                    <div className="inner-profiles-container">
-                        <div className="filters">
+                    <article className="inner-profiles-container">
+                            <article className="filters">
                             <label>
                                 Filter op gender:
                                 <select value={selectedGender} onChange={(e) => setSelectedGender(e.target.value)}>
@@ -52,13 +52,13 @@ function AllProfiles() {
                                     <option value="senior">36-65</option>
                                 </select>
                             </label>
-                        </div>
+                        </article>
                         <FilterProfiles
                             data={profile}
                             gender={selectedGender}
                             ageCategory={selectedAgeCategory}
                         />
-                    </div>
+                    </article>
                 </section>
             </main>
         </>

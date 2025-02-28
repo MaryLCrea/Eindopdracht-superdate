@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {useParams, Link} from 'react-router-dom';
 import axios from 'axios';
-import './recipes.css';
-import Header from "../../components/header/Header";
+import './RecipesPage.css';
+import NavBar from "../../../components/navbar/NavBar";
 
 function RecipesPage() {
     const {categoryName} = useParams();
@@ -23,7 +23,7 @@ function RecipesPage() {
 
     return (
         <>
-            <Header/>
+            <NavBar/>
             <div className="recipes-card">
                 <br/>
                 <Link to="/CategoriesPage" className="back-link">

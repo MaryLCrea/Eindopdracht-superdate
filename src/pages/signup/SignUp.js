@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import axios from 'axios';
-import HomeHeader from "../../components/homeheader/HomeHeader";
 import './SignUp.css';
 import RomaCouple from "../../assets/romacouple.jpg";
+import NavBarHome from "../../components/navbarhome/NavBarHome";
 
 function SignUp() {
     const [email, setEmail] = useState('');
@@ -37,7 +37,7 @@ function SignUp() {
 
     return (
         <>
-            <HomeHeader/>
+            <NavBarHome/>
             <main className="outer-page-container">
                 <div className="inner-page-container pages">
                     <h3> Register</h3>
