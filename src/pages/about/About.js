@@ -1,13 +1,13 @@
 import React from 'react';
 import './About.css';
-import HomeHeader from "../../components/homeheader/HomeHeader";
 import {Link} from "react-router-dom";
 import HomeLink from "../../components/homelink/HomeLink";
+import NavBarHome from "../../components/navbarhome/NavBarHome";
 
 function About() {
     return (
         <>
-            <HomeHeader/>
+            <NavBarHome/>
             <main className="outer-page-container">
                 <div className="inner-page-container pages">
                     <h4>About Us</h4>

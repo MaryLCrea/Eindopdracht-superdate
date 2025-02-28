@@ -1,16 +1,16 @@
 import React, {useState} from 'react';
 import './AlgVw.css';
-import HomeHeader from "../../components/homeheader/HomeHeader";
 import CondiCard from "../../components/condicard/CondiCard";
 import {Link} from "react-router-dom";
 import HomeLink from "../../components/homelink/HomeLink";
+import NavBarHome from "../../components/navbarhome/NavBarHome";
 
 function AlgVw() {
     const {openC, setOpenC} = useState(null);
 
     return (
         <>
-            <HomeHeader/>
+            <NavBarHome/>
             <main className="outer-page-container">
                 <div className="inner-page-container pages">
                     <h2>General Terms and Conditions</h2>

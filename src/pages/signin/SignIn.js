@@ -2,8 +2,8 @@ import React, {useContext, useState} from 'react';
 import {Link} from 'react-router-dom';
 import {AuthContext} from '../../context/AuthContext';
 import axios from 'axios';
-import HomeHeader from "../../components/homeheader/HomeHeader";
 import Malediven from '../../assets/malediven.jpg';
+import NavBarHome from "../../components/navbarhome/NavBarHome";
 
 function SignIn() {
     const [password, setPassword] = useState('');
@@ -30,7 +30,7 @@ function SignIn() {
     }
 
     return (<>
-        <HomeHeader/>
+        <NavBarHome/>
         <main className="outer-page-container">
             <div className="inner-page-container pages">
                 <h3>Inloggen</h3>

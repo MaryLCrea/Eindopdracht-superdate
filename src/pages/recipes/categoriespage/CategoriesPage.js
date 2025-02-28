@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import Header from "../../components/header/Header";
-import RecipeFilter from "../../components/filterrecipes/RecipeFilter";
+import RecipeFilter from "../../../components/filterrecipes/RecipeFilter";
 import {Link} from "react-router-dom";
+import NavBar from "../../../components/navbar/NavBar";
 
 function CategoriesPage() {
     const [categories, setCategories] = useState([]);
@@ -43,7 +43,7 @@ function CategoriesPage() {
 
     return (
         <>
-            <Header/>
+            <NavBar/>
             <div className="filter-list">
                 <div className="search-box">
                     <h3>Welcome to the recipes page </h3>

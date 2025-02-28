@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import {useParams, Link} from 'react-router-dom';
 import axios from 'axios';
-import './recipes.css';
-import Header from "../../components/header/Header";
-import RecipeFilter from '../../components/filterrecipes/RecipeFilter';
+import './RecipeDetailPage.css';
+import RecipeFilter from '../../../components/filterrecipes/RecipeFilter';
+import NavBar from "../../../components/navbar/NavBar";
 
 function RecipeDetailPage() {
     const {recipeId} = useParams();
@@ -39,7 +39,7 @@ function RecipeDetailPage() {
 
     return (
         <>
-            <Header/>
+            <NavBar/>
             <div className="recipes-card recipe-detail-card">
                 {recipe ? (
                     <>

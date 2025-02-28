@@ -1,12 +1,12 @@
 import React from 'react';
-import HomeHeader from "../../components/homeheader/HomeHeader";
 import CForm from "../../components/cform/CForm";
 import HomeLink from "../../components/homelink/HomeLink";
+import NavBarHome from "../../components/navbarhome/NavBarHome";
 
 function Contact() {
     return (
         <>
-            <HomeHeader/>
+            <NavBarHome/>
             <CForm/>
             <HomeLink/>
         </>

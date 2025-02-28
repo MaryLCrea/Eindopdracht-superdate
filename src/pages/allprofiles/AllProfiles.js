@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import Header from "../../components/header/Header";
 import FilterProfiles from "../../components/filterprofiles/FilterProfiles";
 import './AllProfiles.css';
+import NavBar from "../../components/navbar/NavBar";
 
 function AllProfiles() {
     const [profile, setProfile] = useState([]);
@@ -29,7 +29,7 @@ function AllProfiles() {
 
     return (
         <>
-            <Header/>
+            <NavBar/>
             <main>
                 <section className="outer-page-container">
                     <div className="inner-profiles-container">
