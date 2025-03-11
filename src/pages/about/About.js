@@ -8,13 +8,14 @@ function About() {
     return (
         <>
             <NavBarHome/>
-            <main className="outer-page-container">
+            <header className="outer-page-container">
                 <section className="inner-page-container pages">
                     <h4>About Us</h4>
-                    <article className="text">Superdate is one of the largest online dating sites in Europe for singles
+
+                    <article className="text">SuperDate is one of the largest online dating sites in Europe for singles
                         who are looking for a serious relationship.
                     </article>
-                    <article className="text">Super Date trades in the Netherlands under the name ML-Creatons.</article>
+                    <article className="text">SuperDate trades in the Netherlands under the name ML-Creatons.</article>
                     <article className="text">
                         Address:
                         ML-Creatons
@@ -30,13 +31,16 @@ function About() {
                         <p>
                             If you would like to send an email, please use the
                             <a href="/contact" title="Go to the contact form"> contact form</a>.
+
+                            If you have a question about using SuperDate, please send us an e-mail to the following
+                            e-mail
+                            address: customerservice@superdate.nl.
                         </p>
-                        If you have a question about using Superdate, please send us an e-mail to the following e-mail
-                        address: customerservice@superdate.nl.
                     </article>
                     <HomeLink/>
                 </section>
-            </main>
+            </header>
+
         </>
     );
 }

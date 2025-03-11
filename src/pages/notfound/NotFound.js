@@ -9,19 +9,19 @@ function NotFound() {
     return (
         <>
             <NavBarHome/>
-            <main className="outer-page-container">
-                <div className="inner-page-container pages">
-
-                    <h2>Oops... The page you are trying to find doesn't exist</h2>
-
-                    <div className="container">
+            <section className="outer-page-container">
+                <section className="inner-page-container pages">
+                    <header>
+                        <h2>Oops... The page you are trying to find doesn't exist</h2>
+                    </header>
+                    <section className="container">
                         <img src={picture} className="dog" alt="dog"/>
-                    </div>
+                    </section>
                     <p className="link-text">
                         <Link to="/" className="home-link">⬅ Back to Home</Link>
                     </p>
-                </div>
-            </main>
+                </section>
+            </section>
         </>
     );
 }

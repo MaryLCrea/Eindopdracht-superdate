@@ -10,7 +10,7 @@ function NavBar() {
 
     return (
         <>
-            <header className="outer-page-container">
+            <section className="outer-page-container">
                 <section className="topmenu-outer-container1">
                     <h2><NavLink to="/">Superdate</NavLink></h2>
 
@@ -59,7 +59,7 @@ function NavBar() {
                         </ul>
                     </nav>
                 </section>
-            </header>
+            </section>
         </>
     );
 }

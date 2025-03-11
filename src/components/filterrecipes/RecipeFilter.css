@@ -1,55 +1,7 @@
-.filter-section {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-.ingredient-inputs input {
-    margin: 5px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 200px;
-}
-
-.filter-recipes-list {
-    list-style: none;
-    padding: 0;
-}
-
-.filter-recipes-item {
-    margin: 15px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background-color: #f9f9f9;
-}
-
-.filter-recipes-item img {
-    height: 100px;
-    border-radius: 5px;
-}
-
-.filter-recipes-item a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-.filter-recipes-item a:hover {
-    text-decoration: underline;
-    color: #007bff;
-}
-
-/*Styling voor de button*/
+/* Styling voor de button */
 button {
-    background-color: #007bff;
-    color: white;
+    background-color: #d8a4a3;
+    color: #010912;
     font-size: 1rem;
     padding: 10px 20px;
     border: none;
@@ -61,7 +13,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #b28281;
     transform: translateY(-3px);
 }
 
@@ -70,5 +22,64 @@ button:focus {
 }
 
 button:active {
-    background-color: #004085;
+    background-color: #ae9a97;
+}
+
+.filter-recipes-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.filter-recipes-item {
+    width: 200px; /* Kan aangepast worden afhankelijk van je layoutwensen */
+    text-align: center;
+}
+
+.filter-recipes-item img {
+    width: 80%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.filter-recipes-item:hover img {
+    transform: scale(1.05);
+}
+
+.recipe-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.recipe-link h3 {
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.recipe-link:hover h3 {
+    color: #b28281;
+}
+
+.filter-recipes-item a:hover {
+    text-decoration: underline;
+}
+
+/*Styling voor de zoekknop*/
+.search-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: #555;
+    color: #433130;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #ae9a97;
 }

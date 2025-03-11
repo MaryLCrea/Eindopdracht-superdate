@@ -9,14 +9,15 @@ function SignUp() {
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [error, toggleError] = useState(false);
-    const [loading, toggleLoading] = useState(false);
+    const [error, setError] = useState('');
     const history = useHistory();
 
     async function handleSubmit(e) {
         e.preventDefault();
-        toggleError(false);
-        toggleLoading(true);
+        setError('');
+        const controller = new AbortController();
+        const { signal } = controller;
+
         try {
             const result = await axios.post(
                 'https://frontend-educational-backend.herokuapp.com/api/auth/signup',
@@ -25,25 +26,33 @@ function SignUp() {
                     password: password,
                     username: username,
                 },
+                { signal }
             );
-            console.log(result);
             history.push('/signin');
         } catch (e) {
-            console.error(e);
-            toggleError(true);
+            if (e.name === 'AbortError') {
+            } else {
+                console.error(e);
+                setError(e.response?.data?.message || "Something went wrong, please try again.");
+            }
         }
-        toggleLoading(false);
+
+        return () => {
+            controller.abort();
+        };
     }
 
     return (
         <>
             <NavBarHome/>
-            <main className="outer-page-container">
-                <div className="inner-page-container pages">
+            <section className="outer-page-container">
+                <section className="inner-page-container pages">
+                    <header>
                     <h3> Register</h3>
-                    <p>On this page you can register. After this you will be redirected directly to the login page where
+                        <p>On this page you can register. After this you will be redirected directly to the login page where
                         you can log in.
                     </p>
+                    </header>
                     <form className="text" onSubmit={handleSubmit}>
                         <label htmlFor="email-field">
                             E-Mail:
@@ -54,6 +63,7 @@ function SignUp() {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 placeholder="Enter your e-mail address"
+                                autoComplete="email"
                             />
                         </label>
                         <label htmlFor="username-field">
@@ -64,6 +74,7 @@ function SignUp() {
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}
                                 placeholder="Enter your username"
+                                autoComplete="username"
                             />
                         </label>
                         <label htmlFor="password-field">
@@ -75,25 +86,23 @@ function SignUp() {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 placeholder="Choose a password"
+                                autoComplete="new-password"
                             />
                         </label>
-                        {error &&
-                            <p className="error">This account already exists. Please try a different email address or
-                                login..</p>}
+                        {error && <p className="error">{error}</p>}
                         <button
                             type="submit"
                             className="form-button"
-                            disabled={loading}
-                        >
-                            Register
+                                                  >
+                           Register
                         </button>
                     </form>
                     <p>Already have an account? You can <Link to="/signin">log in</Link> here.</p>
-                </div>
+                </section>
                 <section className="pica-container">
                     <img src={RomaCouple} alt="koppel"/>
                 </section>
-            </main>
+            </section>
         </>
     );
 }

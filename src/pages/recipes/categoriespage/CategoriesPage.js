@@ -3,33 +3,46 @@ import axios from 'axios';
 import RecipeFilter from "../../../components/filterrecipes/RecipeFilter";
 import {Link} from "react-router-dom";
 import NavBar from "../../../components/navbar/NavBar";
+import './CategoriesPage.css';
 
 function CategoriesPage() {
     const [categories, setCategories] = useState([]);
     const [allRecipes, setAllRecipes] = useState([]);
     const [ingredients, setIngredients] = useState(['', '', '']);
+    const [error, toggleError] = useState(false);
 
     useEffect(() => {
+        const controller = new AbortController();
+        const signal = controller.signal;
+
         async function fetchCategories() {
             try {
-                const response = await axios.get('https://www.themealdb.com/api/json/v1/1/categories.php');
+                              const response = await axios.get('https://www.themealdb.com/api/json/v1/1/categories.php');
                 setCategories(response.data.categories);
             } catch (error) {
-                console.error("Something went wrong while loading categories:", error);
+                if (!axios.isCancel(error)) {
+                    console.error(e);
+                    toggleError("Failed to load categories. Please try again later.");
             }
+             }
+        };
+            fetchCategories();
+
+        return () => {
+            controller.abort();
         };
 
-        fetchCategories();
     }, []);
 
     useEffect(() => {
         async function fetchRecipes() {
             try {
-                const response = await axios.get('https://www.themealdb.com/api/json/v1/1/search.php?s=');
+                               const response = await axios.get('https://www.themealdb.com/api/json/v1/1/search.php?s=');
                 setAllRecipes(response.data.meals);
             } catch (error) {
-                console.error("Something went wrong while retrieving recipes:", error);
-            }
+                toggleError("Failed to load recipes. Please try again later.");
+
+        }
         };
 
         fetchRecipes();
@@ -44,8 +57,8 @@ function CategoriesPage() {
     return (
         <>
             <NavBar/>
-            <div className="filter-list">
-                <div className="search-box">
+            <section className="filter-list">
+                <section className="search-box">
                     <h3>Welcome to the recipes page </h3>
                     <p className="description-text"> We hope you like SuperDate, where everything comes together because
                         love goes through the stomach, right?
@@ -59,7 +72,7 @@ function CategoriesPage() {
                         surprised! </p>
                     <h6>Search by ingredients</h6>
 
-                    <div className="ingredient-inputs">
+                    <section className="ingredient-inputs">
                         {[0, 1, 2].map(index => (
                             <input
                                 key={index}
@@ -69,14 +82,13 @@ function CategoriesPage() {
                                 onChange={(e) => handleIngredientChange(index, e.target.value)}
                             />
                         ))}
-                    </div>
+                    </section>
 
-                </div>
+                </section>
                 <RecipeFilter recipes={allRecipes} ingredients={ingredients}/>
-            </div>
+            </section>
 
-
-            <div className="recipes-card">
+            <section className="recipes-card">
                 <h2 className="recipes-title">Categories</h2>
                 <ul className="categories-list">
                     {categories.map(category => (
@@ -92,7 +104,7 @@ function CategoriesPage() {
                         </li>
                     ))}
                 </ul>
-            </div>
+            </section>
         </>
 
     );

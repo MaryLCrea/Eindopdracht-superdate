@@ -8,44 +8,51 @@ import NavBarHome from "../../components/navbarhome/NavBarHome";
 function SignIn() {
     const [password, setPassword] = useState('');
     const [username, setUsername] = useState('');
-    const [error, toggleError] = useState(false);
+    const [error, setError] = useState('');
     const {login} = useContext(AuthContext);
 
     async function handleSubmit(e) {
         e.preventDefault();
-        toggleError(false);
+        setError('');
+
+        const controller = new AbortController();
+        const { signal } = controller;
 
         try {
             const result = await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signin', {
                 username: username,
                 password: password,
-            });
-            console.log(result.data);
+            }, {signal: controller.signal});
+
             login(result.data.accessToken);
 
         } catch (e) {
-            console.error(e);
-            toggleError(true);
+            if (e.name === 'AbortError') {
+            } else {
+                console.error(e);
+                setError(e.response?.data?.message || "Something went wrong, please try again.");
+            }
         }
     }
 
     return (<>
         <NavBarHome/>
         <main className="outer-page-container">
-            <div className="inner-page-container pages">
+            <section className="inner-page-container pages">
                 <h3>Inloggen</h3>
                 <article className="text"> Log in here to view other profiles.
                 </article>
                 <form className="text" onSubmit={handleSubmit}>
-                    <label htmlFor="email-field">
+                    <label htmlFor="username-field">
                         Username:
                         <input
-                            type="username"
+                            type="text"
                             id="username-field"
                             name="username"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
                             placeholder="Enter your username"
+                            autoComplete="username"
                         />
                     </label>
                     <label htmlFor="password-field">
@@ -57,21 +64,18 @@ function SignIn() {
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             placeholder="Enter your password"
+                            autoComplete="current-password"
                         />
                     </label>
-                    {error && <p className="error">Username and password combination is incorrect</p>}
-                    <button
-                        type="submit"
-                        className="form-button"
-                    >
-                        Log in
-                    </button>
+                   {error && <p className="error">{error}</p>}
+                    <button type="submit" className="form-button">
+                                            </button>
                 </form>
                 <p>
 
                     Don't have an account yet? <Link to="/signup"> Register </Link> first.
                 </p>
-            </div>
+            </section>
             <section className="pica-container">
                 <img className="malediven" src={Malediven} alt="malediven"/>
             </section>
@@ -80,7 +84,3 @@ function SignIn() {
 }
 
 export default SignIn;
-
-// https://frontend-educational-backend.herokuapp.com/api/auth/signin
-
-// https://api.datavortex.nl/superdate/users/authenticate

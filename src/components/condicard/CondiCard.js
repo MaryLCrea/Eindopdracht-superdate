@@ -1,13 +1,12 @@
 import React from 'react';
 
-function CondiCard(props) {
-    console.log(props);
-    return (
+function CondiCard({ title, children }) {
+        return (
         <article className="article-card">
-            <h5>{props.title}</h5>
-            {props.children}
+            <h5>{title}</h5>
+            {children}
         </article>
-    )
+    );
 }
 
 export default CondiCard;

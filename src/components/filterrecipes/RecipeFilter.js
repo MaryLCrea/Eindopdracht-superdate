@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './RecipeFilter.css';
 
-const RecipeFilter = ({recipes, ingredients}) => {
+const RecipeFilter = ({ recipes, ingredients }) => {
     const [filteredRecipes, setFilteredRecipes] = useState([]);
     const [hasSearched, setHasSearched] = useState(false);
 
@@ -35,24 +35,23 @@ const RecipeFilter = ({recipes, ingredients}) => {
         } else {
             setFilteredRecipes([]);
         }
-
         setHasSearched(true);
     };
 
     return (
-        <div>
+        <div className="filter-section">
             <button onClick={filterRecipes}>Filter Recipes</button>
             {filteredRecipes.length > 0 ? (
-                <ul className="filter-recipes-list">
+                <div className="filter-recipes-gallery">
                     {filteredRecipes.map(recipe => (
-                        <li key={recipe.idMeal} className="filter-recipes-item">
-                            <h3>
-                                <Link to={`/recipe/${recipe.idMeal}`}>{recipe.strMeal}</Link>
-                            </h3>
-                            <img src={recipe.strMealThumb} alt={recipe.strMeal}/>
-                        </li>
+                        <div key={recipe.idMeal} className="filter-recipes-item">
+                            <Link to={`/recipe/${recipe.idMeal}`} className="recipe-link">
+                                <img src={recipe.strMealThumb} alt={recipe.strMeal} />
+                                <h3>{recipe.strMeal}</h3>
+                            </Link>
+                        </div>
                     ))}
-                </ul>
+                </div>
             ) : (
                 hasSearched && <p>No recipes found with the specified ingredients.</p>
             )}

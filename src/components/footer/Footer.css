@@ -78,8 +78,38 @@ footer {
     color: #ededed; /* Zorg ervoor dat de copyright tekst lichtgrijs is */
 }
 
-/* Zorg ervoor dat de hover van de copyright tekst ook wit is */
+/* Zorgt ervoor dat de hover van de copyright tekst ook wit is */
 .footer-copyright a:hover {
     color: white;
+}
+
+h4 {
+    font-size: 25px;
+    margin: 20px;
+}
+
+
+.pages {
+    margin: 40px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+.form-container {
+    margin: 3%;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-width: 44%;
+    min-height: 600px;
+    background-color: #FFFCF8;
+}
+
+
+.text {
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    justify-content: flex-start;
 }
 

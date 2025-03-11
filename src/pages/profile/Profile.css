@@ -88,3 +88,31 @@ body {
 .test-page button:hover {
     background-color: #704948;
 }
+
+/*profielkaartjes op pagina's profielen en mijn profiel*/
+.profile-card {
+    display: flex;
+    border-radius: 4px;
+    box-shadow: 6px 10px 18px 0 rgba(0, 0, 0, 0.3);
+    flex-basis: 200px;
+    background-color: #ededed;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px;
+    min-height: 400px;
+    align-items: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.inner-profiles-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-basis: 100%;
+    min-height: 600px;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 50px 50px;
+    background-color: #FFFCF8;
+}
