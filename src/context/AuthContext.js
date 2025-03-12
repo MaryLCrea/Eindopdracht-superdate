@@ -2,6 +2,7 @@ import React, {createContext, useEffect, useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
 import axios from 'axios';
+import LoadingAnimation from "../components/loadanimation/LoadAnimation";
 
 export const AuthContext = createContext({});
 
@@ -11,13 +12,16 @@ function AuthContextProvider({children}) {
         user: null,
         status: 'pending',
     });
+    const [error, setError] = useState(null);
     const history = useHistory();
 
     useEffect(() => {
+        const controller = new AbortController();
         const token = localStorage.getItem('token');
+
         if (token) {
             const decoded = jwt_decode(token);
-            fetchUserData(decoded.sub, token);
+            fetchUserData(decoded.sub, token, controller.signal);
         } else {
             toggleIsAuth({
                 isAuth: false,
@@ -25,12 +29,17 @@ function AuthContextProvider({children}) {
                 status: 'done',
             });
         }
+        return () => {
+            controller.abort();
+        };
+
     }, []);
 
     function login(JWT) {
         localStorage.setItem('token', JWT);
         const decoded = jwt_decode(JWT);
-        fetchUserData(decoded.sub, JWT, '/profile');
+        const controller = new AbortController();
+        fetchUserData(decoded.sub, JWT, controller.signal);
         history.push('/profile');
     }
 
@@ -42,18 +51,17 @@ function AuthContextProvider({children}) {
             status: 'done',
         });
 
-        console.log('Gebruiker is uitgelogd!');
         history.push('/');
     }
 
-    async function fetchUserData(id, token, redirectUrl) {
+    async function fetchUserData(id, token, signal) {
         try {
             const result = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/user/${id}`, {
                 headers: {
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${token}`,
-
                 },
+                signal: signal,
             });
 
             toggleIsAuth({
@@ -67,11 +75,13 @@ function AuthContextProvider({children}) {
                 status: 'done',
             });
 
-            if (redirectUrl) {
-                history.push(redirectUrl);
+            if (signal) {
+                history.push('/profile');
             }
 
         } catch (e) {
+            console.error('Error fetching user data:', e);
+
             toggleIsAuth({
                 isAuth: false,
                 user: null,
@@ -89,7 +99,14 @@ function AuthContextProvider({children}) {
 
     return (
         <AuthContext.Provider value={contextData}>
-            {isAuth.status === 'done' ? children : <p>Loading...</p>}
+            {isAuth.status === 'pending' ? (
+                <LoadingAnimation />
+            ) : (
+                <>
+                    {error && <p className="error">{error}</p>}
+                    {children}
+                </>
+            )}
         </AuthContext.Provider>
     );
 }

@@ -1,9 +1,12 @@
-.profile-img {
-    height: 175px;
-}
-
-h6 {
-    text-decoration: solid;
-    font-size: 22px;
+.inner-profiles-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-basis: 100%;
+    min-height: 600px;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 50px 50px;
+    background-color: #FFFCF8;
 }
 

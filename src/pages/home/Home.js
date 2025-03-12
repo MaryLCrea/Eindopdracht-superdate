@@ -6,14 +6,13 @@ import NavBarHome from "../../components/navbarhome/NavBarHome";
 
 function Home() {
 
-
     return (
         <>
             <NavBarHome/>
             <LoginField/>
-            <div className="outerpage-container">
+            <section className="outerpage-container">
                 <img src={picture} className="home-picture" alt="home-picture"/>
-            </div>
+            </section>
         </>
     );
 }

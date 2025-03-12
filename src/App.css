@@ -1,10 +1,9 @@
 /*flex outer-page-container hele pagina*/
 .outer-page-container {
-    display: flex;
+    display: grid;
     flex-direction: row;
     background-color: #FFFCF8;
     flex-basis: auto;
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
@@ -22,35 +21,6 @@
     margin-top: 50px;
     background-color: #FFFCF8;
 }
-
-/*profielkaartjes op pagina's profielen en mijn profiel*/
-.profile-card {
-    display: flex;
-    border-radius: 4px;
-    box-shadow: 6px 10px 18px 0 rgba(0, 0, 0, 0.3);
-    flex-basis: 200px;
-    background-color: #ededed;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 20px;
-    min-height: 400px;
-    align-items: center;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
-.inner-profiles-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-basis: 100%;
-    min-height: 600px;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin: 50px 50px;
-    background-color: #FFFCF8;
-}
-
 /*tekst op de pagina's*/
 .text {
     margin: 20px;
@@ -65,38 +35,6 @@ h2 {
     text-transform: uppercase;
 }
 
-/*Wordt gebruikt als kop op de inlog- en aanmeldpagina*/
-h3 {
-    font-family: 'Ebrima', 'Verdana', serif;
-    font-size: 20px;
-    line-height: 115px;
-    color: #000000;
-    text-transform: uppercase;
-}
-
-/*wordt gebruikt in de footer pagina's' (about, algvw, contact)*/
-h4 {
-    font-size: 25px;
-    margin: 20px;
-}
-
-/*wordt gebruikt in de footer pagina's' en in signup en signin (about, algvw, contact)*/
-.pages {
-    margin: 40px;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
-/*wordt gebruikt in de footer pagina's' en in signup en signin, contact*/
-.form-container {
-    margin: 3%;
-    font-family: 'Roboto Condensed', sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-width: 44%;
-    min-height: 600px;
-    background-color: #FFFCF8;
-}
-
 .picture-container {
     font-family: 'Roboto Condensed', sans-serif;
     display: flex;
@@ -105,14 +43,6 @@ h4 {
     min-height: 600px;
     background-color: #FFFCF8;
     opacity: 40%;
-}
-
-/*wordt gebruikt in de footer pagina's' (about, algvw, contact) en in signin*/
-.text {
-    display: flex;
-    flex-direction: column;
-    margin: 25px;
-    justify-content: flex-start;
 }
 
 label {
@@ -145,3 +75,4 @@ label {
         font-size: 16px;
     }
 }
+

@@ -43,7 +43,7 @@ Mocht je meer informatie willen over de backend bezoek dan deze link: [backend] 
 3. Ga (rechtsbovenin) naar open en zoek daar de project map en klik op ok of ga naar get from VCS (rechtsbovenin) en plak vervolgens de 
    repository link: [repository_link] (https://github.com/MaryLCrea/Eindopdracht-superdate.git) en klik op clone.
 4. Open links onderin de terminal.
-5. Voer hierna een npm install uit door dit te typen in de terminal of wanneer webstorm hier (rechtsonderin) zelf mee komt door te klikken op npm install.
+5. Voer hierna een npm install uit door dit te typen in de terminal of wanneer je IDE hier (Bij Webstorm rechtsonderin) zelf mee komt door te klikken op npm install.
 6. Vervolgens check je of de react-router-dom in package.json staat. Op hetzelfde niveau als de src map staat een bestand genaamd package.json. Zoek in dit bestand naar
   react-router-dom. Staat deze er in, ga dan naar de volgende stap. Staat deze er niet in, installeer deze dan door in de terminal het commando: "npm install react-router-dom"
 7. Hierna voer je het commando "npm start" in.

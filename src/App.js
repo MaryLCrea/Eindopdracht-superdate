@@ -15,11 +15,13 @@ import CategoriesPage from "./pages/recipes/categoriespage/CategoriesPage";
 import RecipeDetailPage from "./pages/recipes/recipedetailpage/RecipeDetailPage";
 import RecipesPage from "./pages/recipes/recipespage/RecipesPage";
 import NotFound from "./pages/notfound/NotFound";
+import Loading from "./components/loadanimation/LoadAnimation";
 
 function App() {
 
     return (
-        <>
+        <main>
+            <Loading/>
             <Switch>
                 <Route exact path="/">
                     <Home/>
@@ -48,15 +50,12 @@ function App() {
                 <Route exact path="/CategoriesPage">
                     <CategoriesPage/>
                 </Route>
-                <Route>
-                    <Route path="/category/:categoryName" component={RecipesPage}/>
-                    <Route path="/recipe/:recipeId" component={RecipeDetailPage}/>
-                    <Route path="/" element={<AllProfiles/>}/>
-                    <Route component={NotFound}/>
-                </Route>
+                <Route path="/category/:categoryName" component={RecipesPage}/>
+                <Route path="/recipe/:recipeId" component={RecipeDetailPage}/>
+                <Route component={NotFound}/>
             </Switch>
             <Footer/>
-        </>
+        </main>
     );
 }
 

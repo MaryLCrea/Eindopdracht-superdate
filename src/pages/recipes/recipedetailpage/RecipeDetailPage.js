@@ -10,53 +10,89 @@ function RecipeDetailPage() {
     const [recipe, setRecipe] = useState(null);
     const [allRecipes, setAllRecipes] = useState([]);
     const [ingredients, setIngredients] = useState(['chicken', 'tomato', 'onion']);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
+        const controller = new AbortController();
+
         async function fetchRecipe() {
+                       setError(null);
+
             try {
                 const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${recipeId}`);
-                setRecipe(response.data.meals[0]);
+                setRecipe(response.data.meals?.[0] || null);
             } catch (error) {
-                console.error("Something went wrong while loading the recipe:", error);
+                if (!axios.isCancel(error)) {
+                    setError("Something went wrong while loading the recipe.");
+                }
+
             }
         }
 
         fetchRecipe();
+
+        return () => {
+            controller.abort();
+        };
+
     }, [recipeId]);
 
     useEffect(() => {
+        const controller = new AbortController();
+
         async function fetchAllRecipes() {
+                       setError(null);
+
             try {
                 const response = await axios.get('https://www.themealdb.com/api/json/v1/1/search.php?s=');
-                setAllRecipes(response.data.meals);
+                setAllRecipes(response.data.meals || []);
             } catch (error) {
-                console.error("Something went wrong while retrieving all recipes:", error);
+                if (!axios.isCancel(error)) {
+                    console.error(error);
+                    setError("Something went wrong while retrieving all recipes.");
+                }
+
             }
         }
 
         fetchAllRecipes();
+
+        return () => {
+            controller.abort();
+        };
+
     }, []);
 
     return (
         <>
             <NavBar/>
-            <div className="recipes-card recipe-detail-card">
+
+            <header className="recipe-header">
+                <h2>{recipe ? recipe.strMeal : "Recipe not found"}</h2>
+            </header>
+
+            <section className="recipes-card recipe-detail-card">
+                               {error && <p className="error">{error}</p>}
+
                 {recipe ? (
                     <>
-                        <h2>{recipe.strMeal}</h2>
+                        <Link to={`/category/${recipe.strCategory}`} className="back-link"> ⬅ Back
+                            to {recipe.strCategory} recipes </Link>
                         <img src={recipe.strMealThumb} alt={recipe.strMeal}/>
                         <p>{recipe.strInstructions}</p>
                         <br/>
-                        <Link to={`/category/${recipe.strCategory}`}> ⬅ Back to {recipe.strCategory} recipes </Link>
+                        <Link to={`/category/${recipe.strCategory}`} className="back-link"> ⬅ Back
+                            to {recipe.strCategory} recipes
+                        </Link>
                     </>
                 ) : (
-                    <p>Loading...</p>
+                     <p>No recipe found.</p>
                 )}
-            </div>
-            <div className="filter-list">
+            </section>
 
+            <section className="filter-list">
                 <RecipeFilter recipes={allRecipes} ingredients={ingredients}/>
-            </div>
+            </section>
         </>
     );
 }

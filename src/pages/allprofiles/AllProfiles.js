@@ -1,69 +1,55 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import FilterProfiles from "../../components/filterprofiles/FilterProfiles";
 import './AllProfiles.css';
 import NavBar from "../../components/navbar/NavBar";
+import FilterProfiles from "../../components/filterprofiles/FilterProfiles";
 
 function AllProfiles() {
-    const [profile, setProfile] = useState([]);
-    const [selectedGender, setSelectedGender] = useState('');
-    const [selectedAgeCategory, setSelectedAgeCategory] = useState('');
+    const [allProfiles, setAllProfiles] = useState([]);
+    const [error, toggleError] = useState(false);
 
     useEffect(() => {
+        const controller = new AbortController();
+
         async function fetchData() {
             try {
-                const response = await axios.get('https://fakerapi.it/api/v1/persons?_quantity=100&');
-                const profilesWithAge = response.data.data.map(profile => ({
-                    ...profile,
-                    age: new Date().getFullYear() - new Date(profile.birthday).getFullYear(),
-                }));
-                console.log("Opgehaalde data:", profilesWithAge);
-                setProfile(profilesWithAge);
+                const response = await axios.get('https://randomuser.me/api/?results=204', {
+                    signal: controller.signal,
+
+                });
+                console.log(response.data.results);
+                setAllProfiles(response.data.results);
+
+                toggleError(false);
             } catch (e) {
-                console.error(e);
+                if (axios.isCancel(e)) {
+                } else {
+                    console.error('Fout bij ophalen van profielen:', e);
+                    toggleError(true);
+                }
             }
         }
 
         fetchData();
+
+        return function cleanup() {
+            controller.abort();
+        }
+
     }, []);
 
     return (
         <>
             <NavBar/>
-            <main>
+            <section>
                 <section className="outer-page-container">
                     <article className="inner-profiles-container">
-                            <article className="filters">
-                            <label>
-                                Filter op gender:
-                                <select value={selectedGender} onChange={(e) => setSelectedGender(e.target.value)}>
-                                    <option value="">Alle</option>
-                                    <option value="male">Man</option>
-                                    <option value="female">Vrouw</option>
-                                </select>
-                            </label>
-                            <label>
-                                Filter op leeftijdscategorie:
-                                <select value={selectedAgeCategory}
-                                        onChange={(e) => setSelectedAgeCategory(e.target.value)}>
-                                    <option value="">Alle</option>
-                                    <option value="young">0-18</option>
-                                    <option value="adult">19-35</option>
-                                    <option value="senior">36-65</option>
-                                </select>
-                            </label>
-                        </article>
-                        <FilterProfiles
-                            data={profile}
-                            gender={selectedGender}
-                            ageCategory={selectedAgeCategory}
-                        />
+                        <FilterProfiles data={allProfiles}/>
                     </article>
                 </section>
-            </main>
+            </section>
         </>
     );
 }
 
 export default AllProfiles;
-

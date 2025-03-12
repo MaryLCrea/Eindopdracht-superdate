@@ -7,29 +7,36 @@ import './LoginField.css';
 function Login() {
     const [password, setPassword] = useState('');
     const [username, setUsername] = useState('');
-    const [error, toggleError] = useState(false);
+    const [error, toggleError] = useState(null);
     const {login} = useContext(AuthContext);
 
     async function handleSubmit(e) {
         e.preventDefault();
-        toggleError(false);
+        toggleError(null);
+
+        const controller = new AbortController();
+        const { signal } = controller;
 
         try {
             const result = await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signin', {
-                username: username,
-                password: password,
-            });
-            console.log(result.data);
+                username: username, password: password,
+            }, {signal}
+            );
             login(result.data.accessToken);
 
         } catch (e) {
-            console.error(e);
-            toggleError(true);
+            if (e.response && e.response.data) {
+                toggleError(e.response.data.message || "Unknown error occurred");
+            } else {
+                toggleError("Network error. Please try again later.");
+            }
         }
+        return () => {
+            controller.abort();
+        };
     }
 
-    return (
-        <>
+    return (<>
             <main>
                 <div className="login-box">
                     <h4>Inloggen</h4>
@@ -68,15 +75,10 @@ function Login() {
                     <p className="register-tekst">
                         Don't have an account yet? <Link to="/signup"> Register </Link>
                     </p>
-
                 </div>
-                <section>
-
-                </section>
             </main>
-        </>
-    );
-}
-
+        </>)
+        ;
+    }
 
 export default Login;

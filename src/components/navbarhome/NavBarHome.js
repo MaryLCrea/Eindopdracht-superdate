@@ -14,12 +14,10 @@ function NavBarHome() {
                 <div className="topmenu-outer-container1">
                     <h2><NavLink to="/">Superdate</NavLink></h2>
 
-                    {/* Hamburgermenu knop */}
-                    <button className="hamburger-menu" onClick={() => setMenuOpen(!menuOpen)}>
+                    <button  type="submit" className="hamburger-menu" onClick={() => setMenuOpen(!menuOpen)}>
                         ☰
                     </button>
 
-                    {/* Navigatiebalk met dynamische klasse voor openen/sluiten */}
                     <nav className={`topmenu-outer-container2 ${menuOpen ? 'open' : ''}`}>
                         <ul className="linkmenu2-top">
                             <li>

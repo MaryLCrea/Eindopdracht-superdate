@@ -12,7 +12,7 @@ function AlgVw() {
         <>
             <NavBarHome/>
             <main className="outer-page-container">
-                <div className="inner-page-container pages">
+                <article className="inner-page-container pages">
                     <h2>General Terms and Conditions</h2>
                     <h3>These Terms and Conditions are effective as of January 1, 2025</h3>
                     <CondiCard title="Artikel 1. Definitions">
@@ -133,7 +133,7 @@ function AlgVw() {
                         The Website reserves the right to modify these terms and apply them to existing agreements, effective 30 days after notification.
                     </CondiCard>
                     <HomeLink/>
-                </div>
+                </article>
             </main>
         </>
     );

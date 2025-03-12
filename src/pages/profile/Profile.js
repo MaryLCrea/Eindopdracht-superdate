@@ -15,23 +15,18 @@ function Profile() {
         age: localStorage.getItem("profileAge") || "",
         city: localStorage.getItem("profileCity") || "",
         gender: localStorage.getItem("profileGender") || "",
-        search: localStorage.getItem("profileSearch") || "", // ✅ Correct opgeslagen
+        search: localStorage.getItem("profileSearch") || "",
         comments: localStorage.getItem("profileComments") || "",
     });
 
     useEffect(() => {
-        // ✅ Profielgegevens correct opslaan
-        localStorage.setItem("profileName", profile.name);
-        localStorage.setItem("profileAge", profile.age);
-        localStorage.setItem("profileCity", profile.city);
-        localStorage.setItem("profileGender", profile.gender);
-        localStorage.setItem("profileSearch", profile.search); // 🔥 Opgelost! Dit werd overschreven.
-        localStorage.setItem("profileComments", profile.comments);
+        Object.entries(profile).forEach(([key, value]) => {
+            localStorage.setItem(`profile${key.charAt(0).toUpperCase() + key.slice(1)}`, value);
+        });
     }, [profile]);
 
     useEffect(() => {
-        // Profielfoto opslaan in localStorage
-        localStorage.setItem("profileImage", imageUrl);
+       localStorage.setItem("profileImage", imageUrl);
     }, [imageUrl]);
 
     const handleInputChange = (event) => {
@@ -58,18 +53,18 @@ function Profile() {
     return (
         <>
             <NavBar/>
-            <main className="test-page">
-                <div className="content-container">
+            <header className="test-page">
+                <section className="content-container">
                     <h3>My Profile</h3>
-                    <div className="input-container">
+                    <section className="input-container">
                         <PicaSlider
                             minRange="100"
                             maxRange="600"
                             nameAttribuut="image-slider"
                             imageUrl={imageUrl}
                         />
-                    </div>
-                    <div className="input-container">
+                    </section>
+                    <section className="input-container">
                         <label htmlFor="name">Name:</label>
                         <input
                             type="text"
@@ -79,8 +74,8 @@ function Profile() {
                             value={profile.name}
                             onChange={handleProfileChange}
                         />
-                    </div>
-                    <div className="input-container">
+                    </section>
+                    <section className="input-container">
                         <label htmlFor="age">Age:</label>
                         <input
                             type="number"
@@ -90,8 +85,8 @@ function Profile() {
                             value={profile.age}
                             onChange={handleProfileChange}
                         />
-                    </div>
-                    <div className="input-container">
+                    </section>
+                    <setion className="input-container">
                         <label htmlFor="city">City:</label>
                         <input
                             type="text"
@@ -101,8 +96,8 @@ function Profile() {
                             value={profile.city}
                             onChange={handleProfileChange}
                         />
-                    </div>
-                    <div className="input-container">
+                    </setion>
+                    <section className="input-container">
                         <label htmlFor="gender">Gender:</label>
                         <select
                             id="gender"
@@ -116,8 +111,8 @@ function Profile() {
                             <option value="Other">Other</option>
                             <option value="Rather not tell">Rather not tell</option>
                         </select>
-                    </div>
-                    <div className="input-container">
+                    </section>
+                    <section className="input-container">
                         <label htmlFor="search">Looking for:</label>
                         <select
                             id="search"
@@ -132,8 +127,8 @@ function Profile() {
                             <option value="Fun">Just fun</option>
                             <option value="RatherNotSay">Rather not tell</option>
                         </select>
-                    </div>
-                    <div className="input-container">
+                    </section>
+                    <section className="input-container">
                         <label htmlFor="comments">About Me:</label>
                         <textarea
                             id="comments"
@@ -142,8 +137,8 @@ function Profile() {
                             value={profile.comments}
                             onChange={handleProfileChange}
                         />
-                    </div>
-                    <div>
+                    </section>
+                    <section>
                         <label htmlFor="imageUrlInput">My Pica:</label>
                         <input
                             type="text"
@@ -152,10 +147,10 @@ function Profile() {
                             value={inputValue}
                             onChange={handleInputChange}
                         />
-                        <button onClick={handleUpload}>Upload</button>
-                    </div>
-                </div>
-            </main>
+                        <button type="submit" onClick={handleUpload}>Upload</button>
+                    </section>
+                </section>
+            </header>
         </>
     );
 }
