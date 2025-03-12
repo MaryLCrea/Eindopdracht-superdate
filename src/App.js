@@ -21,7 +21,7 @@ function App() {
 
     return (
         <main>
-            <Loading />
+            <Loading/>
             <Switch>
                 <Route exact path="/">
                     <Home/>
@@ -50,9 +50,9 @@ function App() {
                 <Route exact path="/CategoriesPage">
                     <CategoriesPage/>
                 </Route>
-                    <Route path="/category/:categoryName" component={RecipesPage}/>
-                    <Route path="/recipe/:recipeId" component={RecipeDetailPage}/>
-                    <Route component={NotFound}/>
+                <Route path="/category/:categoryName" component={RecipesPage}/>
+                <Route path="/recipe/:recipeId" component={RecipeDetailPage}/>
+                <Route component={NotFound}/>
             </Switch>
             <Footer/>
         </main>

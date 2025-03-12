@@ -33,7 +33,7 @@ button:active {
 }
 
 .filter-recipes-item {
-    width: 200px; /* Kan aangepast worden afhankelijk van je layoutwensen */
+    width: 200px;
     text-align: center;
 }
 

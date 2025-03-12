@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import './AllProfiles.css';
 import NavBar from "../../components/navbar/NavBar";
@@ -12,28 +12,22 @@ function AllProfiles() {
         const controller = new AbortController();
 
         async function fetchData() {
-
-
             try {
-                const response = await axios.get('https://fakerapi.it/api/v1/persons?_quantity=100&', {
+                const response = await axios.get('https://randomuser.me/api/?results=204', {
                     signal: controller.signal,
+
                 });
+                console.log(response.data.results);
+                setAllProfiles(response.data.results);
 
-                const profilesWithAge = response.data.data.map(profile => ({
-                    ...profile,
-                    age: new Date().getFullYear() - new Date(profile.birthday).getFullYear(),
-                }));
-
-                setAllProfiles(profilesWithAge);
                 toggleError(false);
             } catch (e) {
-
                 if (axios.isCancel(e)) {
                 } else {
                     console.error('Fout bij ophalen van profielen:', e);
                     toggleError(true);
                 }
-                       }
+            }
         }
 
         fetchData();
@@ -47,13 +41,13 @@ function AllProfiles() {
     return (
         <>
             <NavBar/>
-            <main>
+            <section>
                 <section className="outer-page-container">
                     <article className="inner-profiles-container">
-                        <FilterProfiles data={allProfiles} />
+                        <FilterProfiles data={allProfiles}/>
                     </article>
                 </section>
-            </main>
+            </section>
         </>
     );
 }

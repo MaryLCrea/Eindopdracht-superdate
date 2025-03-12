@@ -13,12 +13,12 @@ function CForm({ title, description, fields, submitText, onSubmit }) {
     }
 
     return (
-        <main className="outer-page-container">
-            <div className="inner-page-container pages">
-                <section>
+        <section className="outer-page-container">
+            <section className="inner-page-container pages">
+                <header>
                     <h4>{title}</h4>
                     <p className="text">{description}</p>
-
+                </header>
                     <form onSubmit={handleSubmit(onFormSubmit)}>
                         {fields.map((field) => (
                             <label key={field.name} htmlFor={field.name}>
@@ -39,11 +39,11 @@ function CForm({ title, description, fields, submitText, onSubmit }) {
                         <button className="contact-button" type="submit">{submitText}</button>
                     </form>
                 </section>
-            </div>
+
             <section className="pica-container">
                 <img src={Telephone} alt="telefoon" />
             </section>
-        </main>
+        </section>
     );
 }
 

@@ -39,23 +39,23 @@ const RecipeFilter = ({ recipes, ingredients }) => {
     };
 
     return (
-        <div className="filter-section">
+        <section className="filter-section">
             <button onClick={filterRecipes}>Filter Recipes</button>
             {filteredRecipes.length > 0 ? (
-                <div className="filter-recipes-gallery">
+                <section className="filter-recipes-gallery">
                     {filteredRecipes.map(recipe => (
-                        <div key={recipe.idMeal} className="filter-recipes-item">
+                        <section key={recipe.idMeal} className="filter-recipes-item">
                             <Link to={`/recipe/${recipe.idMeal}`} className="recipe-link">
                                 <img src={recipe.strMealThumb} alt={recipe.strMeal} />
                                 <h3>{recipe.strMeal}</h3>
                             </Link>
-                        </div>
+                        </section>
                     ))}
-                </div>
+                </section>
             ) : (
                 hasSearched && <p>No recipes found with the specified ingredients.</p>
             )}
-        </div>
+        </section>
     );
 };
 
