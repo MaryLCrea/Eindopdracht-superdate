@@ -11,10 +11,12 @@ function AlgVw() {
     return (
         <>
             <NavBarHome/>
-            <main className="outer-page-container">
+            <section className="outer-page-container">
                 <article className="inner-page-container pages">
+                    <header>
                     <h2>General Terms and Conditions</h2>
                     <h3>These Terms and Conditions are effective as of January 1, 2025</h3>
+                    </header>
                     <CondiCard title="Artikel 1. Definitions">
                         <br/>
                         <h6>Participant:</h6> The contracting party of SuperDate within the framework of this agreement.
@@ -134,7 +136,7 @@ function AlgVw() {
                     </CondiCard>
                     <HomeLink/>
                 </article>
-            </main>
+            </section>
         </>
     );
 }

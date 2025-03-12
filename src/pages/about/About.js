@@ -8,10 +8,12 @@ function About() {
     return (
         <>
             <NavBarHome/>
-            <header className="outer-page-container">
-                <section className="inner-page-container pages">
-                    <h4>About Us</h4>
+            <section className="outer-page-container">
 
+                <section className="inner-page-container pages">
+                    <header>
+                    <h4>About Us</h4>
+                    </header>
                     <article className="text">SuperDate is one of the largest online dating sites in Europe for singles
                         who are looking for a serious relationship.
                     </article>
@@ -39,7 +41,7 @@ function About() {
                     </article>
                     <HomeLink/>
                 </section>
-            </header>
+            </section>
 
         </>
     );

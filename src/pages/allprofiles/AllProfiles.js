@@ -17,7 +17,6 @@ function AllProfiles() {
                     signal: controller.signal,
 
                 });
-                console.log(response.data.results);
                 setAllProfiles(response.data.results);
 
                 toggleError(false);

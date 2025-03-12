@@ -21,7 +21,7 @@ function CategoriesPage() {
                 setCategories(response.data.categories);
             } catch (error) {
                 if (!axios.isCancel(error)) {
-                    console.error(e);
+                    console.error(error);
                     toggleError("Failed to load categories. Please try again later.");
             }
              }
@@ -59,6 +59,7 @@ function CategoriesPage() {
             <NavBar/>
             <section className="filter-list">
                 <section className="search-box">
+                    <header>
                     <h3>Welcome to the recipes page </h3>
                     <p className="description-text"> We hope you like SuperDate, where everything comes together because
                         love goes through the stomach, right?
@@ -70,6 +71,8 @@ function CategoriesPage() {
                         date, be in the kitchen together, or just to treat yourself. Who knows, maybe you will find your
                         perfect match and the recipe for happiness here. 🍷💑🍝 Create a profile, try a recipe and be
                         surprised! </p>
+                    </header>
+
                     <h6>Search by ingredients</h6>
 
                     <section className="ingredient-inputs">

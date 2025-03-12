@@ -37,11 +37,13 @@ function SignIn() {
 
     return (<>
         <NavBarHome/>
-        <main className="outer-page-container">
+        <section className="outer-page-container">
             <section className="inner-page-container pages">
+                <header>
                 <h3>Inloggen</h3>
                 <article className="text"> Log in here to view other profiles.
                 </article>
+                </header>
                 <form className="text" onSubmit={handleSubmit}>
                     <label htmlFor="username-field">
                         Username:
@@ -79,7 +81,7 @@ function SignIn() {
             <section className="pica-container">
                 <img className="malediven" src={Malediven} alt="malediven"/>
             </section>
-        </main>
+        </section>
     </>);
 }
 

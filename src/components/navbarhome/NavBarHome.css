@@ -1,4 +1,4 @@
-.topmenu-outer-container1 {
+.topmenu-outer-containers1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,7 +59,7 @@
         display: block;
     }
 
-    .topmenu-outer-container2 {
+    .topmenu-outer-containers2 {
         display: none;
         flex-direction: column;
         background-color: #222;
