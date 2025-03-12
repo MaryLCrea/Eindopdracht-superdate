@@ -8,14 +8,14 @@
 
 .link-text a {
     text-decoration: none;
-    color: #125fb6;
+    color: #704948;
     font-size: 16px;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
 }
 
 .link-text a:hover {
-    color: #3d9aff;
+    color: #b28281;
 }
 
 .container {

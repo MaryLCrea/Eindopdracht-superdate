@@ -3,10 +3,10 @@ import React from 'react';
 function CondiCard({ title, children }) {
 
         return (
-        <article className="article-card">
+        <header className="article-card">
             <h5>{title}</h5>
             {children}
-        </article>
+        </header>
     );
 }
 

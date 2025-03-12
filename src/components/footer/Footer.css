@@ -57,28 +57,27 @@
     font-size: 12px;
 }
 
-/* Algemene kleur voor tekst in de footer */
+/*Algemene kleur voor tekst in de footer*/
 footer {
-    color: white; /* Zorg ervoor dat de tekst in de footer altijd wit is */
+    color: white;
 }
 
-/* Links in de footer */
+/*Links in de footer*/
 .footer-linkmenu a {
-    color: #ededed; /* Zorg ervoor dat de links lichtgrijs zijn */
-    text-decoration: none; /* Verwijder eventueel onderstreping van links */
+    color: #ededed;
+    text-decoration: none;
 }
 
-/* Hover-effect voor de links in de footer */
+/*Hover-effect voor de links in de footer*/
 .footer-linkmenu a:hover {
-    color: white; /* Maak de hoverkleur wit */
+    color: white;
 }
 
-/* Footer copyright tekst */
+/*Footer copyright tekst*/
 .footer-copyright {
-    color: #ededed; /* Zorg ervoor dat de copyright tekst lichtgrijs is */
+    color: #ededed;
 }
 
-/* Zorgt ervoor dat de hover van de copyright tekst ook wit is */
 .footer-copyright a:hover {
     color: white;
 }
@@ -88,12 +87,10 @@ h4 {
     margin: 20px;
 }
 
-
 .pages {
     margin: 40px;
     font-family: 'Roboto Condensed', sans-serif;
 }
-
 
 .form-container {
     margin: 3%;
@@ -105,11 +102,9 @@ h4 {
     background-color: #FFFCF8;
 }
 
-
 .text {
     display: flex;
     flex-direction: column;
     margin: 25px;
     justify-content: flex-start;
 }
-

@@ -32,7 +32,7 @@
 
 .inner-profiles-box {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 blokjes naast elkaar */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 20px;
 }
@@ -59,10 +59,6 @@
     margin-bottom: 15px;
 }
 
-h6 {
-
-}
-
 p {
     font-size: 1rem;
     color: #555;
@@ -70,32 +66,32 @@ p {
 
 @media (max-width: 768px) {
     .inner-profiles-box {
-        grid-template-columns: repeat(2, 1fr); /* 2 blokjes naast elkaar op kleinere schermen */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 480px) {
     .inner-profiles-box {
-        grid-template-columns: 1fr; /* 1 blokje per rij op zeer kleine schermen */
+        grid-template-columns: 1fr;
     }
 }
 
 .inner-profiles-box {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Standaard 3 blokjes naast elkaar */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 20px;
 }
 
 @media (max-width: 768px) {
     .inner-profiles-box {
-        grid-template-columns: repeat(2, 1fr); /* 2 blokjes naast elkaar op tablets */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 480px) {
     .inner-profiles-box {
-        grid-template-columns: 1fr; /* 1 blokje per rij op mobiel */
+        grid-template-columns: 1fr;
     }
 }
 

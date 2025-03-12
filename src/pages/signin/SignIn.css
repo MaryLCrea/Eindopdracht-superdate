@@ -17,7 +17,7 @@ form input {
 }
 
 form input:focus {
-    border-color: #4c90f5;
+    border-color: #986968;
     outline: none;
 }
 
@@ -88,7 +88,3 @@ h3 {
     margin: 25px;
     justify-content: flex-start;
 }
-
-
-
-

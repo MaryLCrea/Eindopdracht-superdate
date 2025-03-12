@@ -37,9 +37,11 @@ function Login() {
     }
 
     return (<>
-            <main>
-                <div className="login-box">
-                    <h4>Inloggen</h4>
+            <section>
+                <section className="login-box">
+                    <header>
+                       <h4>INLOGGEN</h4>
+                    </header>
                     <form className="text" onSubmit={handleSubmit}>
                         <label htmlFor="email-field">
                             Username:
@@ -75,8 +77,8 @@ function Login() {
                     <p className="register-tekst">
                         Don't have an account yet? <Link to="/signup"> Register </Link>
                     </p>
-                </div>
-            </main>
+                </section>
+            </section>
         </>)
         ;
     }

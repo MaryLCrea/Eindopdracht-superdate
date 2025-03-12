@@ -2,7 +2,7 @@
 .heart {
     width: 50px;
     height: 50px;
-    background-color: red;
+    background-color: #d31d1d;
     clip-path: polygon(50% 0%, 0% 35%, 50% 100%, 100% 35%);
     position: fixed;
     top: 20px;
@@ -30,7 +30,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border: 4px solid #f3f3f3;
-    border-top: 4px solid #3498db;
+    border-top: 4px solid #d31d1d;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -54,7 +54,7 @@
     top: 60%;
     left: 50%;
     transform: translateX(-50%);
-    color: #3498db;
+    color: #d31d1d;
     font-weight: bold;
     z-index: 9997;
 }

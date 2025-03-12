@@ -39,11 +39,6 @@ h3 {
     left: 25%;
 }
 
-.home-link:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
 /*Gemeenschappelijke hover voor knoppen*/
 .article-card button:hover {
     background-color: #d3d3d3;

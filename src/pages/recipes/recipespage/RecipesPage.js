@@ -3,6 +3,7 @@ import {useParams, Link} from 'react-router-dom';
 import axios from 'axios';
 import './RecipesPage.css';
 import NavBar from "../../../components/navbar/NavBar";
+import Favorieten from "../../../components/favorites/Favorites"; // Voeg dit toe
 
 function RecipesPage() {
     const {categoryName} = useParams();
@@ -14,20 +15,19 @@ function RecipesPage() {
         const signal = controller.signal;
 
         async function fetchRecipesByCategory() {
-           toggleError(false);
+            toggleError(false);
 
             try {
                 const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryName}`,
                     {signal}
                 );
                 setRecipes(response.data.meals || []);
-
             } catch (error) {
                 if (!axios.isCancel(error)) {
                     console.error("Error fetching recipes:", error);
                     toggleError(true);
                 }
-                      }
+            }
         }
 
         fetchRecipesByCategory();
@@ -62,6 +62,7 @@ function RecipesPage() {
                                     <img className="recipes-image" src={recipe.strMealThumb} alt={recipe.strMeal}/>
                                     {recipe.strMeal}
                                 </Link>
+                                <Favorieten recipe={recipe} />
                             </li>
                         ))}
                     </ul>

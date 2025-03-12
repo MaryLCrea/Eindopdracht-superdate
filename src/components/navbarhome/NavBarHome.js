@@ -10,15 +10,16 @@ function NavBarHome() {
 
     return (
         <>
-            <header className="outer-page-container">
-                <div className="topmenu-outer-container1">
+            <section className="outer-page-container">
+                <section className="topmenu-outer-containers1">
+                    <header>
                     <h2><NavLink to="/">Superdate</NavLink></h2>
-
+                    </header>
                     <button  type="submit" className="hamburger-menu" onClick={() => setMenuOpen(!menuOpen)}>
                         ☰
                     </button>
 
-                    <nav className={`topmenu-outer-container2 ${menuOpen ? 'open' : ''}`}>
+                    <nav className={`topmenu-outer-containers2 ${menuOpen ? 'open' : ''}`}>
                         <ul className="linkmenu2-top">
                             <li>
                                 <NavLink to="/" activeClassName="active">
@@ -32,8 +33,8 @@ function NavBarHome() {
                             </li>
                         </ul>
                     </nav>
-                </div>
-            </header>
+                </section>
+            </section>
         </>
     );
 }

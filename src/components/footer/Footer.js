@@ -7,11 +7,13 @@ function Footer() {
     return (
         <>
             <section className="footer-boven">
+                <header>
                 <ul className="footer-linkmenu">
                     <li><NavLink to="/about">About</NavLink></li>
                     <li><NavLink to="/algvw">Terms and Conditions</NavLink></li>
                     <li><NavLink to="/contact">Contact</NavLink></li>
                 </ul>
+                </header>
             </section>
             <section className="footer-onder">
                 <img src={waarborg} alt="waarborg" className="keurmerk-plaatjes"/>
