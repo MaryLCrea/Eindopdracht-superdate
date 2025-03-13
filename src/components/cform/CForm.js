@@ -8,7 +8,7 @@ function CForm({title, description, fields, submitText, onSubmit}) {
 
     function onFormSubmit(data) {
         if (onSubmit) {
-            onSubmit(data);
+            onSubmit?.(data);
         }
     }
 
@@ -23,13 +23,24 @@ function CForm({title, description, fields, submitText, onSubmit}) {
                     {fields.map((field) => (
                         <label key={field.name} htmlFor={field.name}>
                             {field.label}:
-                            <input
-                                type={field.type}
-                                id={field.name}
-                                className="wide-input"
-                                placeholder={field.placeholder}
-                                {...register(field.name, field.validation)}
-                            />
+                            {field.type === "textarea" ? (
+                                <textarea
+                                    id={field.name}
+                                    className="wide-input"
+                                    placeholder={field.placeholder}
+                                    {...register(field.name, field.validation)}
+                                    aria-invalid={errors[field.name] ? "true" : "false"}
+                                />
+                            ) : (
+                                <input
+                                    type={field.type}
+                                    id={field.name}
+                                    className="wide-input"
+                                    placeholder={field.placeholder}
+                                    {...register(field.name, field.validation)}
+                                    aria-invalid={errors[field.name] ? "true" : "false"}
+                                />
+                            )}
                             {errors[field.name] && (
                                 <p className="error-message">{errors[field.name].message}</p>
                             )}

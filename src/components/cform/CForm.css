@@ -17,6 +17,10 @@ form textarea {
     font-size: 16px;
 }
 
+textarea {
+    min-height: 100px;
+}
+
 form input,
 form textarea:focus {
     border-color: #986968;

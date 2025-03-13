@@ -19,6 +19,7 @@
     text-transform: uppercase;
     justify-content: space-between;
     padding-top: 15px;
+    gap: 30px;
 }
 
 /*footer balk plaatje veiligheid daten*/
