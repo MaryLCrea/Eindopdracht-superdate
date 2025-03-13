@@ -15,12 +15,12 @@ function Login() {
         toggleError(null);
 
         const controller = new AbortController();
-        const { signal } = controller;
+        const {signal} = controller;
 
         try {
             const result = await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signin', {
-                username: username, password: password,
-            }, {signal}
+                    username: username, password: password,
+                }, {signal}
             );
             login(result.data.accessToken);
 
@@ -37,50 +37,50 @@ function Login() {
     }
 
     return (<>
-            <section>
-                <section className="login-box">
-                    <header>
-                       <h4>INLOGGEN</h4>
-                    </header>
-                    <form className="text" onSubmit={handleSubmit}>
-                        <label htmlFor="email-field">
-                            Username:
-                            <input
-                                type="username"
-                                id="username-field"
-                                name="username"
-                                value={username}
-                                placeholder="Enter your username"
-                                onChange={(e) => setUsername(e.target.value)}
-                            />
-                        </label>
-                        <label htmlFor="password-field">
-                            Password:
-                            <input
-                                type="password"
-                                id="password-field"
-                                name="password"
-                                placeholder="Enter your password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                            />
-                        </label>
-                        {error && <p className="error">Username and password combination is incorrect</p>}
-                        <button
-                            type="submit"
-                            className="form-button"
-                        >
-                            Inloggen
-                        </button>
-                    </form>
+        <section>
+            <section className="login-box">
+                <header>
+                    <h4>INLOGGEN</h4>
+                </header>
+                <form className="text" onSubmit={handleSubmit}>
+                    <label htmlFor="email-field">
+                        Username:
+                        <input
+                            type="username"
+                            id="username-field"
+                            name="username"
+                            value={username}
+                            placeholder="Enter your username"
+                            onChange={(e) => setUsername(e.target.value)}
+                        />
+                    </label>
+                    <label htmlFor="password-field">
+                        Password:
+                        <input
+                            type="password"
+                            id="password-field"
+                            name="password"
+                            placeholder="Enter your password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </label>
+                    {error && <p className="error">Username and password combination is incorrect</p>}
+                    <button
+                        type="submit"
+                        className="form-button"
+                    >
+                        Inloggen
+                    </button>
+                </form>
 
-                    <p className="register-tekst">
-                        Don't have an account yet? <Link to="/signup"> Register </Link>
-                    </p>
-                </section>
+                <p className="register-tekst">
+                    Don't have an account yet? <Link to="/signup"> Register </Link>
+                </p>
             </section>
-        </>)
+        </section>
+    </>)
         ;
-    }
+}
 
 export default Login;

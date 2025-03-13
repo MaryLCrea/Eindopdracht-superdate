@@ -1,18 +1,29 @@
-import React, { useState } from 'react';
-import './PicaSlider.css'; // Voeg de CSS-import toe
+import React, {useState} from 'react';
+import './PicaSlider.css';
 
-function PicaSlider({ minRange, maxRange, labelText, nameAttribuut, imageUrl }) {
+function PicaSlider({
+                        minRange = 100,
+                        maxRange = 1000,
+                        labelText = "Resize your image here",
+                        nameAttribuut = "slider",
+                        imageUrl,
+                        onSizeChange,
+                    }) {
     const [size, setSize] = useState(500);
 
     const handleSliderChange = (event) => {
         const newSize = Number(event.target.value);
         setSize(newSize);
+
+        if (onSizeChange) {
+            onSizeChange(newSize);
+        }
     };
 
     return (
         <section className="pica-slider-container">
             <label htmlFor={nameAttribuut} className="pica-slider-label">
-                {labelText} Resize your image here
+                {labelText}
             </label>
             <input
                 type="range"

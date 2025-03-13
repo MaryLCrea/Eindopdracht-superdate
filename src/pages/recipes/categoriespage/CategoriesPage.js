@@ -17,16 +17,16 @@ function CategoriesPage() {
 
         async function fetchCategories() {
             try {
-                              const response = await axios.get('https://www.themealdb.com/api/json/v1/1/categories.php');
+                const response = await axios.get('https://www.themealdb.com/api/json/v1/1/categories.php');
                 setCategories(response.data.categories);
             } catch (error) {
                 if (!axios.isCancel(error)) {
                     console.error(error);
                     toggleError("Failed to load categories. Please try again later.");
+                }
             }
-             }
         };
-            fetchCategories();
+        fetchCategories();
 
         return () => {
             controller.abort();
@@ -37,12 +37,12 @@ function CategoriesPage() {
     useEffect(() => {
         async function fetchRecipes() {
             try {
-                               const response = await axios.get('https://www.themealdb.com/api/json/v1/1/search.php?s=');
+                const response = await axios.get('https://www.themealdb.com/api/json/v1/1/search.php?s=');
                 setAllRecipes(response.data.meals);
             } catch (error) {
                 toggleError("Failed to load recipes. Please try again later.");
 
-        }
+            }
         };
 
         fetchRecipes();
@@ -60,17 +60,20 @@ function CategoriesPage() {
             <section className="filter-list">
                 <section className="search-box">
                     <header>
-                    <h3>Welcome to the recipes page </h3>
-                    <p className="description-text"> We hope you like SuperDate, where everything comes together because
-                        love goes through the stomach, right?
-                        Are you looking for a nice date or do you just want inspiration for a delicious meal? Both are
-                        possible here! Browse profiles of singles who love cooking (and eating) as much as you do. Or
-                        use
-                        our smart search function: enter 1, 2 or 3 ingredients and discover tasty recipes to impress
-                        your
-                        date, be in the kitchen together, or just to treat yourself. Who knows, maybe you will find your
-                        perfect match and the recipe for happiness here. 🍷💑🍝 Create a profile, try a recipe and be
-                        surprised! </p>
+                        <h3>Welcome to the recipes page </h3>
+                        <p className="description-text"> We hope you like SuperDate, where everything comes together
+                            because
+                            love goes through the stomach, right?
+                            Are you looking for a nice date or do you just want inspiration for a delicious meal? Both
+                            are possible here! Browse profiles of singles who love cooking (and eating) as much as you
+                            do.
+                            Or use our smart search function: enter 1, 2 or 3 ingredients and discover tasty recipes to
+                            impress
+                            your date, be in the kitchen together, or just to treat yourself. Who knows, maybe you will
+                            find
+                            your perfect match and the recipe for happiness here. 🍷💑🍝 Create a profile, try a recipe
+                            and
+                            be surprised! </p>
                     </header>
 
                     <h6>Search by ingredients</h6>
@@ -109,7 +112,6 @@ function CategoriesPage() {
                 </ul>
             </section>
         </>
-
     );
 }
 

@@ -16,7 +16,7 @@ function RecipeDetailPage() {
         const controller = new AbortController();
 
         async function fetchRecipe() {
-                       setError(null);
+            setError(null);
 
             try {
                 const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${recipeId}`);
@@ -41,7 +41,7 @@ function RecipeDetailPage() {
         const controller = new AbortController();
 
         async function fetchAllRecipes() {
-                       setError(null);
+            setError(null);
 
             try {
                 const response = await axios.get('https://www.themealdb.com/api/json/v1/1/search.php?s=');
@@ -72,7 +72,7 @@ function RecipeDetailPage() {
             </header>
 
             <section className="recipes-card recipe-detail-card">
-                               {error && <p className="error">{error}</p>}
+                {error && <p className="error">{error}</p>}
 
                 {recipe ? (
                     <>
@@ -86,7 +86,7 @@ function RecipeDetailPage() {
                         </Link>
                     </>
                 ) : (
-                     <p>No recipe found.</p>
+                    <p>No recipe found.</p>
                 )}
             </section>
 

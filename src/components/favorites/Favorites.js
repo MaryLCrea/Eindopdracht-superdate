@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
 
-const Favorites = ({ recipe }) => {
+const Favorites = ({recipe}) => {
     const [favorites, setFavorites] = useState(
         JSON.parse(localStorage.getItem("favorites")) || []
     );

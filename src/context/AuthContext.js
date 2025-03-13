@@ -100,7 +100,7 @@ function AuthContextProvider({children}) {
     return (
         <AuthContext.Provider value={contextData}>
             {isAuth.status === 'pending' ? (
-                <LoadingAnimation />
+                <LoadingAnimation/>
             ) : (
                 <>
                     {error && <p className="error">{error}</p>}

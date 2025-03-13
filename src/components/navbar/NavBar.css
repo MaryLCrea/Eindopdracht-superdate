@@ -22,7 +22,7 @@
 }
 
 @media (max-width: 768px) {
-     .hamburger-menu {
+    .hamburger-menu {
         display: block;
     }
 
@@ -54,6 +54,3 @@
         text-align: center;
     }
 }
-
-
-

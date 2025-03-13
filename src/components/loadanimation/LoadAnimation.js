@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import './LoadAnimation.css';
 
 const LoadingAnimation = () => {
     const [loading, setLoading] = useState(true);
 
-      useEffect(() => {
+    useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
         }, 3000);

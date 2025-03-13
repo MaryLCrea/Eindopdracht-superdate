@@ -12,7 +12,7 @@ function About() {
 
                 <section className="inner-page-container pages">
                     <header>
-                    <h4>About Us</h4>
+                        <h4>About Us</h4>
                     </header>
                     <article className="text">SuperDate is one of the largest online dating sites in Europe for singles
                         who are looking for a serious relationship.
@@ -42,7 +42,6 @@ function About() {
                     <HomeLink/>
                 </section>
             </section>
-
         </>
     );
 }

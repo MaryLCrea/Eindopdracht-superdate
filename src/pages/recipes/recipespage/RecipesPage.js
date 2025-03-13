@@ -3,7 +3,7 @@ import {useParams, Link} from 'react-router-dom';
 import axios from 'axios';
 import './RecipesPage.css';
 import NavBar from "../../../components/navbar/NavBar";
-import Favorieten from "../../../components/favorites/Favorites"; // Voeg dit toe
+import Favorieten from "../../../components/favorites/Favorites";
 
 function RecipesPage() {
     const {categoryName} = useParams();
@@ -62,7 +62,7 @@ function RecipesPage() {
                                     <img className="recipes-image" src={recipe.strMealThumb} alt={recipe.strMeal}/>
                                     {recipe.strMeal}
                                 </Link>
-                                <Favorieten recipe={recipe} />
+                                <Favorieten recipe={recipe}/>
                             </li>
                         ))}
                     </ul>

@@ -22,23 +22,23 @@ const FilterProfiles = ({data}) => {
         <section className="page-container">
             <section className="filters-section">
                 <header>
-                <label>
-                    Filter op gender:
-                    <select value={selectedGender} onChange={(e) => setSelectedGender(e.target.value)}>
-                        <option value="">Alle</option>
-                        <option value="male">Man</option>
-                        <option value="female">Vrouw</option>
-                    </select>
-                </label>
-                <label>
-                    Filter op leeftijdscategorie:
-                    <select value={selectedAgeCategory} onChange={(e) => setSelectedAgeCategory(e.target.value)}>
-                        <option value="">Alle</option>
-                        <option value="young">18-25</option>
-                        <option value="adult">25-45</option>
-                        <option value="senior">46-65</option>
-                    </select>
-                </label>
+                    <label>
+                        Filter op gender:
+                        <select value={selectedGender} onChange={(e) => setSelectedGender(e.target.value)}>
+                            <option value="">Alle</option>
+                            <option value="male">Man</option>
+                            <option value="female">Vrouw</option>
+                        </select>
+                    </label>
+                    <label>
+                        Filter op leeftijdscategorie:
+                        <select value={selectedAgeCategory} onChange={(e) => setSelectedAgeCategory(e.target.value)}>
+                            <option value="">Alle</option>
+                            <option value="young">18-25</option>
+                            <option value="adult">25-45</option>
+                            <option value="senior">46-65</option>
+                        </select>
+                    </label>
                 </header>
             </section>
 
@@ -67,7 +67,3 @@ const FilterProfiles = ({data}) => {
 };
 
 export default FilterProfiles;
-
-
-
-

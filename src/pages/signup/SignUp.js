@@ -16,7 +16,7 @@ function SignUp() {
         e.preventDefault();
         setError('');
         const controller = new AbortController();
-        const { signal } = controller;
+        const {signal} = controller;
 
         try {
             const result = await axios.post(
@@ -26,7 +26,7 @@ function SignUp() {
                     password: password,
                     username: username,
                 },
-                { signal }
+                {signal}
             );
             history.push('/signin');
         } catch (e) {
@@ -48,10 +48,11 @@ function SignUp() {
             <section className="outer-page-container">
                 <section className="inner-page-container pages">
                     <header>
-                    <h3> Register</h3>
-                        <p>On this page you can register. After this you will be redirected directly to the login page where
-                        you can log in.
-                    </p>
+                        <h3> Register</h3>
+                        <p>On this page you can register. After this you will be redirected directly to the login page
+                            where
+                            you can log in.
+                        </p>
                     </header>
                     <form className="text" onSubmit={handleSubmit}>
                         <label htmlFor="email-field">
@@ -93,8 +94,8 @@ function SignUp() {
                         <button
                             type="submit"
                             className="form-button"
-                                                  >
-                           Register
+                        >
+                            Register
                         </button>
                     </form>
                     <p>Already have an account? You can <Link to="/signin">log in</Link> here.</p>

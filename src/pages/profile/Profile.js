@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import PicaSlider from "../../components/picaslider/PicaSlider";
 import NavBar from "../../components/navbar/NavBar";
 import "./Profile.css";
@@ -50,7 +50,7 @@ function Profile() {
     };
 
     const handleProfileChange = (event) => {
-        const { name, value } = event.target;
+        const {name, value} = event.target;
         setProfile((prevProfile) => ({
             ...prevProfile,
             [name]: value,
@@ -63,27 +63,32 @@ function Profile() {
             <section className="my-page">
                 <section className="content-container">
                     <header>
-                    <h3>My Profile</h3>
-                        </header>
+                        <h3>My Profile</h3>
+                    </header>
                     <section className="input-container">
                         <PicaSlider
-                            minRange="100"
-                            maxRange="600"
+                            minRange={100}
+                            maxRange={600}
                             nameAttribuut="image-slider"
                             imageUrl={imageUrl}
+                            onSizeChange={(newSize) => setImageUrl(imageUrl)}
                         />
+
                     </section>
                     <section className="input-container">
                         <label htmlFor="name">Name:</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" value={profile.name} onChange={handleProfileChange}/>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" value={profile.name}
+                               onChange={handleProfileChange}/>
                     </section>
                     <section className="input-container">
                         <label htmlFor="age">Age:</label>
-                        <input type="number" id="age" name="age" placeholder="Enter your age" value={profile.age} onChange={handleProfileChange}/>
+                        <input type="number" id="age" name="age" placeholder="Enter your age" value={profile.age}
+                               onChange={handleProfileChange}/>
                     </section>
                     <section className="input-container">
                         <label htmlFor="city">City:</label>
-                        <input type="text" id="city" name="city" placeholder="Enter your city" value={profile.city} onChange={handleProfileChange}/>
+                        <input type="text" id="city" name="city" placeholder="Enter your city" value={profile.city}
+                               onChange={handleProfileChange}/>
                     </section>
                     <section className="input-container">
                         <label htmlFor="gender">Gender:</label>
@@ -108,11 +113,13 @@ function Profile() {
                     </section>
                     <section className="input-container">
                         <label htmlFor="comments">About Me:</label>
-                        <textarea id="comments" name="comments" placeholder="Shortly about me" value={profile.comments} onChange={handleProfileChange}/>
+                        <textarea id="comments" name="comments" placeholder="Shortly about me" value={profile.comments}
+                                  onChange={handleProfileChange}/>
                     </section>
                     <section>
                         <label htmlFor="imageUrlInput">My Pica:</label>
-                        <input type="text" id="imageUrlInput" placeholder="Paste an image URL (jpg, jpeg, or png)" value={inputValue} onChange={handleInputChange}/>
+                        <input type="text" id="imageUrlInput" placeholder="Paste an image URL (jpg, jpeg, or png)"
+                               value={inputValue} onChange={handleInputChange}/>
                         <button type="submit" onClick={handleUpload}>Upload</button>
                     </section>
                 </section>

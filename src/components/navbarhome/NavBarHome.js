@@ -1,10 +1,10 @@
-import React, { useState, useContext } from 'react';
-import { NavLink, useHistory } from "react-router-dom";
+import React, {useState, useContext} from 'react';
+import {NavLink, useHistory} from "react-router-dom";
 import './NavBarHome.css';
-import { AuthContext } from "../../context/AuthContext";
+import {AuthContext} from "../../context/AuthContext";
 
 function NavBarHome() {
-    const { isAuth, logout } = useContext(AuthContext);
+    const {isAuth, logout} = useContext(AuthContext);
     const history = useHistory();
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -13,9 +13,9 @@ function NavBarHome() {
             <section className="outer-page-container">
                 <section className="topmenu-outer-containers1">
                     <header>
-                    <h2><NavLink to="/">Superdate</NavLink></h2>
+                        <h2><NavLink to="/">Superdate</NavLink></h2>
                     </header>
-                    <button  type="submit" className="hamburger-menu" onClick={() => setMenuOpen(!menuOpen)}>
+                    <button type="submit" className="hamburger-menu" onClick={() => setMenuOpen(!menuOpen)}>
                         ☰
                     </button>
 

@@ -13,7 +13,7 @@ function AllProfiles() {
 
         async function fetchData() {
             try {
-                const response = await axios.get('https://randomuser.me/api/?results=204', {
+                const response = await axios.get('https://randomuser.me/api/?results=50', {
                     signal: controller.signal,
 
                 });

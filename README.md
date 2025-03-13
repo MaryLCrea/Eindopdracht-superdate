@@ -64,7 +64,32 @@ api ook in het engels zijn. Wanneer je dus een zoekactie doet op de recepten pag
 
 Veel plezier en succes met de applicatie!
 
+Aanvullende info: 
 
+### `npm-test`
+
+Start de testrunner in de interactieve kijkmodus.\
+Zie de sectie over [het uitvoeren van tests](https://facebook.github.io/create-react-app/docs/running-tests) voor meer informatie.
+
+### `npm run build`
+
+Bouwt de app voor productie naar de map `build`.\
+Het bundelt React correct in de productiemodus en optimaliseert de build voor de beste prestaties.
+
+De build is verkleind en de bestandsnamen bevatten de hashes.\
+Uw app is klaar om ingezet te worden!
+
+Zie de sectie over [implementatie](https://facebook.github.io/create-react-app/docs/deployment) voor meer informatie.
+
+### `npm run eject`
+
+**Let op: dit is eenrichtingsverkeer. Zodra u 'eject', kunt u niet meer terug!**
+
+Als u niet tevreden bent met de bouwtool en de configuratiekeuzes, kunt u op elk gewenst moment 'eject'. Met deze opdracht wordt de afhankelijkheid van één build uit uw project verwijderd.
+
+In plaats daarvan kopieert het alle configuratiebestanden en de transitieve afhankelijkheden (webpack, Babel, ESLint, enz.) rechtstreeks naar uw project, zodat u er volledige controle over heeft. Alle commando's behalve `eject` zullen nog steeds werken, maar ze zullen naar de gekopieerde scripts verwijzen, zodat je ze kunt aanpassen. Op dit punt sta je er alleen voor.
+
+U hoeft nooit 'eject' te gebruiken. De samengestelde functieset is geschikt voor kleine en middelgrote implementaties, en u hoeft zich niet verplicht te voelen deze functie te gebruiken. We begrijpen echter dat deze tool niet nuttig zou zijn als u deze niet kunt aanpassen wanneer u er klaar voor bent.
 
 
 

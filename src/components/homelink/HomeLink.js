@@ -4,9 +4,9 @@ import './HomeLink.css';
 
 function HomeLink() {
 
-    return(
+    return (
         <>
-        <Link to="/" className="home-link">⬅ Back to Home</Link>
+            <Link to="/" className="home-link">⬅ Back to Home</Link>
         </>
     );
 }

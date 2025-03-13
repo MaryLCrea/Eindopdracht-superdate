@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 import './RecipeFilter.css';
 
-const RecipeFilter = ({ recipes, ingredients }) => {
+const RecipeFilter = ({recipes, ingredients}) => {
     const [filteredRecipes, setFilteredRecipes] = useState([]);
     const [hasSearched, setHasSearched] = useState(false);
 
@@ -46,7 +46,7 @@ const RecipeFilter = ({ recipes, ingredients }) => {
                     {filteredRecipes.map(recipe => (
                         <section key={recipe.idMeal} className="filter-recipes-item">
                             <Link to={`/recipe/${recipe.idMeal}`} className="recipe-link">
-                                <img src={recipe.strMealThumb} alt={recipe.strMeal} />
+                                <img src={recipe.strMealThumb} alt={recipe.strMeal}/>
                                 <h3>{recipe.strMeal}</h3>
                             </Link>
                         </section>

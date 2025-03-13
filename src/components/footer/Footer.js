@@ -8,11 +8,11 @@ function Footer() {
         <>
             <section className="footer-boven">
                 <header>
-                <ul className="footer-linkmenu">
-                    <li><NavLink to="/about">About</NavLink></li>
-                    <li><NavLink to="/algvw">Terms and Conditions</NavLink></li>
-                    <li><NavLink to="/contact">Contact</NavLink></li>
-                </ul>
+                    <ul className="footer-linkmenu">
+                        <li><NavLink to="/about">About</NavLink></li>
+                        <li><NavLink to="/algvw">Terms and Conditions</NavLink></li>
+                        <li><NavLink to="/contact">Contact</NavLink></li>
+                    </ul>
                 </header>
             </section>
             <section className="footer-onder">
@@ -24,4 +24,3 @@ function Footer() {
 }
 
 export default Footer;
-

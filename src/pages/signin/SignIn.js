@@ -16,7 +16,7 @@ function SignIn() {
         setError('');
 
         const controller = new AbortController();
-        const { signal } = controller;
+        const {signal} = controller;
 
         try {
             const result = await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signin', {
@@ -40,9 +40,9 @@ function SignIn() {
         <section className="outer-page-container">
             <section className="inner-page-container pages">
                 <header>
-                <h3>Inloggen</h3>
-                <article className="text"> Log in here to view other profiles.
-                </article>
+                    <h3>Inloggen</h3>
+                    <article className="text"> Log in here to view other profiles.
+                    </article>
                 </header>
                 <form className="text" onSubmit={handleSubmit}>
                     <label htmlFor="username-field">
@@ -69,9 +69,9 @@ function SignIn() {
                             autoComplete="current-password"
                         />
                     </label>
-                   {error && <p className="error">{error}</p>}
+                    {error && <p className="error">{error}</p>}
                     <button type="submit" className="form-button">
-                                            </button>
+                    </button>
                 </form>
                 <p>
 

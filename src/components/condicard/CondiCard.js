@@ -1,8 +1,8 @@
 import React from 'react';
 
-function CondiCard({ title, children }) {
+function CondiCard({title, children}) {
 
-        return (
+    return (
         <header className="article-card">
             <h5>{title}</h5>
             {children}
@@ -11,4 +11,3 @@ function CondiCard({ title, children }) {
 }
 
 export default CondiCard;
-
