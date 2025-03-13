@@ -8,29 +8,29 @@ function Contact() {
         <>
             <NavBarHome/>
             <CForm
-                title="Contact opnemen"
-                description="Laat hier je bericht achter en we nemen contact met je op."
+                title="Contact"
+                description="Leave a message and we will contact you."
                 fields={[
                     {
                         name: "name",
-                        label: "Naam",
+                        label: "Name",
                         type: "text",
-                        placeholder: "Je naam",
-                        validation: { required: "Naam is verplicht" }
+                        placeholder: "Your Name",
+                        validation: { required: "Name required" }
                     },
                     {
                         name: "email",
                         label: "E-mail",
                         type: "email",
-                        placeholder: "Je e-mail",
-                        validation: { required: "E-mail is verplicht" }
+                        placeholder: "Your e-mail",
+                        validation: { required: "E-mail is required" }
                     },
                     {
                         name: "message",
-                        label: "Bericht",
+                        label: "Message",
                         type: "textarea",
-                        placeholder: "Je bericht",
-                        validation: { required: "Bericht is verplicht" }
+                        placeholder: "Your Message",
+                        validation: { required: "Message is required" }
                     }
                 ]}
                 submitText="Send"
