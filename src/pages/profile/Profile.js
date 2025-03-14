@@ -3,6 +3,7 @@ import PicaSlider from "../../components/picaslider/PicaSlider";
 import NavBar from "../../components/navbar/NavBar";
 import "./Profile.css";
 import {Link} from "react-router-dom";
+import LoadAnimation from "../../components/loadanimation/LoadAnimation";
 
 function Profile() {
     const [imageUrl, setImageUrl] = useState(
@@ -59,6 +60,7 @@ function Profile() {
 
     return (
         <>
+            <LoadAnimation/>
             <NavBar/>
             <section className="my-page">
                 <section className="content-container">
@@ -73,7 +75,6 @@ function Profile() {
                             imageUrl={imageUrl}
                             onSizeChange={(newSize) => setImageUrl(imageUrl)}
                         />
-
                     </section>
                     <section className="input-container">
                         <label htmlFor="name">Name:</label>

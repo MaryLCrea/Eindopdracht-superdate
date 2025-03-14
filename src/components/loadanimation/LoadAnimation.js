@@ -1,26 +1,28 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import './LoadAnimation.css';
 
-const LoadingAnimation = () => {
+const LoadAnimation = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+
         const timer = setTimeout(() => {
             setLoading(false);
-        }, 3000);
+        }, 2000);
 
         return () => clearTimeout(timer);
     }, []);
 
+    if (!loading) return null;
+
     return (
         <section className="loading-container">
-            {loading ? (
-                <section className="spinner-container">
-                    <section className="heart-pulse"></section>
-                </section>
-            ) : null}
+            <section className="spinner-container">
+                <section className="heart-pulse"></section>
+            </section>
         </section>
     );
 };
 
-export default LoadingAnimation;
+export default LoadAnimation;
+

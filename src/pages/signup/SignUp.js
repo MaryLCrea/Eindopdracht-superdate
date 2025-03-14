@@ -4,6 +4,7 @@ import axios from 'axios';
 import './SignUp.css';
 import RomaCouple from "../../assets/romacouple.jpg";
 import NavBarHome from "../../components/navbarhome/NavBarHome";
+import LoadAnimation from "../../components/loadanimation/LoadAnimation";
 
 function SignUp() {
     const [email, setEmail] = useState('');
@@ -44,6 +45,7 @@ function SignUp() {
 
     return (
         <>
+            <LoadAnimation/>
             <NavBarHome/>
             <section className="outer-page-container">
                 <section className="inner-page-container pages">

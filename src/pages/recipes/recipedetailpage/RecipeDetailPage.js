@@ -4,6 +4,7 @@ import axios from 'axios';
 import './RecipeDetailPage.css';
 import RecipeFilter from '../../../components/filterrecipes/RecipeFilter';
 import NavBar from "../../../components/navbar/NavBar";
+import LoadAnimation from "../../../components/loadanimation/LoadAnimation";
 
 function RecipeDetailPage() {
     const {recipeId} = useParams();
@@ -65,8 +66,8 @@ function RecipeDetailPage() {
 
     return (
         <>
+            <LoadAnimation/>
             <NavBar/>
-
             <header className="recipe-header">
                 <h2>{recipe ? recipe.strMeal : "Recipe not found"}</h2>
             </header>

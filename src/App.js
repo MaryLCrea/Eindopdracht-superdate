@@ -15,13 +15,14 @@ import CategoriesPage from "./pages/recipes/categoriespage/CategoriesPage";
 import RecipeDetailPage from "./pages/recipes/recipedetailpage/RecipeDetailPage";
 import RecipesPage from "./pages/recipes/recipespage/RecipesPage";
 import NotFound from "./pages/notfound/NotFound";
-import Loading from "./components/loadanimation/LoadAnimation";
+import LoadAnimation from "./components/loadanimation/LoadAnimation";
 
 function App() {
 
     return (
+
         <main>
-            <Loading/>
+            <LoadAnimation />
             <Switch>
                 <Route exact path="/">
                     <Home/>

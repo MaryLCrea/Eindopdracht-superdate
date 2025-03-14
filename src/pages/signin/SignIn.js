@@ -4,6 +4,7 @@ import {AuthContext} from '../../context/AuthContext';
 import axios from 'axios';
 import Malediven from '../../assets/malediven.jpg';
 import NavBarHome from "../../components/navbarhome/NavBarHome";
+import LoadAnimation from "../../components/loadanimation/LoadAnimation";
 
 function SignIn() {
     const [password, setPassword] = useState('');
@@ -36,6 +37,7 @@ function SignIn() {
     }
 
     return (<>
+        <LoadAnimation/>
         <NavBarHome/>
         <section className="outer-page-container">
             <section className="inner-page-container pages">

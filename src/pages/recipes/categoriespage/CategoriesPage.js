@@ -4,6 +4,7 @@ import RecipeFilter from "../../../components/filterrecipes/RecipeFilter";
 import {Link} from "react-router-dom";
 import NavBar from "../../../components/navbar/NavBar";
 import './CategoriesPage.css';
+import LoadAnimation from "../../../components/loadanimation/LoadAnimation";
 
 function CategoriesPage() {
     const [categories, setCategories] = useState([]);
@@ -56,6 +57,7 @@ function CategoriesPage() {
 
     return (
         <>
+            <LoadAnimation/>
             <NavBar/>
             <section className="filter-list">
                 <section className="search-box">

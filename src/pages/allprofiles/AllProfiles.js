@@ -3,6 +3,8 @@ import axios from 'axios';
 import './AllProfiles.css';
 import NavBar from "../../components/navbar/NavBar";
 import FilterProfiles from "../../components/filterprofiles/FilterProfiles";
+import LoadAnimation from "../../components/loadanimation/LoadAnimation";
+
 
 function AllProfiles() {
     const [allProfiles, setAllProfiles] = useState([]);
@@ -40,6 +42,7 @@ function AllProfiles() {
     return (
         <>
             <NavBar/>
+            <LoadAnimation/>
             <section>
                 <section className="outer-page-container">
                     <article className="inner-profiles-container">

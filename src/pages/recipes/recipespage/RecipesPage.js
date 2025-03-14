@@ -4,6 +4,7 @@ import axios from 'axios';
 import './RecipesPage.css';
 import NavBar from "../../../components/navbar/NavBar";
 import Favorieten from "../../../components/favorites/Favorites";
+import LoadAnimation from "../../../components/loadanimation/LoadAnimation";
 
 function RecipesPage() {
     const {categoryName} = useParams();
@@ -40,6 +41,7 @@ function RecipesPage() {
 
     return (
         <>
+            <LoadAnimation/>
             <NavBar/>
             <section className="recipes-card">
                 <br/>
